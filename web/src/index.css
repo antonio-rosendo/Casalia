@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neo-white: #f8f9fa;
+  --color-neo-black: #111111;
+  --color-neo-yellow: #ddf247;
+  --color-neo-orange: #ff5722;
+  --color-neo-gray: #e5e5e5;
+  --color-neo-darkgray: #333333;
+  
+  --shadow-neo: 4px 4px 0px 0px rgba(17, 17, 17, 1);
+  --shadow-neo-hover: 2px 2px 0px 0px rgba(17, 17, 17, 1);
+  --shadow-neo-heavy: 8px 8px 0px 0px rgba(17, 17, 17, 1);
+  --shadow-neo-orange: 4px 4px 0px 0px rgba(255, 87, 34, 1);
+
+  --font-mono: "Space Mono", "Courier New", monospace;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-neo-white text-neo-black font-sans antialiased selection:bg-neo-yellow selection:text-neo-black m-0 p-0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tighter;
+  }
+}
+
+@layer utilities {
+  .neo-border {
+    @apply border-3 border-neo-black;
+  }
+
+  .neo-shadow {
+    @apply shadow-neo transition-all duration-200;
+  }
+
+  .neo-shadow-hover:hover {
+    @apply shadow-neo-hover translate-x-[2px] translate-y-[2px];
+  }
+}
+
