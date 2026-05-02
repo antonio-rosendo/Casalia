@@ -6,17 +6,17 @@ export function Methodology() {
     {
       icon: <Layers className="w-8 h-8" />,
       title: "Data Ingestion",
-      desc: "Aggregating historical property data, spatial zoning rules, and macro-economic indicators."
+      desc: "Aggregating historical property price data, demographic factors (age, immigration), and macro-economic indicators (IPC, mortgages) from the INE."
     },
     {
       icon: <Network className="w-8 h-8" />,
       title: "Feature Extraction",
-      desc: "Geospatial vectoring maps coordinates to amenities, transit, and neighborhood density."
+      desc: "Computing 12-month trailing lag features and macroeconomic variations to construct a robust temporal context for each region."
     },
     {
       icon: <Zap className="w-8 h-8" />,
-      title: "Ensemble Prediction",
-      desc: "XGBoost layered with a deep neural network ensures edge-case clipping and high confidence."
+      title: "Deep Neural Network",
+      desc: "A PyTorch-based Multi-Layer Perceptron (MLP) trained on historical cycles to predict 12-month property value dynamics with high confidence."
     }
   ];
 
@@ -67,11 +67,11 @@ export function Methodology() {
             
             <div className="space-y-4 font-mono text-sm">
               {[
-                { label: "Location Coordinates", pct: 85, color: "bg-neo-black" },
-                { label: "Total Square Meters", pct: 72, color: "bg-neo-orange" },
-                { label: "Year Built / Condition", pct: 58, color: "bg-neo-yellow" },
-                { label: "Transit Proximity", pct: 45, color: "bg-neo-darkgray" },
-                { label: "Local Amenity Density", pct: 30, color: "bg-neo-gray" },
+                { label: "Historical Price Dynamics", pct: 85, color: "bg-neo-black" },
+                { label: "Macroeconomic Indicators", pct: 72, color: "bg-neo-orange" },
+                { label: "Current Price per M2", pct: 58, color: "bg-neo-yellow" },
+                { label: "Demographics (Age, Immig.)", pct: 45, color: "bg-neo-darkgray" },
+                { label: "Regional Context", pct: 30, color: "bg-neo-gray" },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
                   <div className="w-48 truncate uppercase font-bold text-xs">{item.label}</div>

@@ -50,11 +50,11 @@ export function SegmentsFAQ() {
             {[
               {
                 q: "What data structures support the prediction?",
-                a: "A mixed tensor approach incorporating tabular census records, geometric polygon properties for zoning, and historical transaction graphs."
+                a: "A tensor approach incorporating tabular economic indicators (IPC, mortgages), demographic data, and historical pricing dynamics."
               },
               {
                 q: "How does the platform handle missing variables?",
-                a: "Missing inputs are imputed using K-Nearest Neighbors based on geometric proximity, ensuring outliers do not distort the vector space."
+                a: "Missing INE data points or API fallbacks are gracefully handled using established regional baselines to ensure continuous inference."
               },
               {
                 q: "Is this model suitable for real-time market trading?",

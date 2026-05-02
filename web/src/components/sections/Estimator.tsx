@@ -55,7 +55,7 @@ export function Estimator() {
               Model Inference
             </h2>
             <p className="font-mono text-neo-darkgray bg-neo-white p-3 border-2 border-neo-black inline-block">
-              // Inputs are sanitized and fed to the XGBoost ensemble model.
+              // Inputs are enriched with INE macro-economic data and fed to our PyTorch Neural Network.
             </p>
           </div>
           <Badge variant="warning" className="text-lg px-4 py-2 self-start md:self-auto neo-shadow">
