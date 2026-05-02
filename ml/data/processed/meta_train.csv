@@ -1,4 +1,12 @@
 codigo_comunidad,comunidad,name,date
+1,andalucia,Andalucía,2004-01-01
+1,andalucia,Andalucía,2004-04-01
+1,andalucia,Andalucía,2004-07-01
+1,andalucia,Andalucía,2004-10-01
+1,andalucia,Andalucía,2005-01-01
+1,andalucia,Andalucía,2005-04-01
+1,andalucia,Andalucía,2005-07-01
+1,andalucia,Andalucía,2005-10-01
 1,andalucia,Andalucía,2006-01-01
 1,andalucia,Andalucía,2006-04-01
 1,andalucia,Andalucía,2006-07-01
@@ -39,6 +47,14 @@ codigo_comunidad,comunidad,name,date
 1,andalucia,Andalucía,2015-04-01
 1,andalucia,Andalucía,2015-07-01
 1,andalucia,Andalucía,2015-10-01
+2,aragon,Aragón,2004-01-01
+2,aragon,Aragón,2004-04-01
+2,aragon,Aragón,2004-07-01
+2,aragon,Aragón,2004-10-01
+2,aragon,Aragón,2005-01-01
+2,aragon,Aragón,2005-04-01
+2,aragon,Aragón,2005-07-01
+2,aragon,Aragón,2005-10-01
 2,aragon,Aragón,2006-01-01
 2,aragon,Aragón,2006-04-01
 2,aragon,Aragón,2006-07-01
@@ -79,6 +95,14 @@ codigo_comunidad,comunidad,name,date
 2,aragon,Aragón,2015-04-01
 2,aragon,Aragón,2015-07-01
 2,aragon,Aragón,2015-10-01
+3,principado-asturias,Principado de Asturias,2004-01-01
+3,principado-asturias,Principado de Asturias,2004-04-01
+3,principado-asturias,Principado de Asturias,2004-07-01
+3,principado-asturias,Principado de Asturias,2004-10-01
+3,principado-asturias,Principado de Asturias,2005-01-01
+3,principado-asturias,Principado de Asturias,2005-04-01
+3,principado-asturias,Principado de Asturias,2005-07-01
+3,principado-asturias,Principado de Asturias,2005-10-01
 3,principado-asturias,Principado de Asturias,2006-01-01
 3,principado-asturias,Principado de Asturias,2006-04-01
 3,principado-asturias,Principado de Asturias,2006-07-01
@@ -119,6 +143,14 @@ codigo_comunidad,comunidad,name,date
 3,principado-asturias,Principado de Asturias,2015-04-01
 3,principado-asturias,Principado de Asturias,2015-07-01
 3,principado-asturias,Principado de Asturias,2015-10-01
+4,islas-baleares,Islas Baleares,2004-01-01
+4,islas-baleares,Islas Baleares,2004-04-01
+4,islas-baleares,Islas Baleares,2004-07-01
+4,islas-baleares,Islas Baleares,2004-10-01
+4,islas-baleares,Islas Baleares,2005-01-01
+4,islas-baleares,Islas Baleares,2005-04-01
+4,islas-baleares,Islas Baleares,2005-07-01
+4,islas-baleares,Islas Baleares,2005-10-01
 4,islas-baleares,Islas Baleares,2006-01-01
 4,islas-baleares,Islas Baleares,2006-04-01
 4,islas-baleares,Islas Baleares,2006-07-01
@@ -159,6 +191,14 @@ codigo_comunidad,comunidad,name,date
 4,islas-baleares,Islas Baleares,2015-04-01
 4,islas-baleares,Islas Baleares,2015-07-01
 4,islas-baleares,Islas Baleares,2015-10-01
+6,cantabria,Cantabria,2004-01-01
+6,cantabria,Cantabria,2004-04-01
+6,cantabria,Cantabria,2004-07-01
+6,cantabria,Cantabria,2004-10-01
+6,cantabria,Cantabria,2005-01-01
+6,cantabria,Cantabria,2005-04-01
+6,cantabria,Cantabria,2005-07-01
+6,cantabria,Cantabria,2005-10-01
 6,cantabria,Cantabria,2006-01-01
 6,cantabria,Cantabria,2006-04-01
 6,cantabria,Cantabria,2006-07-01
@@ -199,6 +239,14 @@ codigo_comunidad,comunidad,name,date
 6,cantabria,Cantabria,2015-04-01
 6,cantabria,Cantabria,2015-07-01
 6,cantabria,Cantabria,2015-10-01
+7,castilla-leon,Castilla y León,2004-01-01
+7,castilla-leon,Castilla y León,2004-04-01
+7,castilla-leon,Castilla y León,2004-07-01
+7,castilla-leon,Castilla y León,2004-10-01
+7,castilla-leon,Castilla y León,2005-01-01
+7,castilla-leon,Castilla y León,2005-04-01
+7,castilla-leon,Castilla y León,2005-07-01
+7,castilla-leon,Castilla y León,2005-10-01
 7,castilla-leon,Castilla y León,2006-01-01
 7,castilla-leon,Castilla y León,2006-04-01
 7,castilla-leon,Castilla y León,2006-07-01
@@ -239,6 +287,14 @@ codigo_comunidad,comunidad,name,date
 7,castilla-leon,Castilla y León,2015-04-01
 7,castilla-leon,Castilla y León,2015-07-01
 7,castilla-leon,Castilla y León,2015-10-01
+8,castilla-mancha,Castilla-La Mancha,2004-01-01
+8,castilla-mancha,Castilla-La Mancha,2004-04-01
+8,castilla-mancha,Castilla-La Mancha,2004-07-01
+8,castilla-mancha,Castilla-La Mancha,2004-10-01
+8,castilla-mancha,Castilla-La Mancha,2005-01-01
+8,castilla-mancha,Castilla-La Mancha,2005-04-01
+8,castilla-mancha,Castilla-La Mancha,2005-07-01
+8,castilla-mancha,Castilla-La Mancha,2005-10-01
 8,castilla-mancha,Castilla-La Mancha,2006-01-01
 8,castilla-mancha,Castilla-La Mancha,2006-04-01
 8,castilla-mancha,Castilla-La Mancha,2006-07-01
@@ -279,6 +335,14 @@ codigo_comunidad,comunidad,name,date
 8,castilla-mancha,Castilla-La Mancha,2015-04-01
 8,castilla-mancha,Castilla-La Mancha,2015-07-01
 8,castilla-mancha,Castilla-La Mancha,2015-10-01
+9,catalunya,Cataluña,2004-01-01
+9,catalunya,Cataluña,2004-04-01
+9,catalunya,Cataluña,2004-07-01
+9,catalunya,Cataluña,2004-10-01
+9,catalunya,Cataluña,2005-01-01
+9,catalunya,Cataluña,2005-04-01
+9,catalunya,Cataluña,2005-07-01
+9,catalunya,Cataluña,2005-10-01
 9,catalunya,Cataluña,2006-01-01
 9,catalunya,Cataluña,2006-04-01
 9,catalunya,Cataluña,2006-07-01
@@ -319,6 +383,14 @@ codigo_comunidad,comunidad,name,date
 9,catalunya,Cataluña,2015-04-01
 9,catalunya,Cataluña,2015-07-01
 9,catalunya,Cataluña,2015-10-01
+10,comunitat-valenciana,Comunitat Valenciana,2004-01-01
+10,comunitat-valenciana,Comunitat Valenciana,2004-04-01
+10,comunitat-valenciana,Comunitat Valenciana,2004-07-01
+10,comunitat-valenciana,Comunitat Valenciana,2004-10-01
+10,comunitat-valenciana,Comunitat Valenciana,2005-01-01
+10,comunitat-valenciana,Comunitat Valenciana,2005-04-01
+10,comunitat-valenciana,Comunitat Valenciana,2005-07-01
+10,comunitat-valenciana,Comunitat Valenciana,2005-10-01
 10,comunitat-valenciana,Comunitat Valenciana,2006-01-01
 10,comunitat-valenciana,Comunitat Valenciana,2006-04-01
 10,comunitat-valenciana,Comunitat Valenciana,2006-07-01
@@ -359,6 +431,14 @@ codigo_comunidad,comunidad,name,date
 10,comunitat-valenciana,Comunitat Valenciana,2015-04-01
 10,comunitat-valenciana,Comunitat Valenciana,2015-07-01
 10,comunitat-valenciana,Comunitat Valenciana,2015-10-01
+11,extremadura,Extremadura,2004-01-01
+11,extremadura,Extremadura,2004-04-01
+11,extremadura,Extremadura,2004-07-01
+11,extremadura,Extremadura,2004-10-01
+11,extremadura,Extremadura,2005-01-01
+11,extremadura,Extremadura,2005-04-01
+11,extremadura,Extremadura,2005-07-01
+11,extremadura,Extremadura,2005-10-01
 11,extremadura,Extremadura,2006-01-01
 11,extremadura,Extremadura,2006-04-01
 11,extremadura,Extremadura,2006-07-01
@@ -399,6 +479,14 @@ codigo_comunidad,comunidad,name,date
 11,extremadura,Extremadura,2015-04-01
 11,extremadura,Extremadura,2015-07-01
 11,extremadura,Extremadura,2015-10-01
+12,galicia,Galicia,2004-01-01
+12,galicia,Galicia,2004-04-01
+12,galicia,Galicia,2004-07-01
+12,galicia,Galicia,2004-10-01
+12,galicia,Galicia,2005-01-01
+12,galicia,Galicia,2005-04-01
+12,galicia,Galicia,2005-07-01
+12,galicia,Galicia,2005-10-01
 12,galicia,Galicia,2006-01-01
 12,galicia,Galicia,2006-04-01
 12,galicia,Galicia,2006-07-01
@@ -439,6 +527,14 @@ codigo_comunidad,comunidad,name,date
 12,galicia,Galicia,2015-04-01
 12,galicia,Galicia,2015-07-01
 12,galicia,Galicia,2015-10-01
+13,comunidad-madrid,Comunidad de Madrid,2004-01-01
+13,comunidad-madrid,Comunidad de Madrid,2004-04-01
+13,comunidad-madrid,Comunidad de Madrid,2004-07-01
+13,comunidad-madrid,Comunidad de Madrid,2004-10-01
+13,comunidad-madrid,Comunidad de Madrid,2005-01-01
+13,comunidad-madrid,Comunidad de Madrid,2005-04-01
+13,comunidad-madrid,Comunidad de Madrid,2005-07-01
+13,comunidad-madrid,Comunidad de Madrid,2005-10-01
 13,comunidad-madrid,Comunidad de Madrid,2006-01-01
 13,comunidad-madrid,Comunidad de Madrid,2006-04-01
 13,comunidad-madrid,Comunidad de Madrid,2006-07-01
@@ -479,6 +575,14 @@ codigo_comunidad,comunidad,name,date
 13,comunidad-madrid,Comunidad de Madrid,2015-04-01
 13,comunidad-madrid,Comunidad de Madrid,2015-07-01
 13,comunidad-madrid,Comunidad de Madrid,2015-10-01
+14,region-murcia,Región de Murcia,2004-01-01
+14,region-murcia,Región de Murcia,2004-04-01
+14,region-murcia,Región de Murcia,2004-07-01
+14,region-murcia,Región de Murcia,2004-10-01
+14,region-murcia,Región de Murcia,2005-01-01
+14,region-murcia,Región de Murcia,2005-04-01
+14,region-murcia,Región de Murcia,2005-07-01
+14,region-murcia,Región de Murcia,2005-10-01
 14,region-murcia,Región de Murcia,2006-01-01
 14,region-murcia,Región de Murcia,2006-04-01
 14,region-murcia,Región de Murcia,2006-07-01
@@ -519,6 +623,14 @@ codigo_comunidad,comunidad,name,date
 14,region-murcia,Región de Murcia,2015-04-01
 14,region-murcia,Región de Murcia,2015-07-01
 14,region-murcia,Región de Murcia,2015-10-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2004-01-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2004-04-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2004-07-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2004-10-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2005-01-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2005-04-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2005-07-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2005-10-01
 15,comunidad-foral-navarra,Comunidad Foral de Navarra,2006-01-01
 15,comunidad-foral-navarra,Comunidad Foral de Navarra,2006-04-01
 15,comunidad-foral-navarra,Comunidad Foral de Navarra,2006-07-01
@@ -559,6 +671,14 @@ codigo_comunidad,comunidad,name,date
 15,comunidad-foral-navarra,Comunidad Foral de Navarra,2015-04-01
 15,comunidad-foral-navarra,Comunidad Foral de Navarra,2015-07-01
 15,comunidad-foral-navarra,Comunidad Foral de Navarra,2015-10-01
+16,pais-vasco,País Vasco,2004-01-01
+16,pais-vasco,País Vasco,2004-04-01
+16,pais-vasco,País Vasco,2004-07-01
+16,pais-vasco,País Vasco,2004-10-01
+16,pais-vasco,País Vasco,2005-01-01
+16,pais-vasco,País Vasco,2005-04-01
+16,pais-vasco,País Vasco,2005-07-01
+16,pais-vasco,País Vasco,2005-10-01
 16,pais-vasco,País Vasco,2006-01-01
 16,pais-vasco,País Vasco,2006-04-01
 16,pais-vasco,País Vasco,2006-07-01
@@ -599,6 +719,14 @@ codigo_comunidad,comunidad,name,date
 16,pais-vasco,País Vasco,2015-04-01
 16,pais-vasco,País Vasco,2015-07-01
 16,pais-vasco,País Vasco,2015-10-01
+17,la-rioja,La Rioja,2004-01-01
+17,la-rioja,La Rioja,2004-04-01
+17,la-rioja,La Rioja,2004-07-01
+17,la-rioja,La Rioja,2004-10-01
+17,la-rioja,La Rioja,2005-01-01
+17,la-rioja,La Rioja,2005-04-01
+17,la-rioja,La Rioja,2005-07-01
+17,la-rioja,La Rioja,2005-10-01
 17,la-rioja,La Rioja,2006-01-01
 17,la-rioja,La Rioja,2006-04-01
 17,la-rioja,La Rioja,2006-07-01
@@ -639,6 +767,14 @@ codigo_comunidad,comunidad,name,date
 17,la-rioja,La Rioja,2015-04-01
 17,la-rioja,La Rioja,2015-07-01
 17,la-rioja,La Rioja,2015-10-01
+18,ceuta,"Ceuta, capital",2004-01-01
+18,ceuta,"Ceuta, capital",2004-04-01
+18,ceuta,"Ceuta, capital",2004-07-01
+18,ceuta,"Ceuta, capital",2004-10-01
+18,ceuta,"Ceuta, capital",2005-01-01
+18,ceuta,"Ceuta, capital",2005-04-01
+18,ceuta,"Ceuta, capital",2005-07-01
+18,ceuta,"Ceuta, capital",2005-10-01
 18,ceuta,"Ceuta, capital",2006-01-01
 18,ceuta,"Ceuta, capital",2006-04-01
 18,ceuta,"Ceuta, capital",2006-07-01
@@ -679,6 +815,14 @@ codigo_comunidad,comunidad,name,date
 18,ceuta,"Ceuta, capital",2015-04-01
 18,ceuta,"Ceuta, capital",2015-07-01
 18,ceuta,"Ceuta, capital",2015-10-01
+19,melilla,"Melilla, capital",2004-01-01
+19,melilla,"Melilla, capital",2004-04-01
+19,melilla,"Melilla, capital",2004-07-01
+19,melilla,"Melilla, capital",2004-10-01
+19,melilla,"Melilla, capital",2005-01-01
+19,melilla,"Melilla, capital",2005-04-01
+19,melilla,"Melilla, capital",2005-07-01
+19,melilla,"Melilla, capital",2005-10-01
 19,melilla,"Melilla, capital",2006-01-01
 19,melilla,"Melilla, capital",2006-04-01
 19,melilla,"Melilla, capital",2006-07-01

@@ -13,13 +13,12 @@ def load_raw() -> pd.DataFrame:
     """
     df = pd.read_csv(
         RAW_PATH,
-        sep=";",        # cámbialo a ',' si tu CSV usa comas como separador
-        decimal=",",    # interpreta '3,79515E+14' como float
-        dayfirst=True,  # 01/01/2003 = 1 de enero
+        sep=",",       
+        decimal="."
     )
 
-    # year viene como texto tipo '01/01/2003' -> fecha real
-    df["date"] = pd.to_datetime(df["year"], dayfirst=True, errors="coerce")
+    # year viene en formato 'YYYY-MM-DD'
+    df["date"] = pd.to_datetime(df["year"], format="%Y-%m-%d", errors="coerce")
 
     # Ordenar por comunidad y fecha
     df = df.sort_values(["codigo_comunidad", "date"])
@@ -45,16 +44,16 @@ def add_lag_features(df: pd.DataFrame) -> pd.DataFrame:
     """
     df = df.sort_values(["codigo_comunidad", "date"])
 
-    # Precio hace 12 meses
-    df["precio_lag_12m"] = df.groupby("codigo_comunidad")["precio"].shift(12)
+    # Precio hace 12 meses (4 trimestres)
+    df["precio_lag_12m"] = df.groupby("codigo_comunidad")["precio"].shift(4)
     df["delta_precio_12m"] = (df["precio"] - df["precio_lag_12m"]) / df["precio_lag_12m"]
 
-    # IPC hace 12 meses
-    df["IPC_lag_12m"] = df.groupby("codigo_comunidad")["IPC"].shift(12)
+    # IPC hace 12 meses (4 trimestres)
+    df["IPC_lag_12m"] = df.groupby("codigo_comunidad")["IPC"].shift(4)
     df["delta_IPC_12m"] = (df["IPC"] - df["IPC_lag_12m"]) / df["IPC_lag_12m"]
 
-    # Hipotecas hace 12 meses
-    df["num_hipotecas_lag_12m"] = df.groupby("codigo_comunidad")["num_hipotecas"].shift(12)
+    # Hipotecas hace 12 meses (4 trimestres)
+    df["num_hipotecas_lag_12m"] = df.groupby("codigo_comunidad")["num_hipotecas"].shift(4)
     df["delta_num_hipotecas_12m"] = (
         df["num_hipotecas"] - df["num_hipotecas_lag_12m"]
     ) / df["num_hipotecas_lag_12m"]
@@ -73,13 +72,13 @@ def add_lag_features(df: pd.DataFrame) -> pd.DataFrame:
 
 def add_targets(df: pd.DataFrame) -> pd.DataFrame:
     """
-    Crea target a 12 meses:
+    Crea target a 12 meses (4 trimestres):
       - target_price_12m: precio dentro de 12 meses.
       - target_pct_change_12m: variación porcentual en 12 meses.
     """
     df = df.sort_values(["codigo_comunidad", "date"])
 
-    df["precio_t_plus_12m"] = df.groupby("codigo_comunidad")["precio"].shift(-12)
+    df["precio_t_plus_12m"] = df.groupby("codigo_comunidad")["precio"].shift(-4)
 
     # Quitamos filas sin futuro observado (final de la serie)
     df = df.dropna(subset=["precio_t_plus_12m"])

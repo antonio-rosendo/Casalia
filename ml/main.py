@@ -1,19 +1,10 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
+from schemas.prediction import PredictionInput, PredictionOutput
 from backend_features import run_prediction
 
 app = FastAPI()
 
-
-class PredictRequest(BaseModel):
-    comunidad_id: str
-    year: int
-    month: int
-    precio_actual_vivienda: float
-    metros_cuadrados: float
-
-
-@app.post("/predict")
-def predict(req: PredictRequest):
-    result = run_prediction(req.dict())
+@app.post("/predict", response_model=PredictionOutput)
+def predict(req: PredictionInput):
+    result = run_prediction(req.comunidad_autonoma, req.precio_total, req.metros_cuadrados)
     return result
