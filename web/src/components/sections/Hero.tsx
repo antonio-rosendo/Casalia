@@ -8,7 +8,7 @@ export function Hero() {
       <div className="container mx-auto px-4 md:px-8 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-8">
           <Badge variant="warning" className="text-base px-3 py-1">
-            v1.2.0 Model Live
+            v1.0.0 Model Live
           </Badge>
           <h1 className="text-5xl md:text-7xl font-bold uppercase leading-[0.9] tracking-tighter">
             Architect <br />
@@ -18,14 +18,14 @@ export function Hero() {
             An academically rigorous, AI-driven housing prediction model. We estimate and contextualize property values across real estate markets using verifiable metrics and transparent algorithms.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <Button size="lg" className="w-full sm:w-auto gap-2 group">
+            <a href="#estimator" className="inline-flex items-center justify-center whitespace-nowrap font-mono font-bold uppercase transition-all duration-300 active:translate-y-0.5 active:shadow-none bg-neo-black text-neo-white hover:bg-neo-orange border-2 border-neo-black neo-shadow h-12 px-8 text-base w-full sm:w-auto gap-2 group">
               Test Model
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="secondary" size="lg" className="w-full sm:w-auto gap-2">
+            </a>
+            <a href="/datos_unidos_meses.csv" download className="inline-flex items-center justify-center whitespace-nowrap font-mono font-bold uppercase transition-all duration-300 active:translate-y-0.5 active:shadow-none bg-neo-white text-neo-black hover:bg-neo-yellow border-2 border-neo-black neo-shadow h-12 px-8 text-base w-full sm:w-auto gap-2">
               <Database className="w-5 h-5" />
               View Dataset
-            </Button>
+            </a>
           </div>
         </div>
 
