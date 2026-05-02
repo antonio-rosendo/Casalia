@@ -69,11 +69,11 @@ export function Methodology() {
             
             <div className="space-y-4 font-mono text-sm">
               {[
-                { label: t("methodology.features.priceDynamics"), pct: 85, color: "bg-neo-black" },
-                { label: t("methodology.features.macro"), pct: 72, color: "bg-neo-orange" },
-                { label: t("methodology.features.currentPrice"), pct: 58, color: "bg-neo-yellow" },
-                { label: t("methodology.features.demographics"), pct: 45, color: "bg-neo-darkgray" },
-                { label: t("methodology.features.regional"), pct: 30, color: "bg-neo-gray" },
+                { label: t("methodology.features.demographics"), pct: 100, color: "bg-neo-black" },
+                { label: t("methodology.features.priceDynamics"), pct: 68, color: "bg-neo-orange" },
+                { label: t("methodology.features.macro"), pct: 55, color: "bg-neo-yellow" },
+                { label: t("methodology.features.regional"), pct: 10, color: "bg-neo-darkgray" },
+                { label: t("methodology.features.currentPrice"), pct: 10, color: "bg-neo-gray" },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
                   <div className="w-48 truncate uppercase font-bold text-xs">{item.label}</div>
