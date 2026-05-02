@@ -1,0 +1,27 @@
+# Entornos y compilados comunes
+.DS_Store
+.env
+.idea/
+.vscode/
+
+# Backend (Python / ML)
+ml/__pycache__/
+ml/.venv/
+ml/venv/
+ml/env/
+ml/models/*.pth
+ml/models/*.pkl
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Frontend (Node / React / Vite)
+web/node_modules/
+web/dist/
+web/dist-ssr/
+web/*.local
+web/.eslintcache
+web/coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
