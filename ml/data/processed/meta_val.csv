@@ -1,0 +1,217 @@
+codigo_comunidad,comunidad,name,date
+1,andalucia,Andalucía,2016-01-01
+1,andalucia,Andalucía,2016-04-01
+1,andalucia,Andalucía,2016-07-01
+1,andalucia,Andalucía,2016-10-01
+1,andalucia,Andalucía,2017-01-01
+1,andalucia,Andalucía,2017-04-01
+1,andalucia,Andalucía,2017-07-01
+1,andalucia,Andalucía,2017-10-01
+1,andalucia,Andalucía,2018-01-01
+1,andalucia,Andalucía,2018-04-01
+1,andalucia,Andalucía,2018-07-01
+1,andalucia,Andalucía,2018-10-01
+2,aragon,Aragón,2016-01-01
+2,aragon,Aragón,2016-04-01
+2,aragon,Aragón,2016-07-01
+2,aragon,Aragón,2016-10-01
+2,aragon,Aragón,2017-01-01
+2,aragon,Aragón,2017-04-01
+2,aragon,Aragón,2017-07-01
+2,aragon,Aragón,2017-10-01
+2,aragon,Aragón,2018-01-01
+2,aragon,Aragón,2018-04-01
+2,aragon,Aragón,2018-07-01
+2,aragon,Aragón,2018-10-01
+3,principado-asturias,Principado de Asturias,2016-01-01
+3,principado-asturias,Principado de Asturias,2016-04-01
+3,principado-asturias,Principado de Asturias,2016-07-01
+3,principado-asturias,Principado de Asturias,2016-10-01
+3,principado-asturias,Principado de Asturias,2017-01-01
+3,principado-asturias,Principado de Asturias,2017-04-01
+3,principado-asturias,Principado de Asturias,2017-07-01
+3,principado-asturias,Principado de Asturias,2017-10-01
+3,principado-asturias,Principado de Asturias,2018-01-01
+3,principado-asturias,Principado de Asturias,2018-04-01
+3,principado-asturias,Principado de Asturias,2018-07-01
+3,principado-asturias,Principado de Asturias,2018-10-01
+4,islas-baleares,Islas Baleares,2016-01-01
+4,islas-baleares,Islas Baleares,2016-04-01
+4,islas-baleares,Islas Baleares,2016-07-01
+4,islas-baleares,Islas Baleares,2016-10-01
+4,islas-baleares,Islas Baleares,2017-01-01
+4,islas-baleares,Islas Baleares,2017-04-01
+4,islas-baleares,Islas Baleares,2017-07-01
+4,islas-baleares,Islas Baleares,2017-10-01
+4,islas-baleares,Islas Baleares,2018-01-01
+4,islas-baleares,Islas Baleares,2018-04-01
+4,islas-baleares,Islas Baleares,2018-07-01
+4,islas-baleares,Islas Baleares,2018-10-01
+6,cantabria,Cantabria,2016-01-01
+6,cantabria,Cantabria,2016-04-01
+6,cantabria,Cantabria,2016-07-01
+6,cantabria,Cantabria,2016-10-01
+6,cantabria,Cantabria,2017-01-01
+6,cantabria,Cantabria,2017-04-01
+6,cantabria,Cantabria,2017-07-01
+6,cantabria,Cantabria,2017-10-01
+6,cantabria,Cantabria,2018-01-01
+6,cantabria,Cantabria,2018-04-01
+6,cantabria,Cantabria,2018-07-01
+6,cantabria,Cantabria,2018-10-01
+7,castilla-leon,Castilla y León,2016-01-01
+7,castilla-leon,Castilla y León,2016-04-01
+7,castilla-leon,Castilla y León,2016-07-01
+7,castilla-leon,Castilla y León,2016-10-01
+7,castilla-leon,Castilla y León,2017-01-01
+7,castilla-leon,Castilla y León,2017-04-01
+7,castilla-leon,Castilla y León,2017-07-01
+7,castilla-leon,Castilla y León,2017-10-01
+7,castilla-leon,Castilla y León,2018-01-01
+7,castilla-leon,Castilla y León,2018-04-01
+7,castilla-leon,Castilla y León,2018-07-01
+7,castilla-leon,Castilla y León,2018-10-01
+8,castilla-mancha,Castilla-La Mancha,2016-01-01
+8,castilla-mancha,Castilla-La Mancha,2016-04-01
+8,castilla-mancha,Castilla-La Mancha,2016-07-01
+8,castilla-mancha,Castilla-La Mancha,2016-10-01
+8,castilla-mancha,Castilla-La Mancha,2017-01-01
+8,castilla-mancha,Castilla-La Mancha,2017-04-01
+8,castilla-mancha,Castilla-La Mancha,2017-07-01
+8,castilla-mancha,Castilla-La Mancha,2017-10-01
+8,castilla-mancha,Castilla-La Mancha,2018-01-01
+8,castilla-mancha,Castilla-La Mancha,2018-04-01
+8,castilla-mancha,Castilla-La Mancha,2018-07-01
+8,castilla-mancha,Castilla-La Mancha,2018-10-01
+9,catalunya,Cataluña,2016-01-01
+9,catalunya,Cataluña,2016-04-01
+9,catalunya,Cataluña,2016-07-01
+9,catalunya,Cataluña,2016-10-01
+9,catalunya,Cataluña,2017-01-01
+9,catalunya,Cataluña,2017-04-01
+9,catalunya,Cataluña,2017-07-01
+9,catalunya,Cataluña,2017-10-01
+9,catalunya,Cataluña,2018-01-01
+9,catalunya,Cataluña,2018-04-01
+9,catalunya,Cataluña,2018-07-01
+9,catalunya,Cataluña,2018-10-01
+10,comunitat-valenciana,Comunitat Valenciana,2016-01-01
+10,comunitat-valenciana,Comunitat Valenciana,2016-04-01
+10,comunitat-valenciana,Comunitat Valenciana,2016-07-01
+10,comunitat-valenciana,Comunitat Valenciana,2016-10-01
+10,comunitat-valenciana,Comunitat Valenciana,2017-01-01
+10,comunitat-valenciana,Comunitat Valenciana,2017-04-01
+10,comunitat-valenciana,Comunitat Valenciana,2017-07-01
+10,comunitat-valenciana,Comunitat Valenciana,2017-10-01
+10,comunitat-valenciana,Comunitat Valenciana,2018-01-01
+10,comunitat-valenciana,Comunitat Valenciana,2018-04-01
+10,comunitat-valenciana,Comunitat Valenciana,2018-07-01
+10,comunitat-valenciana,Comunitat Valenciana,2018-10-01
+11,extremadura,Extremadura,2016-01-01
+11,extremadura,Extremadura,2016-04-01
+11,extremadura,Extremadura,2016-07-01
+11,extremadura,Extremadura,2016-10-01
+11,extremadura,Extremadura,2017-01-01
+11,extremadura,Extremadura,2017-04-01
+11,extremadura,Extremadura,2017-07-01
+11,extremadura,Extremadura,2017-10-01
+11,extremadura,Extremadura,2018-01-01
+11,extremadura,Extremadura,2018-04-01
+11,extremadura,Extremadura,2018-07-01
+11,extremadura,Extremadura,2018-10-01
+12,galicia,Galicia,2016-01-01
+12,galicia,Galicia,2016-04-01
+12,galicia,Galicia,2016-07-01
+12,galicia,Galicia,2016-10-01
+12,galicia,Galicia,2017-01-01
+12,galicia,Galicia,2017-04-01
+12,galicia,Galicia,2017-07-01
+12,galicia,Galicia,2017-10-01
+12,galicia,Galicia,2018-01-01
+12,galicia,Galicia,2018-04-01
+12,galicia,Galicia,2018-07-01
+12,galicia,Galicia,2018-10-01
+13,comunidad-madrid,Comunidad de Madrid,2016-01-01
+13,comunidad-madrid,Comunidad de Madrid,2016-04-01
+13,comunidad-madrid,Comunidad de Madrid,2016-07-01
+13,comunidad-madrid,Comunidad de Madrid,2016-10-01
+13,comunidad-madrid,Comunidad de Madrid,2017-01-01
+13,comunidad-madrid,Comunidad de Madrid,2017-04-01
+13,comunidad-madrid,Comunidad de Madrid,2017-07-01
+13,comunidad-madrid,Comunidad de Madrid,2017-10-01
+13,comunidad-madrid,Comunidad de Madrid,2018-01-01
+13,comunidad-madrid,Comunidad de Madrid,2018-04-01
+13,comunidad-madrid,Comunidad de Madrid,2018-07-01
+13,comunidad-madrid,Comunidad de Madrid,2018-10-01
+14,region-murcia,Región de Murcia,2016-01-01
+14,region-murcia,Región de Murcia,2016-04-01
+14,region-murcia,Región de Murcia,2016-07-01
+14,region-murcia,Región de Murcia,2016-10-01
+14,region-murcia,Región de Murcia,2017-01-01
+14,region-murcia,Región de Murcia,2017-04-01
+14,region-murcia,Región de Murcia,2017-07-01
+14,region-murcia,Región de Murcia,2017-10-01
+14,region-murcia,Región de Murcia,2018-01-01
+14,region-murcia,Región de Murcia,2018-04-01
+14,region-murcia,Región de Murcia,2018-07-01
+14,region-murcia,Región de Murcia,2018-10-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2016-01-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2016-04-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2016-07-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2016-10-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2017-01-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2017-04-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2017-07-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2017-10-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2018-01-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2018-04-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2018-07-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2018-10-01
+16,pais-vasco,País Vasco,2016-01-01
+16,pais-vasco,País Vasco,2016-04-01
+16,pais-vasco,País Vasco,2016-07-01
+16,pais-vasco,País Vasco,2016-10-01
+16,pais-vasco,País Vasco,2017-01-01
+16,pais-vasco,País Vasco,2017-04-01
+16,pais-vasco,País Vasco,2017-07-01
+16,pais-vasco,País Vasco,2017-10-01
+16,pais-vasco,País Vasco,2018-01-01
+16,pais-vasco,País Vasco,2018-04-01
+16,pais-vasco,País Vasco,2018-07-01
+16,pais-vasco,País Vasco,2018-10-01
+17,la-rioja,La Rioja,2016-01-01
+17,la-rioja,La Rioja,2016-04-01
+17,la-rioja,La Rioja,2016-07-01
+17,la-rioja,La Rioja,2016-10-01
+17,la-rioja,La Rioja,2017-01-01
+17,la-rioja,La Rioja,2017-04-01
+17,la-rioja,La Rioja,2017-07-01
+17,la-rioja,La Rioja,2017-10-01
+17,la-rioja,La Rioja,2018-01-01
+17,la-rioja,La Rioja,2018-04-01
+17,la-rioja,La Rioja,2018-07-01
+17,la-rioja,La Rioja,2018-10-01
+18,ceuta,"Ceuta, capital",2016-01-01
+18,ceuta,"Ceuta, capital",2016-04-01
+18,ceuta,"Ceuta, capital",2016-07-01
+18,ceuta,"Ceuta, capital",2016-10-01
+18,ceuta,"Ceuta, capital",2017-01-01
+18,ceuta,"Ceuta, capital",2017-04-01
+18,ceuta,"Ceuta, capital",2017-07-01
+18,ceuta,"Ceuta, capital",2017-10-01
+18,ceuta,"Ceuta, capital",2018-01-01
+18,ceuta,"Ceuta, capital",2018-04-01
+18,ceuta,"Ceuta, capital",2018-07-01
+18,ceuta,"Ceuta, capital",2018-10-01
+19,melilla,"Melilla, capital",2016-01-01
+19,melilla,"Melilla, capital",2016-04-01
+19,melilla,"Melilla, capital",2016-07-01
+19,melilla,"Melilla, capital",2016-10-01
+19,melilla,"Melilla, capital",2017-01-01
+19,melilla,"Melilla, capital",2017-04-01
+19,melilla,"Melilla, capital",2017-07-01
+19,melilla,"Melilla, capital",2017-10-01
+19,melilla,"Melilla, capital",2018-01-01
+19,melilla,"Melilla, capital",2018-04-01
+19,melilla,"Melilla, capital",2018-07-01
+19,melilla,"Melilla, capital",2018-10-01

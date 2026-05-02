@@ -1,0 +1,721 @@
+codigo_comunidad,comunidad,name,date
+1,andalucia,Andalucía,2006-01-01
+1,andalucia,Andalucía,2006-04-01
+1,andalucia,Andalucía,2006-07-01
+1,andalucia,Andalucía,2006-10-01
+1,andalucia,Andalucía,2007-01-01
+1,andalucia,Andalucía,2007-04-01
+1,andalucia,Andalucía,2007-07-01
+1,andalucia,Andalucía,2007-10-01
+1,andalucia,Andalucía,2008-01-01
+1,andalucia,Andalucía,2008-04-01
+1,andalucia,Andalucía,2008-07-01
+1,andalucia,Andalucía,2008-10-01
+1,andalucia,Andalucía,2009-01-01
+1,andalucia,Andalucía,2009-04-01
+1,andalucia,Andalucía,2009-07-01
+1,andalucia,Andalucía,2009-10-01
+1,andalucia,Andalucía,2010-01-01
+1,andalucia,Andalucía,2010-04-01
+1,andalucia,Andalucía,2010-07-01
+1,andalucia,Andalucía,2010-10-01
+1,andalucia,Andalucía,2011-01-01
+1,andalucia,Andalucía,2011-04-01
+1,andalucia,Andalucía,2011-07-01
+1,andalucia,Andalucía,2011-10-01
+1,andalucia,Andalucía,2012-01-01
+1,andalucia,Andalucía,2012-04-01
+1,andalucia,Andalucía,2012-07-01
+1,andalucia,Andalucía,2012-10-01
+1,andalucia,Andalucía,2013-01-01
+1,andalucia,Andalucía,2013-04-01
+1,andalucia,Andalucía,2013-07-01
+1,andalucia,Andalucía,2013-10-01
+1,andalucia,Andalucía,2014-01-01
+1,andalucia,Andalucía,2014-04-01
+1,andalucia,Andalucía,2014-07-01
+1,andalucia,Andalucía,2014-10-01
+1,andalucia,Andalucía,2015-01-01
+1,andalucia,Andalucía,2015-04-01
+1,andalucia,Andalucía,2015-07-01
+1,andalucia,Andalucía,2015-10-01
+2,aragon,Aragón,2006-01-01
+2,aragon,Aragón,2006-04-01
+2,aragon,Aragón,2006-07-01
+2,aragon,Aragón,2006-10-01
+2,aragon,Aragón,2007-01-01
+2,aragon,Aragón,2007-04-01
+2,aragon,Aragón,2007-07-01
+2,aragon,Aragón,2007-10-01
+2,aragon,Aragón,2008-01-01
+2,aragon,Aragón,2008-04-01
+2,aragon,Aragón,2008-07-01
+2,aragon,Aragón,2008-10-01
+2,aragon,Aragón,2009-01-01
+2,aragon,Aragón,2009-04-01
+2,aragon,Aragón,2009-07-01
+2,aragon,Aragón,2009-10-01
+2,aragon,Aragón,2010-01-01
+2,aragon,Aragón,2010-04-01
+2,aragon,Aragón,2010-07-01
+2,aragon,Aragón,2010-10-01
+2,aragon,Aragón,2011-01-01
+2,aragon,Aragón,2011-04-01
+2,aragon,Aragón,2011-07-01
+2,aragon,Aragón,2011-10-01
+2,aragon,Aragón,2012-01-01
+2,aragon,Aragón,2012-04-01
+2,aragon,Aragón,2012-07-01
+2,aragon,Aragón,2012-10-01
+2,aragon,Aragón,2013-01-01
+2,aragon,Aragón,2013-04-01
+2,aragon,Aragón,2013-07-01
+2,aragon,Aragón,2013-10-01
+2,aragon,Aragón,2014-01-01
+2,aragon,Aragón,2014-04-01
+2,aragon,Aragón,2014-07-01
+2,aragon,Aragón,2014-10-01
+2,aragon,Aragón,2015-01-01
+2,aragon,Aragón,2015-04-01
+2,aragon,Aragón,2015-07-01
+2,aragon,Aragón,2015-10-01
+3,principado-asturias,Principado de Asturias,2006-01-01
+3,principado-asturias,Principado de Asturias,2006-04-01
+3,principado-asturias,Principado de Asturias,2006-07-01
+3,principado-asturias,Principado de Asturias,2006-10-01
+3,principado-asturias,Principado de Asturias,2007-01-01
+3,principado-asturias,Principado de Asturias,2007-04-01
+3,principado-asturias,Principado de Asturias,2007-07-01
+3,principado-asturias,Principado de Asturias,2007-10-01
+3,principado-asturias,Principado de Asturias,2008-01-01
+3,principado-asturias,Principado de Asturias,2008-04-01
+3,principado-asturias,Principado de Asturias,2008-07-01
+3,principado-asturias,Principado de Asturias,2008-10-01
+3,principado-asturias,Principado de Asturias,2009-01-01
+3,principado-asturias,Principado de Asturias,2009-04-01
+3,principado-asturias,Principado de Asturias,2009-07-01
+3,principado-asturias,Principado de Asturias,2009-10-01
+3,principado-asturias,Principado de Asturias,2010-01-01
+3,principado-asturias,Principado de Asturias,2010-04-01
+3,principado-asturias,Principado de Asturias,2010-07-01
+3,principado-asturias,Principado de Asturias,2010-10-01
+3,principado-asturias,Principado de Asturias,2011-01-01
+3,principado-asturias,Principado de Asturias,2011-04-01
+3,principado-asturias,Principado de Asturias,2011-07-01
+3,principado-asturias,Principado de Asturias,2011-10-01
+3,principado-asturias,Principado de Asturias,2012-01-01
+3,principado-asturias,Principado de Asturias,2012-04-01
+3,principado-asturias,Principado de Asturias,2012-07-01
+3,principado-asturias,Principado de Asturias,2012-10-01
+3,principado-asturias,Principado de Asturias,2013-01-01
+3,principado-asturias,Principado de Asturias,2013-04-01
+3,principado-asturias,Principado de Asturias,2013-07-01
+3,principado-asturias,Principado de Asturias,2013-10-01
+3,principado-asturias,Principado de Asturias,2014-01-01
+3,principado-asturias,Principado de Asturias,2014-04-01
+3,principado-asturias,Principado de Asturias,2014-07-01
+3,principado-asturias,Principado de Asturias,2014-10-01
+3,principado-asturias,Principado de Asturias,2015-01-01
+3,principado-asturias,Principado de Asturias,2015-04-01
+3,principado-asturias,Principado de Asturias,2015-07-01
+3,principado-asturias,Principado de Asturias,2015-10-01
+4,islas-baleares,Islas Baleares,2006-01-01
+4,islas-baleares,Islas Baleares,2006-04-01
+4,islas-baleares,Islas Baleares,2006-07-01
+4,islas-baleares,Islas Baleares,2006-10-01
+4,islas-baleares,Islas Baleares,2007-01-01
+4,islas-baleares,Islas Baleares,2007-04-01
+4,islas-baleares,Islas Baleares,2007-07-01
+4,islas-baleares,Islas Baleares,2007-10-01
+4,islas-baleares,Islas Baleares,2008-01-01
+4,islas-baleares,Islas Baleares,2008-04-01
+4,islas-baleares,Islas Baleares,2008-07-01
+4,islas-baleares,Islas Baleares,2008-10-01
+4,islas-baleares,Islas Baleares,2009-01-01
+4,islas-baleares,Islas Baleares,2009-04-01
+4,islas-baleares,Islas Baleares,2009-07-01
+4,islas-baleares,Islas Baleares,2009-10-01
+4,islas-baleares,Islas Baleares,2010-01-01
+4,islas-baleares,Islas Baleares,2010-04-01
+4,islas-baleares,Islas Baleares,2010-07-01
+4,islas-baleares,Islas Baleares,2010-10-01
+4,islas-baleares,Islas Baleares,2011-01-01
+4,islas-baleares,Islas Baleares,2011-04-01
+4,islas-baleares,Islas Baleares,2011-07-01
+4,islas-baleares,Islas Baleares,2011-10-01
+4,islas-baleares,Islas Baleares,2012-01-01
+4,islas-baleares,Islas Baleares,2012-04-01
+4,islas-baleares,Islas Baleares,2012-07-01
+4,islas-baleares,Islas Baleares,2012-10-01
+4,islas-baleares,Islas Baleares,2013-01-01
+4,islas-baleares,Islas Baleares,2013-04-01
+4,islas-baleares,Islas Baleares,2013-07-01
+4,islas-baleares,Islas Baleares,2013-10-01
+4,islas-baleares,Islas Baleares,2014-01-01
+4,islas-baleares,Islas Baleares,2014-04-01
+4,islas-baleares,Islas Baleares,2014-07-01
+4,islas-baleares,Islas Baleares,2014-10-01
+4,islas-baleares,Islas Baleares,2015-01-01
+4,islas-baleares,Islas Baleares,2015-04-01
+4,islas-baleares,Islas Baleares,2015-07-01
+4,islas-baleares,Islas Baleares,2015-10-01
+6,cantabria,Cantabria,2006-01-01
+6,cantabria,Cantabria,2006-04-01
+6,cantabria,Cantabria,2006-07-01
+6,cantabria,Cantabria,2006-10-01
+6,cantabria,Cantabria,2007-01-01
+6,cantabria,Cantabria,2007-04-01
+6,cantabria,Cantabria,2007-07-01
+6,cantabria,Cantabria,2007-10-01
+6,cantabria,Cantabria,2008-01-01
+6,cantabria,Cantabria,2008-04-01
+6,cantabria,Cantabria,2008-07-01
+6,cantabria,Cantabria,2008-10-01
+6,cantabria,Cantabria,2009-01-01
+6,cantabria,Cantabria,2009-04-01
+6,cantabria,Cantabria,2009-07-01
+6,cantabria,Cantabria,2009-10-01
+6,cantabria,Cantabria,2010-01-01
+6,cantabria,Cantabria,2010-04-01
+6,cantabria,Cantabria,2010-07-01
+6,cantabria,Cantabria,2010-10-01
+6,cantabria,Cantabria,2011-01-01
+6,cantabria,Cantabria,2011-04-01
+6,cantabria,Cantabria,2011-07-01
+6,cantabria,Cantabria,2011-10-01
+6,cantabria,Cantabria,2012-01-01
+6,cantabria,Cantabria,2012-04-01
+6,cantabria,Cantabria,2012-07-01
+6,cantabria,Cantabria,2012-10-01
+6,cantabria,Cantabria,2013-01-01
+6,cantabria,Cantabria,2013-04-01
+6,cantabria,Cantabria,2013-07-01
+6,cantabria,Cantabria,2013-10-01
+6,cantabria,Cantabria,2014-01-01
+6,cantabria,Cantabria,2014-04-01
+6,cantabria,Cantabria,2014-07-01
+6,cantabria,Cantabria,2014-10-01
+6,cantabria,Cantabria,2015-01-01
+6,cantabria,Cantabria,2015-04-01
+6,cantabria,Cantabria,2015-07-01
+6,cantabria,Cantabria,2015-10-01
+7,castilla-leon,Castilla y León,2006-01-01
+7,castilla-leon,Castilla y León,2006-04-01
+7,castilla-leon,Castilla y León,2006-07-01
+7,castilla-leon,Castilla y León,2006-10-01
+7,castilla-leon,Castilla y León,2007-01-01
+7,castilla-leon,Castilla y León,2007-04-01
+7,castilla-leon,Castilla y León,2007-07-01
+7,castilla-leon,Castilla y León,2007-10-01
+7,castilla-leon,Castilla y León,2008-01-01
+7,castilla-leon,Castilla y León,2008-04-01
+7,castilla-leon,Castilla y León,2008-07-01
+7,castilla-leon,Castilla y León,2008-10-01
+7,castilla-leon,Castilla y León,2009-01-01
+7,castilla-leon,Castilla y León,2009-04-01
+7,castilla-leon,Castilla y León,2009-07-01
+7,castilla-leon,Castilla y León,2009-10-01
+7,castilla-leon,Castilla y León,2010-01-01
+7,castilla-leon,Castilla y León,2010-04-01
+7,castilla-leon,Castilla y León,2010-07-01
+7,castilla-leon,Castilla y León,2010-10-01
+7,castilla-leon,Castilla y León,2011-01-01
+7,castilla-leon,Castilla y León,2011-04-01
+7,castilla-leon,Castilla y León,2011-07-01
+7,castilla-leon,Castilla y León,2011-10-01
+7,castilla-leon,Castilla y León,2012-01-01
+7,castilla-leon,Castilla y León,2012-04-01
+7,castilla-leon,Castilla y León,2012-07-01
+7,castilla-leon,Castilla y León,2012-10-01
+7,castilla-leon,Castilla y León,2013-01-01
+7,castilla-leon,Castilla y León,2013-04-01
+7,castilla-leon,Castilla y León,2013-07-01
+7,castilla-leon,Castilla y León,2013-10-01
+7,castilla-leon,Castilla y León,2014-01-01
+7,castilla-leon,Castilla y León,2014-04-01
+7,castilla-leon,Castilla y León,2014-07-01
+7,castilla-leon,Castilla y León,2014-10-01
+7,castilla-leon,Castilla y León,2015-01-01
+7,castilla-leon,Castilla y León,2015-04-01
+7,castilla-leon,Castilla y León,2015-07-01
+7,castilla-leon,Castilla y León,2015-10-01
+8,castilla-mancha,Castilla-La Mancha,2006-01-01
+8,castilla-mancha,Castilla-La Mancha,2006-04-01
+8,castilla-mancha,Castilla-La Mancha,2006-07-01
+8,castilla-mancha,Castilla-La Mancha,2006-10-01
+8,castilla-mancha,Castilla-La Mancha,2007-01-01
+8,castilla-mancha,Castilla-La Mancha,2007-04-01
+8,castilla-mancha,Castilla-La Mancha,2007-07-01
+8,castilla-mancha,Castilla-La Mancha,2007-10-01
+8,castilla-mancha,Castilla-La Mancha,2008-01-01
+8,castilla-mancha,Castilla-La Mancha,2008-04-01
+8,castilla-mancha,Castilla-La Mancha,2008-07-01
+8,castilla-mancha,Castilla-La Mancha,2008-10-01
+8,castilla-mancha,Castilla-La Mancha,2009-01-01
+8,castilla-mancha,Castilla-La Mancha,2009-04-01
+8,castilla-mancha,Castilla-La Mancha,2009-07-01
+8,castilla-mancha,Castilla-La Mancha,2009-10-01
+8,castilla-mancha,Castilla-La Mancha,2010-01-01
+8,castilla-mancha,Castilla-La Mancha,2010-04-01
+8,castilla-mancha,Castilla-La Mancha,2010-07-01
+8,castilla-mancha,Castilla-La Mancha,2010-10-01
+8,castilla-mancha,Castilla-La Mancha,2011-01-01
+8,castilla-mancha,Castilla-La Mancha,2011-04-01
+8,castilla-mancha,Castilla-La Mancha,2011-07-01
+8,castilla-mancha,Castilla-La Mancha,2011-10-01
+8,castilla-mancha,Castilla-La Mancha,2012-01-01
+8,castilla-mancha,Castilla-La Mancha,2012-04-01
+8,castilla-mancha,Castilla-La Mancha,2012-07-01
+8,castilla-mancha,Castilla-La Mancha,2012-10-01
+8,castilla-mancha,Castilla-La Mancha,2013-01-01
+8,castilla-mancha,Castilla-La Mancha,2013-04-01
+8,castilla-mancha,Castilla-La Mancha,2013-07-01
+8,castilla-mancha,Castilla-La Mancha,2013-10-01
+8,castilla-mancha,Castilla-La Mancha,2014-01-01
+8,castilla-mancha,Castilla-La Mancha,2014-04-01
+8,castilla-mancha,Castilla-La Mancha,2014-07-01
+8,castilla-mancha,Castilla-La Mancha,2014-10-01
+8,castilla-mancha,Castilla-La Mancha,2015-01-01
+8,castilla-mancha,Castilla-La Mancha,2015-04-01
+8,castilla-mancha,Castilla-La Mancha,2015-07-01
+8,castilla-mancha,Castilla-La Mancha,2015-10-01
+9,catalunya,Cataluña,2006-01-01
+9,catalunya,Cataluña,2006-04-01
+9,catalunya,Cataluña,2006-07-01
+9,catalunya,Cataluña,2006-10-01
+9,catalunya,Cataluña,2007-01-01
+9,catalunya,Cataluña,2007-04-01
+9,catalunya,Cataluña,2007-07-01
+9,catalunya,Cataluña,2007-10-01
+9,catalunya,Cataluña,2008-01-01
+9,catalunya,Cataluña,2008-04-01
+9,catalunya,Cataluña,2008-07-01
+9,catalunya,Cataluña,2008-10-01
+9,catalunya,Cataluña,2009-01-01
+9,catalunya,Cataluña,2009-04-01
+9,catalunya,Cataluña,2009-07-01
+9,catalunya,Cataluña,2009-10-01
+9,catalunya,Cataluña,2010-01-01
+9,catalunya,Cataluña,2010-04-01
+9,catalunya,Cataluña,2010-07-01
+9,catalunya,Cataluña,2010-10-01
+9,catalunya,Cataluña,2011-01-01
+9,catalunya,Cataluña,2011-04-01
+9,catalunya,Cataluña,2011-07-01
+9,catalunya,Cataluña,2011-10-01
+9,catalunya,Cataluña,2012-01-01
+9,catalunya,Cataluña,2012-04-01
+9,catalunya,Cataluña,2012-07-01
+9,catalunya,Cataluña,2012-10-01
+9,catalunya,Cataluña,2013-01-01
+9,catalunya,Cataluña,2013-04-01
+9,catalunya,Cataluña,2013-07-01
+9,catalunya,Cataluña,2013-10-01
+9,catalunya,Cataluña,2014-01-01
+9,catalunya,Cataluña,2014-04-01
+9,catalunya,Cataluña,2014-07-01
+9,catalunya,Cataluña,2014-10-01
+9,catalunya,Cataluña,2015-01-01
+9,catalunya,Cataluña,2015-04-01
+9,catalunya,Cataluña,2015-07-01
+9,catalunya,Cataluña,2015-10-01
+10,comunitat-valenciana,Comunitat Valenciana,2006-01-01
+10,comunitat-valenciana,Comunitat Valenciana,2006-04-01
+10,comunitat-valenciana,Comunitat Valenciana,2006-07-01
+10,comunitat-valenciana,Comunitat Valenciana,2006-10-01
+10,comunitat-valenciana,Comunitat Valenciana,2007-01-01
+10,comunitat-valenciana,Comunitat Valenciana,2007-04-01
+10,comunitat-valenciana,Comunitat Valenciana,2007-07-01
+10,comunitat-valenciana,Comunitat Valenciana,2007-10-01
+10,comunitat-valenciana,Comunitat Valenciana,2008-01-01
+10,comunitat-valenciana,Comunitat Valenciana,2008-04-01
+10,comunitat-valenciana,Comunitat Valenciana,2008-07-01
+10,comunitat-valenciana,Comunitat Valenciana,2008-10-01
+10,comunitat-valenciana,Comunitat Valenciana,2009-01-01
+10,comunitat-valenciana,Comunitat Valenciana,2009-04-01
+10,comunitat-valenciana,Comunitat Valenciana,2009-07-01
+10,comunitat-valenciana,Comunitat Valenciana,2009-10-01
+10,comunitat-valenciana,Comunitat Valenciana,2010-01-01
+10,comunitat-valenciana,Comunitat Valenciana,2010-04-01
+10,comunitat-valenciana,Comunitat Valenciana,2010-07-01
+10,comunitat-valenciana,Comunitat Valenciana,2010-10-01
+10,comunitat-valenciana,Comunitat Valenciana,2011-01-01
+10,comunitat-valenciana,Comunitat Valenciana,2011-04-01
+10,comunitat-valenciana,Comunitat Valenciana,2011-07-01
+10,comunitat-valenciana,Comunitat Valenciana,2011-10-01
+10,comunitat-valenciana,Comunitat Valenciana,2012-01-01
+10,comunitat-valenciana,Comunitat Valenciana,2012-04-01
+10,comunitat-valenciana,Comunitat Valenciana,2012-07-01
+10,comunitat-valenciana,Comunitat Valenciana,2012-10-01
+10,comunitat-valenciana,Comunitat Valenciana,2013-01-01
+10,comunitat-valenciana,Comunitat Valenciana,2013-04-01
+10,comunitat-valenciana,Comunitat Valenciana,2013-07-01
+10,comunitat-valenciana,Comunitat Valenciana,2013-10-01
+10,comunitat-valenciana,Comunitat Valenciana,2014-01-01
+10,comunitat-valenciana,Comunitat Valenciana,2014-04-01
+10,comunitat-valenciana,Comunitat Valenciana,2014-07-01
+10,comunitat-valenciana,Comunitat Valenciana,2014-10-01
+10,comunitat-valenciana,Comunitat Valenciana,2015-01-01
+10,comunitat-valenciana,Comunitat Valenciana,2015-04-01
+10,comunitat-valenciana,Comunitat Valenciana,2015-07-01
+10,comunitat-valenciana,Comunitat Valenciana,2015-10-01
+11,extremadura,Extremadura,2006-01-01
+11,extremadura,Extremadura,2006-04-01
+11,extremadura,Extremadura,2006-07-01
+11,extremadura,Extremadura,2006-10-01
+11,extremadura,Extremadura,2007-01-01
+11,extremadura,Extremadura,2007-04-01
+11,extremadura,Extremadura,2007-07-01
+11,extremadura,Extremadura,2007-10-01
+11,extremadura,Extremadura,2008-01-01
+11,extremadura,Extremadura,2008-04-01
+11,extremadura,Extremadura,2008-07-01
+11,extremadura,Extremadura,2008-10-01
+11,extremadura,Extremadura,2009-01-01
+11,extremadura,Extremadura,2009-04-01
+11,extremadura,Extremadura,2009-07-01
+11,extremadura,Extremadura,2009-10-01
+11,extremadura,Extremadura,2010-01-01
+11,extremadura,Extremadura,2010-04-01
+11,extremadura,Extremadura,2010-07-01
+11,extremadura,Extremadura,2010-10-01
+11,extremadura,Extremadura,2011-01-01
+11,extremadura,Extremadura,2011-04-01
+11,extremadura,Extremadura,2011-07-01
+11,extremadura,Extremadura,2011-10-01
+11,extremadura,Extremadura,2012-01-01
+11,extremadura,Extremadura,2012-04-01
+11,extremadura,Extremadura,2012-07-01
+11,extremadura,Extremadura,2012-10-01
+11,extremadura,Extremadura,2013-01-01
+11,extremadura,Extremadura,2013-04-01
+11,extremadura,Extremadura,2013-07-01
+11,extremadura,Extremadura,2013-10-01
+11,extremadura,Extremadura,2014-01-01
+11,extremadura,Extremadura,2014-04-01
+11,extremadura,Extremadura,2014-07-01
+11,extremadura,Extremadura,2014-10-01
+11,extremadura,Extremadura,2015-01-01
+11,extremadura,Extremadura,2015-04-01
+11,extremadura,Extremadura,2015-07-01
+11,extremadura,Extremadura,2015-10-01
+12,galicia,Galicia,2006-01-01
+12,galicia,Galicia,2006-04-01
+12,galicia,Galicia,2006-07-01
+12,galicia,Galicia,2006-10-01
+12,galicia,Galicia,2007-01-01
+12,galicia,Galicia,2007-04-01
+12,galicia,Galicia,2007-07-01
+12,galicia,Galicia,2007-10-01
+12,galicia,Galicia,2008-01-01
+12,galicia,Galicia,2008-04-01
+12,galicia,Galicia,2008-07-01
+12,galicia,Galicia,2008-10-01
+12,galicia,Galicia,2009-01-01
+12,galicia,Galicia,2009-04-01
+12,galicia,Galicia,2009-07-01
+12,galicia,Galicia,2009-10-01
+12,galicia,Galicia,2010-01-01
+12,galicia,Galicia,2010-04-01
+12,galicia,Galicia,2010-07-01
+12,galicia,Galicia,2010-10-01
+12,galicia,Galicia,2011-01-01
+12,galicia,Galicia,2011-04-01
+12,galicia,Galicia,2011-07-01
+12,galicia,Galicia,2011-10-01
+12,galicia,Galicia,2012-01-01
+12,galicia,Galicia,2012-04-01
+12,galicia,Galicia,2012-07-01
+12,galicia,Galicia,2012-10-01
+12,galicia,Galicia,2013-01-01
+12,galicia,Galicia,2013-04-01
+12,galicia,Galicia,2013-07-01
+12,galicia,Galicia,2013-10-01
+12,galicia,Galicia,2014-01-01
+12,galicia,Galicia,2014-04-01
+12,galicia,Galicia,2014-07-01
+12,galicia,Galicia,2014-10-01
+12,galicia,Galicia,2015-01-01
+12,galicia,Galicia,2015-04-01
+12,galicia,Galicia,2015-07-01
+12,galicia,Galicia,2015-10-01
+13,comunidad-madrid,Comunidad de Madrid,2006-01-01
+13,comunidad-madrid,Comunidad de Madrid,2006-04-01
+13,comunidad-madrid,Comunidad de Madrid,2006-07-01
+13,comunidad-madrid,Comunidad de Madrid,2006-10-01
+13,comunidad-madrid,Comunidad de Madrid,2007-01-01
+13,comunidad-madrid,Comunidad de Madrid,2007-04-01
+13,comunidad-madrid,Comunidad de Madrid,2007-07-01
+13,comunidad-madrid,Comunidad de Madrid,2007-10-01
+13,comunidad-madrid,Comunidad de Madrid,2008-01-01
+13,comunidad-madrid,Comunidad de Madrid,2008-04-01
+13,comunidad-madrid,Comunidad de Madrid,2008-07-01
+13,comunidad-madrid,Comunidad de Madrid,2008-10-01
+13,comunidad-madrid,Comunidad de Madrid,2009-01-01
+13,comunidad-madrid,Comunidad de Madrid,2009-04-01
+13,comunidad-madrid,Comunidad de Madrid,2009-07-01
+13,comunidad-madrid,Comunidad de Madrid,2009-10-01
+13,comunidad-madrid,Comunidad de Madrid,2010-01-01
+13,comunidad-madrid,Comunidad de Madrid,2010-04-01
+13,comunidad-madrid,Comunidad de Madrid,2010-07-01
+13,comunidad-madrid,Comunidad de Madrid,2010-10-01
+13,comunidad-madrid,Comunidad de Madrid,2011-01-01
+13,comunidad-madrid,Comunidad de Madrid,2011-04-01
+13,comunidad-madrid,Comunidad de Madrid,2011-07-01
+13,comunidad-madrid,Comunidad de Madrid,2011-10-01
+13,comunidad-madrid,Comunidad de Madrid,2012-01-01
+13,comunidad-madrid,Comunidad de Madrid,2012-04-01
+13,comunidad-madrid,Comunidad de Madrid,2012-07-01
+13,comunidad-madrid,Comunidad de Madrid,2012-10-01
+13,comunidad-madrid,Comunidad de Madrid,2013-01-01
+13,comunidad-madrid,Comunidad de Madrid,2013-04-01
+13,comunidad-madrid,Comunidad de Madrid,2013-07-01
+13,comunidad-madrid,Comunidad de Madrid,2013-10-01
+13,comunidad-madrid,Comunidad de Madrid,2014-01-01
+13,comunidad-madrid,Comunidad de Madrid,2014-04-01
+13,comunidad-madrid,Comunidad de Madrid,2014-07-01
+13,comunidad-madrid,Comunidad de Madrid,2014-10-01
+13,comunidad-madrid,Comunidad de Madrid,2015-01-01
+13,comunidad-madrid,Comunidad de Madrid,2015-04-01
+13,comunidad-madrid,Comunidad de Madrid,2015-07-01
+13,comunidad-madrid,Comunidad de Madrid,2015-10-01
+14,region-murcia,Región de Murcia,2006-01-01
+14,region-murcia,Región de Murcia,2006-04-01
+14,region-murcia,Región de Murcia,2006-07-01
+14,region-murcia,Región de Murcia,2006-10-01
+14,region-murcia,Región de Murcia,2007-01-01
+14,region-murcia,Región de Murcia,2007-04-01
+14,region-murcia,Región de Murcia,2007-07-01
+14,region-murcia,Región de Murcia,2007-10-01
+14,region-murcia,Región de Murcia,2008-01-01
+14,region-murcia,Región de Murcia,2008-04-01
+14,region-murcia,Región de Murcia,2008-07-01
+14,region-murcia,Región de Murcia,2008-10-01
+14,region-murcia,Región de Murcia,2009-01-01
+14,region-murcia,Región de Murcia,2009-04-01
+14,region-murcia,Región de Murcia,2009-07-01
+14,region-murcia,Región de Murcia,2009-10-01
+14,region-murcia,Región de Murcia,2010-01-01
+14,region-murcia,Región de Murcia,2010-04-01
+14,region-murcia,Región de Murcia,2010-07-01
+14,region-murcia,Región de Murcia,2010-10-01
+14,region-murcia,Región de Murcia,2011-01-01
+14,region-murcia,Región de Murcia,2011-04-01
+14,region-murcia,Región de Murcia,2011-07-01
+14,region-murcia,Región de Murcia,2011-10-01
+14,region-murcia,Región de Murcia,2012-01-01
+14,region-murcia,Región de Murcia,2012-04-01
+14,region-murcia,Región de Murcia,2012-07-01
+14,region-murcia,Región de Murcia,2012-10-01
+14,region-murcia,Región de Murcia,2013-01-01
+14,region-murcia,Región de Murcia,2013-04-01
+14,region-murcia,Región de Murcia,2013-07-01
+14,region-murcia,Región de Murcia,2013-10-01
+14,region-murcia,Región de Murcia,2014-01-01
+14,region-murcia,Región de Murcia,2014-04-01
+14,region-murcia,Región de Murcia,2014-07-01
+14,region-murcia,Región de Murcia,2014-10-01
+14,region-murcia,Región de Murcia,2015-01-01
+14,region-murcia,Región de Murcia,2015-04-01
+14,region-murcia,Región de Murcia,2015-07-01
+14,region-murcia,Región de Murcia,2015-10-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2006-01-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2006-04-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2006-07-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2006-10-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2007-01-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2007-04-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2007-07-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2007-10-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2008-01-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2008-04-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2008-07-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2008-10-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2009-01-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2009-04-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2009-07-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2009-10-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2010-01-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2010-04-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2010-07-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2010-10-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2011-01-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2011-04-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2011-07-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2011-10-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2012-01-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2012-04-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2012-07-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2012-10-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2013-01-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2013-04-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2013-07-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2013-10-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2014-01-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2014-04-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2014-07-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2014-10-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2015-01-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2015-04-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2015-07-01
+15,comunidad-foral-navarra,Comunidad Foral de Navarra,2015-10-01
+16,pais-vasco,País Vasco,2006-01-01
+16,pais-vasco,País Vasco,2006-04-01
+16,pais-vasco,País Vasco,2006-07-01
+16,pais-vasco,País Vasco,2006-10-01
+16,pais-vasco,País Vasco,2007-01-01
+16,pais-vasco,País Vasco,2007-04-01
+16,pais-vasco,País Vasco,2007-07-01
+16,pais-vasco,País Vasco,2007-10-01
+16,pais-vasco,País Vasco,2008-01-01
+16,pais-vasco,País Vasco,2008-04-01
+16,pais-vasco,País Vasco,2008-07-01
+16,pais-vasco,País Vasco,2008-10-01
+16,pais-vasco,País Vasco,2009-01-01
+16,pais-vasco,País Vasco,2009-04-01
+16,pais-vasco,País Vasco,2009-07-01
+16,pais-vasco,País Vasco,2009-10-01
+16,pais-vasco,País Vasco,2010-01-01
+16,pais-vasco,País Vasco,2010-04-01
+16,pais-vasco,País Vasco,2010-07-01
+16,pais-vasco,País Vasco,2010-10-01
+16,pais-vasco,País Vasco,2011-01-01
+16,pais-vasco,País Vasco,2011-04-01
+16,pais-vasco,País Vasco,2011-07-01
+16,pais-vasco,País Vasco,2011-10-01
+16,pais-vasco,País Vasco,2012-01-01
+16,pais-vasco,País Vasco,2012-04-01
+16,pais-vasco,País Vasco,2012-07-01
+16,pais-vasco,País Vasco,2012-10-01
+16,pais-vasco,País Vasco,2013-01-01
+16,pais-vasco,País Vasco,2013-04-01
+16,pais-vasco,País Vasco,2013-07-01
+16,pais-vasco,País Vasco,2013-10-01
+16,pais-vasco,País Vasco,2014-01-01
+16,pais-vasco,País Vasco,2014-04-01
+16,pais-vasco,País Vasco,2014-07-01
+16,pais-vasco,País Vasco,2014-10-01
+16,pais-vasco,País Vasco,2015-01-01
+16,pais-vasco,País Vasco,2015-04-01
+16,pais-vasco,País Vasco,2015-07-01
+16,pais-vasco,País Vasco,2015-10-01
+17,la-rioja,La Rioja,2006-01-01
+17,la-rioja,La Rioja,2006-04-01
+17,la-rioja,La Rioja,2006-07-01
+17,la-rioja,La Rioja,2006-10-01
+17,la-rioja,La Rioja,2007-01-01
+17,la-rioja,La Rioja,2007-04-01
+17,la-rioja,La Rioja,2007-07-01
+17,la-rioja,La Rioja,2007-10-01
+17,la-rioja,La Rioja,2008-01-01
+17,la-rioja,La Rioja,2008-04-01
+17,la-rioja,La Rioja,2008-07-01
+17,la-rioja,La Rioja,2008-10-01
+17,la-rioja,La Rioja,2009-01-01
+17,la-rioja,La Rioja,2009-04-01
+17,la-rioja,La Rioja,2009-07-01
+17,la-rioja,La Rioja,2009-10-01
+17,la-rioja,La Rioja,2010-01-01
+17,la-rioja,La Rioja,2010-04-01
+17,la-rioja,La Rioja,2010-07-01
+17,la-rioja,La Rioja,2010-10-01
+17,la-rioja,La Rioja,2011-01-01
+17,la-rioja,La Rioja,2011-04-01
+17,la-rioja,La Rioja,2011-07-01
+17,la-rioja,La Rioja,2011-10-01
+17,la-rioja,La Rioja,2012-01-01
+17,la-rioja,La Rioja,2012-04-01
+17,la-rioja,La Rioja,2012-07-01
+17,la-rioja,La Rioja,2012-10-01
+17,la-rioja,La Rioja,2013-01-01
+17,la-rioja,La Rioja,2013-04-01
+17,la-rioja,La Rioja,2013-07-01
+17,la-rioja,La Rioja,2013-10-01
+17,la-rioja,La Rioja,2014-01-01
+17,la-rioja,La Rioja,2014-04-01
+17,la-rioja,La Rioja,2014-07-01
+17,la-rioja,La Rioja,2014-10-01
+17,la-rioja,La Rioja,2015-01-01
+17,la-rioja,La Rioja,2015-04-01
+17,la-rioja,La Rioja,2015-07-01
+17,la-rioja,La Rioja,2015-10-01
+18,ceuta,"Ceuta, capital",2006-01-01
+18,ceuta,"Ceuta, capital",2006-04-01
+18,ceuta,"Ceuta, capital",2006-07-01
+18,ceuta,"Ceuta, capital",2006-10-01
+18,ceuta,"Ceuta, capital",2007-01-01
+18,ceuta,"Ceuta, capital",2007-04-01
+18,ceuta,"Ceuta, capital",2007-07-01
+18,ceuta,"Ceuta, capital",2007-10-01
+18,ceuta,"Ceuta, capital",2008-01-01
+18,ceuta,"Ceuta, capital",2008-04-01
+18,ceuta,"Ceuta, capital",2008-07-01
+18,ceuta,"Ceuta, capital",2008-10-01
+18,ceuta,"Ceuta, capital",2009-01-01
+18,ceuta,"Ceuta, capital",2009-04-01
+18,ceuta,"Ceuta, capital",2009-07-01
+18,ceuta,"Ceuta, capital",2009-10-01
+18,ceuta,"Ceuta, capital",2010-01-01
+18,ceuta,"Ceuta, capital",2010-04-01
+18,ceuta,"Ceuta, capital",2010-07-01
+18,ceuta,"Ceuta, capital",2010-10-01
+18,ceuta,"Ceuta, capital",2011-01-01
+18,ceuta,"Ceuta, capital",2011-04-01
+18,ceuta,"Ceuta, capital",2011-07-01
+18,ceuta,"Ceuta, capital",2011-10-01
+18,ceuta,"Ceuta, capital",2012-01-01
+18,ceuta,"Ceuta, capital",2012-04-01
+18,ceuta,"Ceuta, capital",2012-07-01
+18,ceuta,"Ceuta, capital",2012-10-01
+18,ceuta,"Ceuta, capital",2013-01-01
+18,ceuta,"Ceuta, capital",2013-04-01
+18,ceuta,"Ceuta, capital",2013-07-01
+18,ceuta,"Ceuta, capital",2013-10-01
+18,ceuta,"Ceuta, capital",2014-01-01
+18,ceuta,"Ceuta, capital",2014-04-01
+18,ceuta,"Ceuta, capital",2014-07-01
+18,ceuta,"Ceuta, capital",2014-10-01
+18,ceuta,"Ceuta, capital",2015-01-01
+18,ceuta,"Ceuta, capital",2015-04-01
+18,ceuta,"Ceuta, capital",2015-07-01
+18,ceuta,"Ceuta, capital",2015-10-01
+19,melilla,"Melilla, capital",2006-01-01
+19,melilla,"Melilla, capital",2006-04-01
+19,melilla,"Melilla, capital",2006-07-01
+19,melilla,"Melilla, capital",2006-10-01
+19,melilla,"Melilla, capital",2007-01-01
+19,melilla,"Melilla, capital",2007-04-01
+19,melilla,"Melilla, capital",2007-07-01
+19,melilla,"Melilla, capital",2007-10-01
+19,melilla,"Melilla, capital",2008-01-01
+19,melilla,"Melilla, capital",2008-04-01
+19,melilla,"Melilla, capital",2008-07-01
+19,melilla,"Melilla, capital",2008-10-01
+19,melilla,"Melilla, capital",2009-01-01
+19,melilla,"Melilla, capital",2009-04-01
+19,melilla,"Melilla, capital",2009-07-01
+19,melilla,"Melilla, capital",2009-10-01
+19,melilla,"Melilla, capital",2010-01-01
+19,melilla,"Melilla, capital",2010-04-01
+19,melilla,"Melilla, capital",2010-07-01
+19,melilla,"Melilla, capital",2010-10-01
+19,melilla,"Melilla, capital",2011-01-01
+19,melilla,"Melilla, capital",2011-04-01
+19,melilla,"Melilla, capital",2011-07-01
+19,melilla,"Melilla, capital",2011-10-01
+19,melilla,"Melilla, capital",2012-01-01
+19,melilla,"Melilla, capital",2012-04-01
+19,melilla,"Melilla, capital",2012-07-01
+19,melilla,"Melilla, capital",2012-10-01
+19,melilla,"Melilla, capital",2013-01-01
+19,melilla,"Melilla, capital",2013-04-01
+19,melilla,"Melilla, capital",2013-07-01
+19,melilla,"Melilla, capital",2013-10-01
+19,melilla,"Melilla, capital",2014-01-01
+19,melilla,"Melilla, capital",2014-04-01
+19,melilla,"Melilla, capital",2014-07-01
+19,melilla,"Melilla, capital",2014-10-01
+19,melilla,"Melilla, capital",2015-01-01
+19,melilla,"Melilla, capital",2015-04-01
+19,melilla,"Melilla, capital",2015-07-01
+19,melilla,"Melilla, capital",2015-10-01

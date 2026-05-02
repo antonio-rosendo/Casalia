@@ -1,0 +1,13 @@
+precio
+precio_lag_12m
+delta_precio_12m
+IPC
+IPC_lag_12m
+delta_IPC_12m
+num_hipotecas
+num_hipotecas_lag_12m
+delta_num_hipotecas_12m
+edad_media
+num_inmigracion
+year_t0
+month_t0
