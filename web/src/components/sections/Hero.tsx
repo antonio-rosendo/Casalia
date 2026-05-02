@@ -32,37 +32,50 @@ export function Hero() {
         </div>
 
         <div className="relative justify-self-center lg:justify-self-end w-full max-w-md">
-          {/* Abstract geometric composition imitating a raw technical dashboard */}
-          <div className="aspect-square bg-neo-black p-4 relative neo-shadow-heavy shadow-neo-orange">
-            <div className="absolute top-0 right-0 p-2 bg-neo-yellow border-l-4 border-b-4 border-neo-black font-mono font-bold text-xs uppercase z-20">
-              {t("hero.inferenceMode")}
-            </div>
+          {/* Data Pipeline Visualization */}
+          <div className="bg-neo-black p-4 relative neo-shadow-heavy shadow-neo-orange">
+            <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9IiNlNWU1ZTUiLz48L3N2Zz4=')]" />
             
-            <div className="w-full h-full bg-neo-white border-2 border-neo-black flex flex-col relative z-10 relative overflow-hidden">
+            <div className="w-full bg-neo-white border-2 border-neo-black flex flex-col relative z-10">
               <div className="h-10 border-b-2 border-neo-black flex items-center px-4 gap-2 bg-neo-gray">
                 <div className="w-3 h-3 rounded-full bg-neo-black" />
                 <div className="w-3 h-3 rounded-full bg-neo-orange" />
                 <div className="w-3 h-3 rounded-full bg-neo-yellow" />
               </div>
               
-              <div className="flex-1 p-6 flex flex-col gap-4">
-                <div className="space-y-1">
-                  <div className="text-xs font-mono text-neo-darkgray uppercase">{t("hero.targetValue")}</div>
-                  <div className="text-4xl font-bold tracking-tighter">$425,500</div>
+              <div className="p-6 md:p-8 flex flex-col items-center">
+                {/* Node 1: Data Feed */}
+                <div className="w-full border-3 border-neo-black bg-neo-white p-4 relative group hover:bg-neo-yellow transition-colors duration-300 z-10">
+                  <div className="absolute -top-3 -left-3 bg-neo-black text-neo-white font-mono text-xs px-2 py-1 border-2 border-neo-black font-bold">
+                    01
+                  </div>
+                  <div className="text-center font-bold uppercase tracking-tight">{t("hero.graphic.ineData")}</div>
+                  <div className="text-center font-mono text-xs text-neo-darkgray mt-1">{t("hero.graphic.macro")}</div>
                 </div>
-                
-                <div className="w-full h-32 mt-auto border-2 border-neo-black bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9IiNlNWU1ZTUiLz48L3N2Zz4=')] relative flex items-end">
-                   {/* Fake chart bars */}
-                   <div className="w-1/6 h-1/4 bg-neo-black border-t-2 border-r-2 border-neo-black"></div>
-                   <div className="w-1/6 h-2/4 bg-neo-black border-t-2 border-r-2 border-neo-black"></div>
-                   <div className="w-1/6 h-1/3 bg-neo-black border-t-2 border-r-2 border-neo-black"></div>
-                   <div className="w-1/6 h-3/4 bg-neo-orange border-t-2 border-r-2 border-neo-black relative">
-                     <span className="absolute -top-6 left-1/2 -translate-x-1/2 font-mono text-[10px] font-bold">+12%</span>
-                   </div>
-                   <div className="w-1/6 h-1/2 bg-neo-black border-t-2 border-r-2 border-neo-black"></div>
-                   <div className="w-1/6 h-full bg-neo-yellow border-t-2 border-l-2 border-neo-black relative">
-                     <span className="absolute -top-6 left-1/2 -translate-x-1/2 font-mono text-[10px] font-bold">{t("hero.proj")}</span>
-                   </div>
+
+                {/* Arrow Down */}
+                <div className="h-8 border-l-4 border-neo-black border-dashed my-1 relative z-0" />
+                <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[10px] border-t-neo-black mb-1 z-10" />
+
+                {/* Node 2: Model Layer */}
+                <div className="w-full border-3 border-neo-black bg-neo-black text-neo-white p-4 relative shadow-neo-orange neo-shadow-orange z-10">
+                  <div className="absolute -top-3 -left-3 bg-neo-orange text-neo-black font-mono text-xs px-2 py-1 border-2 border-neo-black font-bold">
+                    02
+                  </div>
+                  <div className="text-center font-bold uppercase tracking-tight text-neo-yellow">{t("hero.graphic.pytorch")}</div>
+                  <div className="text-center font-mono text-xs text-neo-gray mt-1">{t("hero.graphic.tensor")}</div>
+                </div>
+
+                {/* Arrow Down */}
+                <div className="h-8 border-l-4 border-neo-black border-dashed my-1 relative z-0" />
+                <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[10px] border-t-neo-black mb-1 z-10" />
+
+                {/* Node 3: Output */}
+                <div className="w-full border-3 border-neo-black bg-neo-white p-4 relative group hover:bg-neo-orange transition-colors duration-300 z-10">
+                  <div className="absolute -top-3 -left-3 bg-neo-black text-neo-white font-mono text-xs px-2 py-1 border-2 border-neo-black font-bold">
+                    03
+                  </div>
+                  <div className="text-center font-bold uppercase tracking-tight text-xl">{t("hero.graphic.prediction")}</div>
                 </div>
               </div>
             </div>

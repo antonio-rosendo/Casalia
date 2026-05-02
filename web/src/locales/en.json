@@ -12,10 +12,17 @@
       "value": "Value.",
       "description": "An academically rigorous, AI-driven housing prediction model. We estimate and contextualize property values across real estate markets using verifiable metrics and transparent algorithms.",
       "testModel": "Test Model",
-      "viewDataset": "View Dataset",
+      "viewDataset": "Download Dataset",
       "inferenceMode": "Inference Mode",
       "targetValue": "Target Value",
-      "proj": "PROJ"
+      "proj": "PROJ",
+      "graphic": {
+        "ineData": "INE Data Feed",
+        "pytorch": "PyTorch MLP",
+        "prediction": "12-Month Projection",
+        "macro": "Macro-economics, Mortgages",
+        "tensor": "Tensor Processing"
+      }
     },
     "methodology": {
       "title": "Under the Hood",
@@ -44,7 +51,7 @@
     },
     "estimator": {
       "title": "Model Inference",
-      "subtitle": "// Inputs are enriched with INE macro-economic data and fed to our PyTorch Neural Network.",
+      "subtitle": "// Calculates projected valuation 12 months into the future using INE macro-economic data and a PyTorch Neural Network.",
       "liveDemo": "LIVE DEMO",
       "defineParams": "Define Parameters",
       "comunidad": "Autonomous Community",
@@ -60,7 +67,7 @@
         "inference": "Running inference..."
       },
       "success": "SUCCESS_OP",
-      "predictedValue": "Predicted Market Value",
+      "predictedValue": "Projected Value (12 Months)",
       "increase": "Increase (YoY)",
       "confidence": "Model Confidence",
       "excellent": "Excellent",

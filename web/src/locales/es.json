@@ -12,10 +12,17 @@
       "value": "Futuro.",
       "description": "Un modelo de predicción de vivienda impulsado por IA y con rigor académico. Estimamos y contextualizamos los valores de las propiedades en los mercados inmobiliarios utilizando métricas verificables y algoritmos transparentes.",
       "testModel": "Probar Modelo",
-      "viewDataset": "Ver Dataset",
+      "viewDataset": "Descargar Dataset",
       "inferenceMode": "Modo de Inferencia",
       "targetValue": "Valor Objetivo",
-      "proj": "PROY"
+      "proj": "PROY",
+      "graphic": {
+        "ineData": "Datos del INE",
+        "pytorch": "MLP PyTorch",
+        "prediction": "Proyección 12 Meses",
+        "macro": "Macroecon., Hipotecas",
+        "tensor": "Procesamiento Tensorial"
+      }
     },
     "methodology": {
       "title": "Bajo el Capó",
@@ -35,7 +42,7 @@
       "featureImportance": "Importancia de Características",
       "shapValues": "VALORES SHAP",
       "features": {
-        "priceDynamics": "Dinámica Histórica de Precios",
+        "priceDynamics": "Evolución de Precios",
         "macro": "Indicadores Macroeconómicos",
         "currentPrice": "Precio Actual por M2",
         "demographics": "Demografía (Edad, Inmig.)",
@@ -44,7 +51,7 @@
     },
     "estimator": {
       "title": "Inferencia del Modelo",
-      "subtitle": "// Las entradas se enriquecen con datos macroeconómicos del INE y se envían a nuestra Red Neuronal en PyTorch.",
+      "subtitle": "// Calcula la valoración proyectada a 12 meses vista utilizando datos macroeconómicos del INE y una Red Neuronal PyTorch.",
       "liveDemo": "DEMO EN VIVO",
       "defineParams": "Definir Parámetros",
       "comunidad": "Comunidad Autónoma",
@@ -60,7 +67,7 @@
         "inference": "Ejecutando inferencia..."
       },
       "success": "OP_EXITOSA",
-      "predictedValue": "Valor de Mercado Predicho",
+      "predictedValue": "Valor Proyectado (12 Meses)",
       "increase": "Incremento (Interanual)",
       "confidence": "Confianza del Modelo",
       "excellent": "Excelente",
