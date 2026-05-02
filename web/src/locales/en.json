@@ -1,0 +1,110 @@
+{
+  "translation": {
+    "nav": {
+      "prediction": "Prediction",
+      "methodology": "Methodology",
+      "dataMetrics": "Data & Metrics"
+    },
+    "hero": {
+      "version": "v1.0.0 Model Live",
+      "architect": "Architect",
+      "future": "Future",
+      "value": "Value.",
+      "description": "An academically rigorous, AI-driven housing prediction model. We estimate and contextualize property values across real estate markets using verifiable metrics and transparent algorithms.",
+      "testModel": "Test Model",
+      "viewDataset": "View Dataset",
+      "inferenceMode": "Inference Mode",
+      "targetValue": "Target Value",
+      "proj": "PROJ"
+    },
+    "methodology": {
+      "title": "Under the Hood",
+      "description": "Our approach prioritizes explainability. We avoid black-box techniques in favor of structured ensemble methods where each variable's weight can be audited and traced back to verifiable real-world phenomena.",
+      "dataIngestion": {
+        "title": "Data Ingestion",
+        "desc": "Aggregating historical property price data, demographic factors (age, immigration), and macro-economic indicators (IPC, mortgages) from the INE."
+      },
+      "featureExtraction": {
+        "title": "Feature Extraction",
+        "desc": "Computing 12-month trailing lag features and macroeconomic variations to construct a robust temporal context for each region."
+      },
+      "dnn": {
+        "title": "Deep Neural Network",
+        "desc": "A PyTorch-based Multi-Layer Perceptron (MLP) trained on historical cycles to predict 12-month property value dynamics with high confidence."
+      },
+      "featureImportance": "Feature Importance",
+      "shapValues": "SHAP VALUES",
+      "features": {
+        "priceDynamics": "Historical Price Dynamics",
+        "macro": "Macroeconomic Indicators",
+        "currentPrice": "Current Price per M2",
+        "demographics": "Demographics (Age, Immig.)",
+        "regional": "Regional Context"
+      }
+    },
+    "estimator": {
+      "title": "Model Inference",
+      "subtitle": "// Inputs are enriched with INE macro-economic data and fed to our PyTorch Neural Network.",
+      "liveDemo": "LIVE DEMO",
+      "defineParams": "Define Parameters",
+      "comunidad": "Autonomous Community",
+      "metros": "Square Meters",
+      "precio": "Current Price (€)",
+      "compute": "Computing Tensor Data...",
+      "execute": "Execute Prediction",
+      "awaiting": "Awaiting Input",
+      "provide": "Provide the spatial parameters to calculate the estimated local valuation.",
+      "loading": {
+        "weights": "Load weights: OK",
+        "normalize": "Normalize parameters: OK",
+        "inference": "Running inference..."
+      },
+      "success": "SUCCESS_OP",
+      "predictedValue": "Predicted Market Value",
+      "increase": "Increase (YoY)",
+      "confidence": "Model Confidence",
+      "excellent": "Excellent",
+      "error": "Error connecting to neural engine / API."
+    },
+    "faq": {
+      "title": "Use Cases & Reliability",
+      "cases": {
+        "analysts": {
+          "title": "For Analysts",
+          "desc": "Analyze structural shifts in local real estate markets using verifiable INE data on inflation and mortgages to build comprehensive quarterly reports."
+        },
+        "buyers": {
+          "title": "For Buyers",
+          "desc": "Gain an academic projection on future house pricing across autonomous communities to inform better long-term residential investments."
+        },
+        "risk": {
+          "title": "Risk Mitigation",
+          "desc": "Understand how macroeconomic forces (like changing mortgage rates and age demographics) will likely stress local housing demand over the next 12 months."
+        }
+      },
+      "metric": {
+        "title": "Core System Metric",
+        "value": "Continuous Learning",
+        "desc": "The model incorporates the latest macroeconomic updates from the INE, ensuring inference relies on current market reality rather than stale historical baselines."
+      },
+      "techTitle": "Technical FAQ",
+      "questions": {
+        "q1": {
+          "q": "What data structures support the prediction?",
+          "a": "A tensor approach incorporating tabular economic indicators (IPC, mortgages), demographic data, and historical pricing dynamics."
+        },
+        "q2": {
+          "q": "How does the platform handle missing variables?",
+          "a": "Missing INE data points or API fallbacks are gracefully handled using established regional baselines to ensure continuous inference."
+        }
+      }
+    },
+    "footer": {
+      "titleReady": "Ready",
+      "titleDeploy": "To Deploy.",
+      "desc": "The AI-Powered Real Estate Platform built for scale, reliability, and precision.",
+      "academic": "© 2026 Academic Demo",
+      "projectBadge": "Final Degree Project // 2026"
+    }
+  }
+}

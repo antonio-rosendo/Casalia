@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { Calculator, MapPin, Ruler, Calendar, CheckSquare } from "lucide-react";
+import { Calculator, MapPin, Ruler } from "lucide-react";
 import { Button } from "../ui/Button";
 import { Card, CardHeader, CardTitle, CardContent } from "../ui/Card";
 import { Badge } from "../ui/Badge";
 import { cn } from "../../utils/cn";
+import { useTranslation } from "react-i18next";
 
 export function Estimator() {
+  const { t } = useTranslation();
   const [isPredicting, setIsPredicting] = useState(false);
   const [result, setResult] = useState<number | null>(null);
   const [pctChange, setPctChange] = useState<number | null>(null);
@@ -40,7 +42,7 @@ export function Estimator() {
       setPctChange(data.pct_change_12m);
     } catch(err: any) {
       console.error(err);
-      setErrorMsg("Error connecting to neural engine / API.");
+      setErrorMsg(t("estimator.error"));
     } finally {
       setIsPredicting(false);
     }
@@ -52,14 +54,14 @@ export function Estimator() {
         <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="max-w-2xl">
             <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tighter mb-4">
-              Model Inference
+              {t("estimator.title")}
             </h2>
             <p className="font-mono text-neo-darkgray bg-neo-white p-3 border-2 border-neo-black inline-block">
-              // Inputs are enriched with INE macro-economic data and fed to our PyTorch Neural Network.
+              {t("estimator.subtitle")}
             </p>
           </div>
           <Badge variant="warning" className="text-lg px-4 py-2 self-start md:self-auto neo-shadow">
-            LIVE DEMO
+            {t("estimator.liveDemo")}
           </Badge>
         </div>
 
@@ -70,7 +72,7 @@ export function Estimator() {
               <CardHeader>
                 <CardTitle className="uppercase flex items-center gap-2">
                   <Calculator className="w-5 h-5" />
-                  Define Parameters
+                  {t("estimator.defineParams")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -78,7 +80,7 @@ export function Estimator() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="font-mono text-sm font-bold uppercase block flex items-center gap-2">
-                        <MapPin className="w-4 h-4" /> Comunidad Autónoma
+                        <MapPin className="w-4 h-4" /> {t("estimator.comunidad")}
                       </label>
                       <select 
                         value={comunidad}
@@ -110,7 +112,7 @@ export function Estimator() {
 
                     <div className="space-y-2">
                       <label className="font-mono text-sm font-bold uppercase block flex items-center gap-2">
-                        <Ruler className="w-4 h-4" /> Metros Cuadrados
+                        <Ruler className="w-4 h-4" /> {t("estimator.metros")}
                       </label>
                       <input 
                         type="number" 
@@ -122,7 +124,7 @@ export function Estimator() {
 
                     <div className="space-y-2">
                       <label className="font-mono text-sm font-bold uppercase block flex items-center gap-2">
-                        <Calculator className="w-4 h-4" /> Precio Actual (€)
+                        <Calculator className="w-4 h-4" /> {t("estimator.precio")}
                       </label>
                       <input 
                         type="number" 
@@ -134,7 +136,7 @@ export function Estimator() {
                   </div>
 
                   <Button type="submit" className="w-full mt-4" disabled={isPredicting}>
-                    {isPredicting ? "Computing Tensor Data..." : "Execute Prediction"}
+                    {isPredicting ? t("estimator.compute") : t("estimator.execute")}
                   </Button>
                 </form>
               </CardContent>
@@ -153,9 +155,9 @@ export function Estimator() {
                   <div className="w-16 h-16 border-4 border-neo-black rounded-full flex items-center justify-center mx-auto bg-neo-white">
                     <span className="font-mono font-bold text-xl">?</span>
                   </div>
-                  <h3 className="font-bold text-xl uppercase">Awaiting Input</h3>
+                  <h3 className="font-bold text-xl uppercase">{t("estimator.awaiting")}</h3>
                   <p className="font-mono text-sm max-w-[250px] mx-auto text-neo-darkgray opacity-70">
-                    Provide the spatial parameters to calculate the estimated local valuation.
+                    {t("estimator.provide")}
                   </p>
                 </div>
               )}
@@ -164,18 +166,18 @@ export function Estimator() {
                 <div className="space-y-6">
                   <div className="w-16 h-16 border-4 border-dashed border-neo-black border-t-neo-orange rounded-full flex items-center justify-center mx-auto animate-spin" />
                   <div className="font-mono text-sm animate-pulse space-y-1">
-                    <p>Load weights: OK</p>
-                    <p>Normalize parameters: OK</p>
-                    <p>Running inference...</p>
+                    <p>{t("estimator.loading.weights")}</p>
+                    <p>{t("estimator.loading.normalize")}</p>
+                    <p>{t("estimator.loading.inference")}</p>
                   </div>
                 </div>
               )}
 
               {result && !isPredicting && (
                 <div className="space-y-6 w-full animate-in fade-in zoom-in duration-300">
-                  <Badge variant="warning" className="border-neo-white">SUCCESS_OP</Badge>
+                  <Badge variant="warning" className="border-neo-white">{t("estimator.success")}</Badge>
                   <div className="space-y-2">
-                    <p className="font-mono text-neo-gray text-sm uppercase">Predicted Market Value</p>
+                    <p className="font-mono text-neo-gray text-sm uppercase">{t("estimator.predictedValue")}</p>
                     <p className="text-5xl md:text-6xl font-bold tracking-tighter text-neo-yellow">
                       €{result.toLocaleString('es-ES', { maximumFractionDigits: 0 })}
                     </p>
@@ -183,14 +185,14 @@ export function Estimator() {
                   
                   <div className="grid grid-cols-2 gap-4 w-full mt-8 border-t-2 border-neo-white/20 pt-6">
                     <div className="text-left font-mono text-xs">
-                      <span className="block text-neo-gray/70 uppercase">Increase (YoY)</span>
+                      <span className="block text-neo-gray/70 uppercase">{t("estimator.increase")}</span>
                       <span className="block text-lg text-neo-white font-bold">
                         {pctChange !== null ? (pctChange > 0 ? "+" : "") + (pctChange * 100).toFixed(2) + "%" : "N/A"}
                       </span>
                     </div>
                     <div className="text-right font-mono text-xs">
-                      <span className="block text-neo-gray/70 uppercase">Model Confidence</span>
-                      <span className="block text-lg text-neo-white font-bold">Excellent</span>
+                      <span className="block text-neo-gray/70 uppercase">{t("estimator.confidence")}</span>
+                      <span className="block text-lg text-neo-white font-bold">{t("estimator.excellent")}</span>
                     </div>
                   </div>
                 </div>

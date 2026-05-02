@@ -1,0 +1,110 @@
+{
+  "translation": {
+    "nav": {
+      "prediction": "Predicción",
+      "methodology": "Metodología",
+      "dataMetrics": "Datos y Métricas"
+    },
+    "hero": {
+      "version": "v1.0.0 Modelo en vivo",
+      "architect": "Diseña el",
+      "future": "Valor",
+      "value": "Futuro.",
+      "description": "Un modelo de predicción de vivienda impulsado por IA y con rigor académico. Estimamos y contextualizamos los valores de las propiedades en los mercados inmobiliarios utilizando métricas verificables y algoritmos transparentes.",
+      "testModel": "Probar Modelo",
+      "viewDataset": "Ver Dataset",
+      "inferenceMode": "Modo de Inferencia",
+      "targetValue": "Valor Objetivo",
+      "proj": "PROY"
+    },
+    "methodology": {
+      "title": "Bajo el Capó",
+      "description": "Nuestro enfoque prioriza la explicabilidad. Evitamos técnicas de caja negra en favor de métodos de conjunto estructurados donde el peso de cada variable puede ser auditado y rastreado hasta fenómenos reales verificables.",
+      "dataIngestion": {
+        "title": "Ingesta de Datos",
+        "desc": "Agregando datos históricos de precios de propiedades, factores demográficos (edad, inmigración) e indicadores macroeconómicos (IPC, hipotecas) del INE."
+      },
+      "featureExtraction": {
+        "title": "Extracción de Características",
+        "desc": "Calculando características de rezago de 12 meses y variaciones macroeconómicas para construir un contexto temporal robusto para cada región."
+      },
+      "dnn": {
+        "title": "Red Neuronal Profunda",
+        "desc": "Un Perceptrón Multicapa (MLP) basado en PyTorch entrenado en ciclos históricos para predecir dinámicas de valor de propiedades a 12 meses con alta confianza."
+      },
+      "featureImportance": "Importancia de Características",
+      "shapValues": "VALORES SHAP",
+      "features": {
+        "priceDynamics": "Dinámica Histórica de Precios",
+        "macro": "Indicadores Macroeconómicos",
+        "currentPrice": "Precio Actual por M2",
+        "demographics": "Demografía (Edad, Inmig.)",
+        "regional": "Contexto Regional"
+      }
+    },
+    "estimator": {
+      "title": "Inferencia del Modelo",
+      "subtitle": "// Las entradas se enriquecen con datos macroeconómicos del INE y se envían a nuestra Red Neuronal en PyTorch.",
+      "liveDemo": "DEMO EN VIVO",
+      "defineParams": "Definir Parámetros",
+      "comunidad": "Comunidad Autónoma",
+      "metros": "Metros Cuadrados",
+      "precio": "Precio Actual (€)",
+      "compute": "Calculando Datos del Tensor...",
+      "execute": "Ejecutar Predicción",
+      "awaiting": "Esperando Entrada",
+      "provide": "Proporcione los parámetros espaciales para calcular la valoración local estimada.",
+      "loading": {
+        "weights": "Cargando pesos: OK",
+        "normalize": "Normalizando parámetros: OK",
+        "inference": "Ejecutando inferencia..."
+      },
+      "success": "OP_EXITOSA",
+      "predictedValue": "Valor de Mercado Predicho",
+      "increase": "Incremento (Interanual)",
+      "confidence": "Confianza del Modelo",
+      "excellent": "Excelente",
+      "error": "Error al conectar con el motor neuronal / API."
+    },
+    "faq": {
+      "title": "Casos de Uso",
+      "cases": {
+        "analysts": {
+          "title": "Para Analistas",
+          "desc": "Analice cambios estructurales en mercados inmobiliarios locales usando datos verificables del INE sobre inflación e hipotecas para construir informes trimestrales completos."
+        },
+        "buyers": {
+          "title": "Para Compradores",
+          "desc": "Obtenga una proyección académica sobre el precio futuro de la vivienda a través de comunidades autónomas para informar mejores inversiones residenciales a largo plazo."
+        },
+        "risk": {
+          "title": "Mitigación de Riesgos",
+          "desc": "Comprenda cómo las fuerzas macroeconómicas (como tasas de interés cambiantes y demografía por edad) probablemente afectarán la demanda local de vivienda en los próximos 12 meses."
+        }
+      },
+      "metric": {
+        "title": "Métrica Principal del Sistema",
+        "value": "Aprendizaje Continuo",
+        "desc": "El modelo incorpora las últimas actualizaciones macroeconómicas del INE, asegurando que la inferencia se base en la realidad actual del mercado en lugar de promedios históricos obsoletos."
+      },
+      "techTitle": "FAQ Técnico",
+      "questions": {
+        "q1": {
+          "q": "¿Qué estructuras de datos soportan la predicción?",
+          "a": "Un enfoque de tensor incorporando indicadores económicos tabulares (IPC, hipotecas), datos demográficos y dinámicas históricas de precios."
+        },
+        "q2": {
+          "q": "¿Cómo maneja la plataforma variables ausentes?",
+          "a": "Los puntos de datos faltantes del INE o problemas de API se manejan elegantemente utilizando promedios regionales establecidos para asegurar inferencia continua."
+        }
+      }
+    },
+    "footer": {
+      "titleReady": "Listo",
+      "titleDeploy": "Para Desplegar.",
+      "desc": "La Plataforma Inmobiliaria Impulsada por IA construida para escala, fiabilidad y precisión.",
+      "academic": "© 2026 Demo Académica",
+      "projectBadge": "Proyecto de Fin de Grado // 2026"
+    }
+  }
+}

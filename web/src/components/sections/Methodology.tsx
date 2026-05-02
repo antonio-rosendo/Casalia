@@ -1,22 +1,25 @@
 import { Layers, Network, Zap } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "../ui/Card";
+import { useTranslation } from "react-i18next";
 
 export function Methodology() {
+  const { t } = useTranslation();
+
   const steps = [
     {
       icon: <Layers className="w-8 h-8" />,
-      title: "Data Ingestion",
-      desc: "Aggregating historical property price data, demographic factors (age, immigration), and macro-economic indicators (IPC, mortgages) from the INE."
+      title: t("methodology.dataIngestion.title"),
+      desc: t("methodology.dataIngestion.desc")
     },
     {
       icon: <Network className="w-8 h-8" />,
-      title: "Feature Extraction",
-      desc: "Computing 12-month trailing lag features and macroeconomic variations to construct a robust temporal context for each region."
+      title: t("methodology.featureExtraction.title"),
+      desc: t("methodology.featureExtraction.desc")
     },
     {
       icon: <Zap className="w-8 h-8" />,
-      title: "Deep Neural Network",
-      desc: "A PyTorch-based Multi-Layer Perceptron (MLP) trained on historical cycles to predict 12-month property value dynamics with high confidence."
+      title: t("methodology.dnn.title"),
+      desc: t("methodology.dnn.desc")
     }
   ];
 
@@ -25,12 +28,11 @@ export function Methodology() {
       <div className="container mx-auto px-4 md:px-8">
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tighter mb-4">
-            Under the Hood
+            {t("methodology.title")}
           </h2>
           <div className="w-full h-1 bg-neo-black mb-8" />
           <p className="font-mono text-lg max-w-3xl text-neo-darkgray">
-            Our approach prioritizes explainability. We avoid black-box techniques in favor of 
-            structured ensemble methods where each variable's weight can be audited and traced back to verifiable real-world phenomena.
+            {t("methodology.description")}
           </p>
         </div>
 
@@ -61,17 +63,17 @@ export function Methodology() {
         <div className="mt-16 border-4 border-neo-black p-6 md:p-12 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9IiNlNWU1ZTUiLz48L3N2Zz4=')]">
           <div className="bg-neo-white border-2 border-neo-black p-6 md:p-8 neo-shadow-heavy shadow-neo-orange">
             <h3 className="text-2xl font-bold uppercase mb-6 flex items-center justify-between">
-              <span>Feature Importance</span>
-              <span className="font-mono text-xs bg-neo-black text-neo-white px-2 py-1">SHAP VALUES</span>
+              <span>{t("methodology.featureImportance")}</span>
+              <span className="font-mono text-xs bg-neo-black text-neo-white px-2 py-1">{t("methodology.shapValues")}</span>
             </h3>
             
             <div className="space-y-4 font-mono text-sm">
               {[
-                { label: "Historical Price Dynamics", pct: 85, color: "bg-neo-black" },
-                { label: "Macroeconomic Indicators", pct: 72, color: "bg-neo-orange" },
-                { label: "Current Price per M2", pct: 58, color: "bg-neo-yellow" },
-                { label: "Demographics (Age, Immig.)", pct: 45, color: "bg-neo-darkgray" },
-                { label: "Regional Context", pct: 30, color: "bg-neo-gray" },
+                { label: t("methodology.features.priceDynamics"), pct: 85, color: "bg-neo-black" },
+                { label: t("methodology.features.macro"), pct: 72, color: "bg-neo-orange" },
+                { label: t("methodology.features.currentPrice"), pct: 58, color: "bg-neo-yellow" },
+                { label: t("methodology.features.demographics"), pct: 45, color: "bg-neo-darkgray" },
+                { label: t("methodology.features.regional"), pct: 30, color: "bg-neo-gray" },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
                   <div className="w-48 truncate uppercase font-bold text-xs">{item.label}</div>

@@ -1,24 +1,26 @@
 import { useState } from "react";
 import { Plus, Minus, Users, ShieldAlert, BarChart } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export function SegmentsFAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { t } = useTranslation();
 
   const useCases = [
     { 
-      title: "For Analysts", 
+      title: t("faq.cases.analysts.title"), 
       icon: <BarChart />,
-      desc: "Analyze structural shifts in local real estate markets using verifiable INE data on inflation and mortgages to build comprehensive quarterly reports."
+      desc: t("faq.cases.analysts.desc")
     },
     { 
-      title: "For Buyers", 
+      title: t("faq.cases.buyers.title"), 
       icon: <Users />,
-      desc: "Gain an academic projection on future house pricing across autonomous communities to inform better long-term residential investments."
+      desc: t("faq.cases.buyers.desc")
     },
     { 
-      title: "Risk Mitigation", 
+      title: t("faq.cases.risk.title"), 
       icon: <ShieldAlert />,
-      desc: "Understand how macroeconomic forces (like changing mortgage rates and age demographics) will likely stress local housing demand over the next 12 months."
+      desc: t("faq.cases.risk.desc")
     }
   ];
 
@@ -27,7 +29,7 @@ export function SegmentsFAQ() {
       <div className="container mx-auto px-4 md:px-8 grid lg:grid-cols-2 gap-16">
         <div>
           <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tighter mb-8">
-            Use Cases & Reliability
+            {t("faq.title")}
           </h2>
           <div className="grid gap-4">
             {useCases.map((useCase, idx) => {
@@ -58,29 +60,29 @@ export function SegmentsFAQ() {
           </div>
 
           <div className="mt-12 bg-neo-black text-neo-white p-8 neo-shadow-orange shadow-neo-orange font-mono">
-            <div className="text-xs text-neo-gray mb-2 uppercase">Core System Metric</div>
+            <div className="text-xs text-neo-gray mb-2 uppercase">{t("faq.metric.title")}</div>
             <div className="text-3xl md:text-4xl font-bold tracking-tighter text-neo-yellow">
-              Continuous Learning
+              {t("faq.metric.value")}
             </div>
             <div className="text-sm mt-2 opacity-80">
-              The model incorporates the latest macroeconomic updates from the INE, ensuring inference relies on current market reality rather than stale historical baselines.
+              {t("faq.metric.desc")}
             </div>
           </div>
         </div>
 
         <div>
           <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tighter mb-8">
-            Technical FAQ
+            {t("faq.techTitle")}
           </h2>
           <div className="space-y-4">
             {[
               {
-                q: "What data structures support the prediction?",
-                a: "A tensor approach incorporating tabular economic indicators (IPC, mortgages), demographic data, and historical pricing dynamics."
+                q: t("faq.questions.q1.q"),
+                a: t("faq.questions.q1.a")
               },
               {
-                q: "How does the platform handle missing variables?",
-                a: "Missing INE data points or API fallbacks are gracefully handled using established regional baselines to ensure continuous inference."
+                q: t("faq.questions.q2.q"),
+                a: t("faq.questions.q2.a")
               }
             ].map((faq, i) => (
               <div key={i} className="border-3 border-neo-black bg-neo-white p-6 relative">
