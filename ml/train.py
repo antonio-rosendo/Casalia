@@ -5,8 +5,9 @@ import torch.nn as nn
 from pathlib import Path
 from model import PricePredictor
 
-DATA_DIR = Path("data/processed")
-MODEL_DIR = Path("models")
+BASE_DIR = Path(__file__).parent
+DATA_DIR = BASE_DIR / "data/processed"
+MODEL_DIR = BASE_DIR / "models"
 
 
 def load_split(name: str):

@@ -2,8 +2,9 @@ import pandas as pd
 import numpy as np
 from pathlib import Path
 
-RAW_PATH = Path("data/raw/datos_unidos_meses.csv")
-OUT_PATH = Path("data/processed")
+BASE_DIR = Path(__file__).parent
+RAW_PATH = BASE_DIR / "data/raw/datos_unidos_meses.csv"
+OUT_PATH = BASE_DIR / "data/processed"
 
 
 def load_raw() -> pd.DataFrame:

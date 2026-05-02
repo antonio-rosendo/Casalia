@@ -1,5 +1,5 @@
 ﻿from datetime import datetime
-from ine_client import (
+from app.services.ine_client import (
     get_ipv_last_and_lag,
     get_ipc_last_and_lag,
     get_hipotecas_last_and_lag,

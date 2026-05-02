@@ -1,4 +1,4 @@
-from backend_features import build_features_for_request, run_prediction
+from app.services.backend_features import build_features_for_request, run_prediction
 import pprint
 
 print("--- RAW FEATURES PASSED TO THE MODEL ---")

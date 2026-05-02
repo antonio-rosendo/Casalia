@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from schemas.prediction import PredictionInput, PredictionOutput
-from backend_features import run_prediction
+from app.schemas.prediction import PredictionInput, PredictionOutput
+from app.services.backend_features import run_prediction
 
 app = FastAPI()
 
