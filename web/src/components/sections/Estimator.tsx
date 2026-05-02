@@ -8,14 +8,42 @@ import { cn } from "../../utils/cn";
 export function Estimator() {
   const [isPredicting, setIsPredicting] = useState(false);
   const [result, setResult] = useState<number | null>(null);
+  const [pctChange, setPctChange] = useState<number | null>(null);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const [comunidad, setComunidad] = useState("madrid");
+  const [metros, setMetros] = useState(80);
+  const [precioTotal, setPrecioTotal] = useState(250000);
 
-  const handlePredict = () => {
+  const handlePredict = async () => {
     setIsPredicting(true);
     setResult(null);
-    setTimeout(() => {
+    setPctChange(null);
+    setErrorMsg(null);
+
+    try {
+      const response = await fetch("http://localhost:8000/predict", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          comunidad_autonoma: comunidad,
+          metros_cuadrados: metros,
+          precio_total: precioTotal
+        })
+      });
+      
+      if (!response.ok) {
+        throw new Error("Local backend error");
+      }
+      
+      const data = await response.json();
+      setResult(data.precio_futuro_vivienda);
+      setPctChange(data.pct_change_12m);
+    } catch(err: any) {
+      console.error(err);
+      setErrorMsg("Error connecting to neural engine / API.");
+    } finally {
       setIsPredicting(false);
-      setResult(385000 + Math.random() * 50000);
-    }, 1500);
+    }
   };
 
   return (
@@ -50,47 +78,58 @@ export function Estimator() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="font-mono text-sm font-bold uppercase block flex items-center gap-2">
-                        <MapPin className="w-4 h-4" /> Zoning District
+                        <MapPin className="w-4 h-4" /> Comunidad Autónoma
                       </label>
-                      <select className="w-full h-12 border-2 border-neo-black bg-neo-white px-3 font-sans focus:outline-none focus:ring-2 focus:ring-neo-orange neo-shadow-hover">
-                        <option>Urban Core (D1)</option>
-                        <option>Suburban Res (R2)</option>
-                        <option>Commercial Mix (C3)</option>
-                        <option>Industrial Edge (I1)</option>
+                      <select 
+                        value={comunidad}
+                        onChange={(e) => setComunidad(e.target.value)}
+                        className="w-full h-12 border-2 border-neo-black bg-neo-white px-3 font-sans focus:outline-none focus:ring-2 focus:ring-neo-orange neo-shadow-hover"
+                      >
+                        <option value="andalucia">Andalucía</option>
+                        <option value="aragon">Aragón</option>
+                        <option value="asturias">Asturias</option>
+                        <option value="baleares">Baleares</option>
+                        <option value="canarias">Canarias</option>
+                        <option value="cantabria">Cantabria</option>
+                        <option value="castilla_y_leon">Castilla y León</option>
+                        <option value="castilla_la_mancha">Castilla-La Mancha</option>
+                        <option value="cataluna">Cataluña</option>
+                        <option value="comunitat_valenciana">Comunidad Valenciana</option>
+                        <option value="extremadura">Extremadura</option>
+                        <option value="galicia">Galicia</option>
+                        <option value="madrid">Madrid</option>
+                        <option value="murcia">Murcia</option>
+                        <option value="navarra">Navarra</option>
+                        <option value="pais_vasco">País Vasco</option>
+                        <option value="rioja">La Rioja</option>
+                        <option value="ceuta">Ceuta</option>
+                        <option value="melilla">Melilla</option>
+                        <option value="nacional">Nacional (Media)</option>
                       </select>
                     </div>
 
                     <div className="space-y-2">
                       <label className="font-mono text-sm font-bold uppercase block flex items-center gap-2">
-                        <Ruler className="w-4 h-4" /> Area (Sq. Meters)
+                        <Ruler className="w-4 h-4" /> Metros Cuadrados
                       </label>
                       <input 
                         type="number" 
-                        defaultValue={120}
+                        value={metros}
+                        onChange={(e) => setMetros(Number(e.target.value))}
                         className="w-full h-12 border-2 border-neo-black bg-neo-white px-3 font-sans focus:outline-none focus:ring-2 focus:ring-neo-orange neo-shadow-hover"
                       />
                     </div>
 
                     <div className="space-y-2">
                       <label className="font-mono text-sm font-bold uppercase block flex items-center gap-2">
-                        <Calendar className="w-4 h-4" /> Year Built
+                        <Calculator className="w-4 h-4" /> Precio Actual (€)
                       </label>
                       <input 
                         type="number" 
-                        defaultValue={2015}
+                        value={precioTotal}
+                        onChange={(e) => setPrecioTotal(Number(e.target.value))}
                         className="w-full h-12 border-2 border-neo-black bg-neo-white px-3 font-sans focus:outline-none focus:ring-2 focus:ring-neo-orange neo-shadow-hover"
                       />
-                    </div>
-
-                    <div className="space-y-2">
-                      <label className="font-mono text-sm font-bold uppercase block flex items-center gap-2">
-                        <CheckSquare className="w-4 h-4" /> Transit Proximity
-                      </label>
-                      <select className="w-full h-12 border-2 border-neo-black bg-neo-white px-3 font-sans focus:outline-none focus:ring-2 focus:ring-neo-orange neo-shadow-hover">
-                        <option>High (&lt;500m)</option>
-                        <option>Medium (500m - 2km)</option>
-                        <option>Low (&gt;2km)</option>
-                      </select>
                     </div>
                   </div>
 
@@ -138,23 +177,30 @@ export function Estimator() {
                   <div className="space-y-2">
                     <p className="font-mono text-neo-gray text-sm uppercase">Predicted Market Value</p>
                     <p className="text-5xl md:text-6xl font-bold tracking-tighter text-neo-yellow">
-                      ${result.toLocaleString('en-US', { maximumFractionDigits: 0 })}
+                      €{result.toLocaleString('es-ES', { maximumFractionDigits: 0 })}
                     </p>
                   </div>
                   
                   <div className="grid grid-cols-2 gap-4 w-full mt-8 border-t-2 border-neo-white/20 pt-6">
                     <div className="text-left font-mono text-xs">
-                      <span className="block text-neo-gray/70 uppercase">Confidence</span>
-                      <span className="block text-lg text-neo-white font-bold">92.4%</span>
+                      <span className="block text-neo-gray/70 uppercase">Increase (YoY)</span>
+                      <span className="block text-lg text-neo-white font-bold">
+                        {pctChange !== null ? (pctChange > 0 ? "+" : "") + (pctChange * 100).toFixed(2) + "%" : "N/A"}
+                      </span>
                     </div>
                     <div className="text-right font-mono text-xs">
-                      <span className="block text-neo-gray/70 uppercase">Model Volatility</span>
-                      <span className="block text-lg text-neo-white font-bold">±$12k</span>
+                      <span className="block text-neo-gray/70 uppercase">Model Confidence</span>
+                      <span className="block text-lg text-neo-white font-bold">Excellent</span>
                     </div>
                   </div>
                 </div>
               )}
 
+              {errorMsg && (
+                <div className="mt-4 p-3 bg-neo-orange font-mono text-neo-black border-2 border-neo-black neo-shadow">
+                  {errorMsg}
+                </div>
+              )}
             </div>
           </div>
         </div>
