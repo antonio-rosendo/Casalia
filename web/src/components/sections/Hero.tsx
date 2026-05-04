@@ -20,11 +20,11 @@ export function Hero() {
             {t("hero.description")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <a href="#estimator" className="inline-flex items-center justify-center whitespace-nowrap font-mono font-bold uppercase transition-all duration-300 active:translate-y-0.5 active:shadow-none bg-neo-black text-neo-white hover:bg-neo-orange border-2 border-neo-black neo-shadow h-12 px-8 text-base w-full sm:w-auto gap-2 group">
+            <a href="#estimator" className="inline-flex items-center justify-center whitespace-nowrap font-mono font-bold uppercase transition-all duration-300 active:translate-y-0.5 active:shadow-none bg-neo-black text-neo-white hover:bg-neo-orange border-2 border-neo-black neo-shadow neo-shadow-hover h-12 px-8 text-base w-full sm:w-auto gap-2 group">
               {t("hero.testModel")}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="/datos_unidos_meses.csv" download className="inline-flex items-center justify-center whitespace-nowrap font-mono font-bold uppercase transition-all duration-300 active:translate-y-0.5 active:shadow-none bg-neo-white text-neo-black hover:bg-neo-yellow border-2 border-neo-black neo-shadow h-12 px-8 text-base w-full sm:w-auto gap-2">
+            <a href="/datos_unidos_meses.csv" download className="inline-flex items-center justify-center whitespace-nowrap font-mono font-bold uppercase transition-all duration-300 active:translate-y-0.5 active:shadow-none bg-neo-white text-neo-black hover:bg-neo-yellow border-2 border-neo-black neo-shadow neo-shadow-hover h-12 px-8 text-base w-full sm:w-auto gap-2 group">
               <Database className="w-5 h-5" />
               {t("hero.viewDataset")}
             </a>

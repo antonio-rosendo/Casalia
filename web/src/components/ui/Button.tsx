@@ -13,7 +13,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         className={cn(
-          "inline-flex items-center justify-center font-bold tracking-tight transition-all duration-200 active:scale-95 disabled:pointer-events-none disabled:opacity-50",
+          "inline-flex items-center justify-center font-bold tracking-tight transition-all duration-200 cursor-pointer active:scale-95 disabled:pointer-events-none disabled:opacity-50",
           "neo-border",
           variant === "primary" &&
             "bg-neo-yellow text-neo-black neo-shadow neo-shadow-hover",
