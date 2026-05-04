@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, Moon, Sun } from "lucide-react";
 import logo from "../../assets/logo.png";
 import { useTranslation } from "react-i18next";
+import { useDarkMode } from "../../hooks/useDarkMode";
+import { cn } from "../../utils/cn";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
+  const { isDark, toggleTheme } = useDarkMode();
 
   const toggleLanguage = () => {
     const nextLang = i18n.language === 'es' ? 'en' : 'es';
@@ -13,11 +16,11 @@ export function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-neo-white border-b-4 border-neo-black">
+    <header className="sticky top-0 z-50 w-full bg-neo-white border-b-4 border-neo-black text-neo-black">
       <div className="container mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 group cursor-pointer no-underline text-neo-black">
           <div className="bg-neo-black p-1">
-            <img src={logo} alt="Casalia Logo" className="w-5 h-5 object-contain invert group-hover:sepia transition-all" />
+            <img src={logo} alt="Casalia Logo" className={cn("w-5 h-5 object-contain group-hover:sepia transition-all", isDark ? "" : "invert")} />
           </div>
           <span className="font-bold text-xl tracking-tighter uppercase whitespace-nowrap">
             Casalia AI
@@ -31,6 +34,14 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <button
+            onClick={toggleTheme}
+            className="p-2 border-2 border-neo-black bg-neo-white hover:bg-neo-yellow font-mono font-bold uppercase text-xs flex items-center gap-1 transition-colors"
+            title={t("nav.toggleTheme", "Toggle Theme")}
+          >
+            {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </button>
+          
           <button 
             onClick={toggleLanguage}
             className="p-2 border-2 border-neo-black bg-neo-white hover:bg-neo-yellow font-mono font-bold uppercase text-xs flex items-center gap-1"

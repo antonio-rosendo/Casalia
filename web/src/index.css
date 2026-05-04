@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
 @theme {
-  --color-neo-white: #f8f9fa;
-  --color-neo-black: #111111;
-  --color-neo-yellow: #ddf247;
-  --color-neo-orange: #ff5722;
-  --color-neo-gray: #e5e5e5;
-  --color-neo-darkgray: #333333;
+  --color-neo-white: var(--theme-white);
+  --color-neo-black: var(--theme-black);
+  --color-neo-yellow: var(--theme-yellow);
+  --color-neo-orange: var(--theme-orange);
+  --color-neo-gray: var(--theme-gray);
+  --color-neo-darkgray: var(--theme-darkgray);
   
-  --shadow-neo: 4px 4px 0px 0px rgba(17, 17, 17, 1);
-  --shadow-neo-hover: 2px 2px 0px 0px rgba(17, 17, 17, 1);
-  --shadow-neo-heavy: 8px 8px 0px 0px rgba(17, 17, 17, 1);
-  --shadow-neo-orange: 4px 4px 0px 0px rgba(255, 87, 34, 1);
+  --shadow-neo: 4px 4px 0px 0px var(--theme-black);
+  --shadow-neo-hover: 2px 2px 0px 0px var(--theme-black);
+  --shadow-neo-heavy: 8px 8px 0px 0px var(--theme-black);
+  --shadow-neo-orange: 4px 4px 0px 0px var(--theme-orange);
 
   --font-mono: "Space Mono", "Courier New", monospace;
   --font-sans: "Inter", system-ui, sans-serif;
 }
 
 @layer base {
-  body {
-    @apply bg-neo-white text-neo-black font-sans antialiased selection:bg-neo-yellow selection:text-neo-black m-0 p-0;
+  :root {
+    --theme-white: #f8f9fa;
+    --theme-black: #111111;
+    --theme-yellow: #ddf247;
+    --theme-orange: #ff5722;
+    --theme-gray: #e5e5e5;
+    --theme-darkgray: #333333;
   }
+
+  .dark {
+    --theme-white: #111111;
+    --theme-black: #f8f9fa;
+    --theme-yellow: #e4f757; /* slightly brighter for dark mode */
+    --theme-orange: #ff6a3b;
+    --theme-gray: #222222;
+    --theme-darkgray: #bbbbbb;
+  }
+
+  body {
+    @apply bg-neo-white text-neo-black font-sans antialiased selection:bg-neo-yellow selection:text-neo-black m-0 p-0 transition-colors duration-300;
+  }
+
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold tracking-tighter;

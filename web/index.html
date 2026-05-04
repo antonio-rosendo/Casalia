@@ -9,6 +9,19 @@
   <meta name="description" content="Casalia is a platform for house price prediction using AI." />
   <meta name="author" content="Arcomus" />
   <meta name="application-name" content="CASALIA" />
+  <script>
+    (function() {
+      try {
+        var localTheme = localStorage.getItem('theme');
+        var isDark = localTheme === 'dark' || ((localTheme === 'system' || !localTheme) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.add('light');
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 
 <body>
