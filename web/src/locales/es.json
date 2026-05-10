@@ -71,6 +71,9 @@
       "increase": "Incremento (Interanual)",
       "confidence": "Confianza del Modelo",
       "excellent": "Excelente",
+      "good": "Buena",
+      "moderate": "Moderada",
+      "low": "Baja",
       "error": "Error al conectar con el motor neuronal / API."
     },
     "faq": {

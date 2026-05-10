@@ -9,3 +9,4 @@ class PredictionOutput(BaseModel):
     pct_change_12m: float = Field(..., description="Variación porcentual predicha a 12 meses (ej: 0.05 significa +5%)")
     precio_actual_vivienda: float = Field(..., description="Precio total actual")
     precio_futuro_vivienda: float = Field(..., description="Precio total predicho a 12 meses")
+    confidence_category: str = Field(..., description="Categoría de confianza basada en el error histórico local (excellent, good, moderate, low)")

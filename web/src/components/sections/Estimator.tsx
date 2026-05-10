@@ -11,6 +11,7 @@ export function Estimator() {
   const [isPredicting, setIsPredicting] = useState(false);
   const [result, setResult] = useState<number | null>(null);
   const [pctChange, setPctChange] = useState<number | null>(null);
+  const [confidence, setConfidence] = useState<string | null>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [comunidad, setComunidad] = useState("madrid");
   const [metros, setMetros] = useState(80);
@@ -20,6 +21,7 @@ export function Estimator() {
     setIsPredicting(true);
     setResult(null);
     setPctChange(null);
+    setConfidence(null);
     setErrorMsg(null);
 
     try {
@@ -40,7 +42,8 @@ export function Estimator() {
       const data = await response.json();
       setResult(data.precio_futuro_vivienda);
       setPctChange(data.pct_change_12m);
-    } catch(err: any) {
+      setConfidence(data.confidence_category);
+    } catch(err: unknown) {
       console.error(err);
       setErrorMsg(t("estimator.error"));
     } finally {
@@ -192,7 +195,9 @@ export function Estimator() {
                     </div>
                     <div className="text-right font-mono text-xs">
                       <span className="block text-neo-gray/70 uppercase">{t("estimator.confidence")}</span>
-                      <span className="block text-lg text-neo-white font-bold">{t("estimator.excellent")}</span>
+                      <span className="block text-lg text-neo-white font-bold">
+                        {confidence ? t(`estimator.${confidence}`) : t("estimator.excellent")}
+                      </span>
                     </div>
                   </div>
                 </div>

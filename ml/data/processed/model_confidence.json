@@ -1,0 +1,78 @@
+{
+    "andalucia": {
+        "mae_pct": 2.79,
+        "category": "excellent"
+    },
+    "aragon": {
+        "mae_pct": 2.61,
+        "category": "excellent"
+    },
+    "cantabria": {
+        "mae_pct": 2.63,
+        "category": "excellent"
+    },
+    "castilla-leon": {
+        "mae_pct": 1.89,
+        "category": "excellent"
+    },
+    "castilla-mancha": {
+        "mae_pct": 3.16,
+        "category": "good"
+    },
+    "catalunya": {
+        "mae_pct": 1.62,
+        "category": "excellent"
+    },
+    "ceuta": {
+        "mae_pct": 2.63,
+        "category": "excellent"
+    },
+    "comunidad-foral-navarra": {
+        "mae_pct": 4.96,
+        "category": "good"
+    },
+    "comunidad-madrid": {
+        "mae_pct": 4.97,
+        "category": "good"
+    },
+    "comunitat-valenciana": {
+        "mae_pct": 1.69,
+        "category": "excellent"
+    },
+    "extremadura": {
+        "mae_pct": 1.63,
+        "category": "excellent"
+    },
+    "galicia": {
+        "mae_pct": 2.36,
+        "category": "excellent"
+    },
+    "islas-baleares": {
+        "mae_pct": 4.38,
+        "category": "good"
+    },
+    "la-rioja": {
+        "mae_pct": 2.78,
+        "category": "excellent"
+    },
+    "melilla": {
+        "mae_pct": 1.21,
+        "category": "excellent"
+    },
+    "pais-vasco": {
+        "mae_pct": 3.65,
+        "category": "good"
+    },
+    "principado-asturias": {
+        "mae_pct": 2.92,
+        "category": "excellent"
+    },
+    "region-murcia": {
+        "mae_pct": 1.81,
+        "category": "excellent"
+    },
+    "nacional": {
+        "mae_pct": 2.76,
+        "category": "excellent"
+    }
+}

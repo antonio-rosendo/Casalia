@@ -1,4 +1,7 @@
-﻿from datetime import datetime
+﻿import json
+import os
+from pathlib import Path
+from datetime import datetime
 from app.services.ine_client import (
     get_ipv_last_and_lag,
     get_ipc_last_and_lag,
@@ -7,6 +10,30 @@ from app.services.ine_client import (
     get_num_inmigracion,
 )
 from inference import predict_pct_change_12m
+
+# Load confidence mapping
+CONFIDENCE_FILE = Path(__file__).resolve().parents[2] / "data" / "processed" / "model_confidence.json"
+try:
+    with open(CONFIDENCE_FILE, "r", encoding="utf-8") as f:
+        CONFIDENCE_DATA = json.load(f)
+except Exception:
+    CONFIDENCE_DATA = {}
+
+# Map frontend keys to metadata keys if needed
+COMMUNITY_MAP = {
+    "asturias": "principado-asturias",
+    "baleares": "islas-baleares",
+    "canarias": "canarias", # Falta en test, usará nacional
+    "castilla_y_leon": "castilla-leon",
+    "castilla_la_mancha": "castilla-mancha",
+    "cataluna": "catalunya",
+    "comunitat_valenciana": "comunitat-valenciana",
+    "madrid": "comunidad-madrid",
+    "murcia": "region-murcia",
+    "navarra": "comunidad-foral-navarra",
+    "pais_vasco": "pais-vasco",
+    "rioja": "la-rioja"
+}
 
 def build_features_for_request(comunidad_autonoma: str, precio_total: float, metros_cuadrados: float) -> dict:
     now = datetime.now()
@@ -72,11 +99,16 @@ def run_prediction(comunidad_autonoma: str, precio_total: float, metros_cuadrado
     features = build_features_for_request(comunidad_autonoma, precio_total, metros_cuadrados)
     pct_change_12m = predict_pct_change_12m(features)
 
-    # El porcentaje de output hay que respetarlo absoluto tal cual da 
     precio_futuro = precio_total * (1.0 + pct_change_12m)
+
+    # Get confidence
+    mapped_comunidad = COMMUNITY_MAP.get(comunidad_autonoma, comunidad_autonoma)
+    confidence_info = CONFIDENCE_DATA.get(mapped_comunidad, CONFIDENCE_DATA.get("nacional", {"category": "moderate"}))
+    confidence_category = confidence_info.get("category", "moderate")
 
     return {
         "pct_change_12m": pct_change_12m,
         "precio_actual_vivienda": precio_total,
         "precio_futuro_vivienda": precio_futuro,
+        "confidence_category": confidence_category
     }

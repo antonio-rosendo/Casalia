@@ -71,6 +71,9 @@
       "increase": "Increase (YoY)",
       "confidence": "Model Confidence",
       "excellent": "Excellent",
+      "good": "Good",
+      "moderate": "Moderate",
+      "low": "Low",
       "error": "Error connecting to neural engine / API."
     },
     "faq": {
