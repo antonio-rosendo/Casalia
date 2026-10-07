@@ -1,3 +1,6 @@
+import copy
+import random
+
 import numpy as np
 import torch
 from torch.utils.data import TensorDataset, DataLoader
@@ -9,6 +12,15 @@ BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data/processed"
 MODEL_DIR = BASE_DIR / "models"
 
+SEED = 42
+
+
+def set_seed(seed: int = SEED):
+    """Fija todas las fuentes de aleatoriedad para que el entrenamiento sea reproducible."""
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+
 
 def load_split(name: str):
     X = np.load(DATA_DIR / f"X_{name}.npy")
@@ -19,6 +31,7 @@ def load_split(name: str):
 
 
 def main():
+    set_seed()
     MODEL_DIR.mkdir(parents=True, exist_ok=True)
 
     X_train, y_train = load_split("train")
@@ -42,7 +55,12 @@ def main():
     train_ds = TensorDataset(X_train, y_train)
     val_ds = TensorDataset(X_val, y_val)
 
-    train_loader = DataLoader(train_ds, batch_size=64, shuffle=True)
+    train_loader = DataLoader(
+        train_ds,
+        batch_size=64,
+        shuffle=True,
+        generator=torch.Generator().manual_seed(SEED),
+    )
     val_loader = DataLoader(val_ds, batch_size=128, shuffle=False)
 
     criterion = nn.MSELoss()
@@ -54,6 +72,7 @@ def main():
 
     best_val_loss = float("inf")
     best_state_dict = None
+    best_epoch = None
 
     for epoch in range(1, num_epochs + 1):
         # TRAIN
@@ -84,7 +103,10 @@ def main():
 
         if val_loss < best_val_loss:
             best_val_loss = val_loss
-            best_state_dict = model.state_dict()
+            best_epoch = epoch
+            # deepcopy: state_dict() devuelve los mismos tensores que el modelo sigue
+            # modificando, así que sin copia se acabaría guardando la última época.
+            best_state_dict = copy.deepcopy(model.state_dict())
 
         print(
             f"Epoch {epoch:03d}/{num_epochs} | "
@@ -94,6 +116,7 @@ def main():
     # Guardamos el mejor modelo (por val_loss)
     if best_state_dict is not None:
         model.load_state_dict(best_state_dict)
+        print(f"Best epoch: {best_epoch} | val_loss={best_val_loss:.6f}")
     torch.save(model.state_dict(), MODEL_DIR / "price_predictor.pt")
 
 
