@@ -1,78 +1,78 @@
 {
     "andalucia": {
-        "mae_pct": 2.79,
+        "mae_pct": 2.15,
         "category": "excellent"
     },
     "aragon": {
-        "mae_pct": 2.61,
+        "mae_pct": 2.15,
         "category": "excellent"
     },
     "cantabria": {
-        "mae_pct": 2.63,
+        "mae_pct": 2.51,
         "category": "excellent"
     },
     "castilla-leon": {
-        "mae_pct": 1.89,
+        "mae_pct": 1.85,
         "category": "excellent"
     },
     "castilla-mancha": {
-        "mae_pct": 3.16,
-        "category": "good"
+        "mae_pct": 2.51,
+        "category": "excellent"
     },
     "catalunya": {
-        "mae_pct": 1.62,
+        "mae_pct": 1.92,
         "category": "excellent"
     },
     "ceuta": {
-        "mae_pct": 2.63,
+        "mae_pct": 2.51,
         "category": "excellent"
     },
     "comunidad-foral-navarra": {
-        "mae_pct": 4.96,
+        "mae_pct": 4.52,
         "category": "good"
     },
     "comunidad-madrid": {
-        "mae_pct": 4.97,
+        "mae_pct": 4.63,
         "category": "good"
     },
     "comunitat-valenciana": {
-        "mae_pct": 1.69,
+        "mae_pct": 1.53,
         "category": "excellent"
     },
     "extremadura": {
-        "mae_pct": 1.63,
+        "mae_pct": 1.17,
         "category": "excellent"
     },
     "galicia": {
-        "mae_pct": 2.36,
+        "mae_pct": 1.41,
         "category": "excellent"
     },
     "islas-baleares": {
-        "mae_pct": 4.38,
+        "mae_pct": 3.87,
         "category": "good"
     },
     "la-rioja": {
-        "mae_pct": 2.78,
+        "mae_pct": 1.89,
         "category": "excellent"
     },
     "melilla": {
-        "mae_pct": 1.21,
+        "mae_pct": 1.29,
         "category": "excellent"
     },
     "pais-vasco": {
-        "mae_pct": 3.65,
+        "mae_pct": 3.07,
         "category": "good"
     },
     "principado-asturias": {
-        "mae_pct": 2.92,
+        "mae_pct": 2.15,
         "category": "excellent"
     },
     "region-murcia": {
-        "mae_pct": 1.81,
+        "mae_pct": 1.54,
         "category": "excellent"
     },
     "nacional": {
-        "mae_pct": 2.76,
+        "mae_pct": 2.37,
         "category": "excellent"
     }
 }
