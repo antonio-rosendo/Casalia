@@ -212,6 +212,7 @@ class MLP:
 
 
 MODELS = [NoChange, Momentum, HistoricalMean, RidgeModel, GradientBoosting, MLP]
+CANDIDATE = GradientBoosting.name  # best non-baseline model on the development folds
 
 
 # --------------------------------------------------------------------------
@@ -293,9 +294,9 @@ def report(preds: pd.DataFrame, title: str, intro: str, figure_name: str) -> str
     small_table, _ = summarise(small_set)
 
     (REPORT_DIR / "figures").mkdir(parents=True, exist_ok=True)
-    candidates = table.drop([NoChange.name, Momentum.name, HistoricalMean.name])
-    best_model = candidates["MAE (pp of change)"].idxmin()
-    plot_regions(main_set, best_model, ["madrid", "cataluna", "andalucia"],
+    # Always plot the candidate frozen on the development folds, never a model
+    # picked by looking at the results being plotted.
+    plot_regions(main_set, CANDIDATE, ["madrid", "cataluna", "andalucia"],
                  REPORT_DIR / "figures" / figure_name)
 
     n_regions = main_set["region"].nunique()
