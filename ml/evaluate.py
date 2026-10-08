@@ -1,6 +1,6 @@
 """Walk-forward evaluation of every model against naive baselines.
 
-For each test year T (2010-2021):
+For each test year T (development folds 2010-2021, frozen holdout 2022-2025):
   - test rows: forecast origins in year T;
   - train rows: only origins whose 12-month target was already observed at the
     start of T (target_date <= first test origin). This purge gap stops the
@@ -8,9 +8,11 @@ For each test year T (2010-2021):
 Models that need tuning or early stopping split their training rows the same
 way, so no decision ever looks at test data.
 
-Usage:  python evaluate.py        (writes reports/results.md and figures)
+Usage:  python evaluate.py            development folds -> reports/results.md
+        python evaluate.py --holdout  also the frozen holdout -> reports/holdout.md
 """
 
+import argparse
 import copy
 import random
 from pathlib import Path
@@ -32,7 +34,8 @@ from features import FEATURES, SMALL_MARKETS, TARGET, load_dataset
 from model import PricePredictor
 
 SEED = 42
-TEST_YEARS = range(2010, 2022)
+DEV_YEARS = range(2010, 2022)       # used to choose features, models and settings
+HOLDOUT_YEARS = range(2022, 2026)   # frozen: scored once, after everything is fixed
 REPORT_DIR = Path(__file__).parent / "reports"
 N_BOOTSTRAP = 2000
 
@@ -52,12 +55,31 @@ def purged_split(df: pd.DataFrame, test_start: pd.Timestamp):
     return df[df["target_date"] <= test_start]
 
 
-def inner_split(train: pd.DataFrame, n_quarters: int = 4):
-    """Hold out the last n_quarters of origins for tuning, with the same purge."""
-    val_start = np.sort(train["date"].unique())[-n_quarters]
-    val = train[train["date"] >= val_start]
+def inner_split(train: pd.DataFrame, n_quarters: int = 4, years_back: int = 1):
+    """Hold out a block of n_quarters origins for tuning, ending years_back years
+    before the end of the training data, with the same purge as the outer split."""
+    dates = np.sort(train["date"].unique())
+    val_start = dates[-n_quarters * years_back]
+    val_end = dates[-n_quarters * (years_back - 1) - 1] if years_back > 1 else dates[-1]
+    val = train[(train["date"] >= val_start) & (train["date"] <= val_end)]
     inner_train = train[train["target_date"] <= val_start]
     return inner_train, val
+
+
+def tune(make_model, grid, train: pd.DataFrame, n_years: int = 3):
+    """Pick the setting with the lowest mean MAE over the last n_years inner
+    validation blocks (one block alone is too noisy to choose from)."""
+    scores = {}
+    for setting in grid:
+        errors = []
+        for k in range(1, n_years + 1):
+            inner_train, val = inner_split(train, years_back=k)
+            if inner_train.empty or val.empty:
+                continue
+            m = make_model(setting).fit(inner_train[FEATURES], inner_train[TARGET])
+            errors.append(mae(m.predict(val[FEATURES]), val[TARGET]))
+        scores[setting] = np.mean(errors)
+    return min(scores, key=scores.get)
 
 
 def mae(pred, y) -> float:
@@ -101,18 +123,14 @@ class HistoricalMean:
 
 class RidgeModel:
     name = "Ridge regression"
-    alphas = (0.1, 1.0, 10.0, 100.0, 1000.0)
+    alphas = (0.1, 1.0, 10.0, 100.0, 1000.0, 10000.0)
 
-    def _make(self, alpha):
+    @staticmethod
+    def _make(alpha):
         return make_pipeline(StandardScaler(), Ridge(alpha=alpha))
 
     def fit(self, train):
-        inner_train, val = inner_split(train)
-        scores = {}
-        for a in self.alphas:
-            m = self._make(a).fit(inner_train[FEATURES], inner_train[TARGET])
-            scores[a] = mae(m.predict(val[FEATURES]), val[TARGET])
-        self.alpha_ = min(scores, key=scores.get)
+        self.alpha_ = tune(self._make, self.alphas, train)
         self.model_ = self._make(self.alpha_).fit(train[FEATURES], train[TARGET])
         return self
 
@@ -122,17 +140,21 @@ class RidgeModel:
 
 class GradientBoosting:
     name = "Gradient boosting"
+    # (max_depth, max_iter): shallow trees and few iterations, there are only
+    # a few hundred rows per fold.
+    grid = ((2, 100), (2, 300), (3, 100), (3, 300))
+
+    @staticmethod
+    def _make(setting):
+        depth, iters = setting
+        return HistGradientBoostingRegressor(
+            max_depth=depth, max_iter=iters, learning_rate=0.05,
+            min_samples_leaf=20, l2_regularization=1.0, random_state=SEED,
+        )
 
     def fit(self, train):
-        # Shallow trees and strong regularisation: there are only a few hundred rows.
-        self.model_ = HistGradientBoostingRegressor(
-            max_iter=300,
-            learning_rate=0.05,
-            max_depth=3,
-            min_samples_leaf=20,
-            l2_regularization=1.0,
-            random_state=SEED,
-        ).fit(train[FEATURES], train[TARGET])
+        self.setting_ = tune(self._make, self.grid, train)
+        self.model_ = self._make(self.setting_).fit(train[FEATURES], train[TARGET])
         return self
 
     def predict(self, df):
@@ -196,10 +218,10 @@ MODELS = [NoChange, Momentum, HistoricalMean, RidgeModel, GradientBoosting, MLP]
 # Walk-forward loop
 # --------------------------------------------------------------------------
 
-def walk_forward(ds: pd.DataFrame) -> pd.DataFrame:
+def walk_forward(ds: pd.DataFrame, years) -> pd.DataFrame:
     """Return one row per (model, test origin) with prediction and actual."""
     rows = []
-    for year in TEST_YEARS:
+    for year in years:
         test_start = pd.Timestamp(year=year, month=1, day=1)
         test = ds[ds["date"].dt.year == year]
         train = purged_split(ds, test_start)
@@ -212,7 +234,7 @@ def walk_forward(ds: pd.DataFrame) -> pd.DataFrame:
     return pd.concat(rows, ignore_index=True)
 
 
-def summarise(preds: pd.DataFrame) -> pd.DataFrame:
+def summarise(preds: pd.DataFrame):
     p = preds.assign(
         abs_err_pp=lambda d: (d["pred"] - d[TARGET]).abs() * 100,
         abs_err_price_pct=lambda d: (d["base_price"] * (1 + d["pred"]) - d["target_price"]).abs()
@@ -245,7 +267,7 @@ def summarise(preds: pd.DataFrame) -> pd.DataFrame:
 def plot_regions(preds: pd.DataFrame, model_name: str, regions, path: Path) -> None:
     fig, axes = plt.subplots(len(regions), 1, figsize=(9, 2.6 * len(regions)), sharex=True)
     for ax, region in zip(axes, regions):
-        r = preds[preds["comunidad"] == region]
+        r = preds[preds["region"] == region]
         actual = r[r["model"] == Momentum.name].set_index("date")[TARGET] * 100
         ax.plot(actual.index, actual, color="black", lw=2, label="Actual")
         for name, style in [(Momentum.name, ":"), (model_name, "-")]:
@@ -254,7 +276,7 @@ def plot_regions(preds: pd.DataFrame, model_name: str, regions, path: Path) -> N
         ax.axhline(0, color="grey", lw=0.5)
         ax.set_title(r["name"].iloc[0], loc="left", fontsize=10)
         ax.set_ylabel("12-month change (%)")
-    axes[0].legend(fontsize=8, loc="upper right")
+    axes[0].legend(fontsize=8, loc="upper left")
     fig.tight_layout()
     fig.savefig(path, dpi=120)
     plt.close(fig)
@@ -264,30 +286,24 @@ def fmt(table: pd.DataFrame) -> str:
     return table.to_markdown(floatfmt=".2f").replace(" nan ", " n/a ")
 
 
-def main() -> None:
-    set_seed()
-    ds = load_dataset()
-    preds = walk_forward(ds)
-
-    main_set = preds[~preds["comunidad"].isin(SMALL_MARKETS)]
-    small_set = preds[preds["comunidad"].isin(SMALL_MARKETS)]
+def report(preds: pd.DataFrame, title: str, intro: str, figure_name: str) -> str:
+    main_set = preds[~preds["region"].isin(SMALL_MARKETS)]
+    small_set = preds[preds["region"].isin(SMALL_MARKETS)]
     table, by_fold = summarise(main_set)
     small_table, _ = summarise(small_set)
 
-    REPORT_DIR.mkdir(exist_ok=True)
-    (REPORT_DIR / "figures").mkdir(exist_ok=True)
-    main_set.to_csv(REPORT_DIR / "walk_forward_predictions.csv", index=False)
-    best_model = table.drop([NoChange.name, Momentum.name, HistoricalMean.name])["MAE (pp of change)"].idxmin()
-    plot_regions(main_set, best_model, ["comunidad-madrid", "catalunya", "andalucia"],
-                 REPORT_DIR / "figures" / "predictions_vs_actual.png")
+    (REPORT_DIR / "figures").mkdir(parents=True, exist_ok=True)
+    candidates = table.drop([NoChange.name, Momentum.name, HistoricalMean.name])
+    best_model = candidates["MAE (pp of change)"].idxmin()
+    plot_regions(main_set, best_model, ["madrid", "cataluna", "andalucia"],
+                 REPORT_DIR / "figures" / figure_name)
 
-    n_years = by_fold.shape[1]
-    report = [
-        "# Walk-forward results",
+    n_regions = main_set["region"].nunique()
+    return "\n".join([
+        f"# {title}",
         "",
-        f"Test years {by_fold.columns.min()}-{by_fold.columns.max()} ({n_years} folds), "
-        f"16 regions ({len(main_set) // len(MODELS)} forecasts per model). "
-        "Each fold trains only on targets observed before the test year starts.",
+        f"Test years {by_fold.columns.min()}-{by_fold.columns.max()} ({by_fold.shape[1]} folds), "
+        f"{n_regions} regions, {len(main_set) // len(MODELS)} forecasts per model. {intro}",
         "",
         "Lower MAE is better. 'vs momentum' is the mean yearly difference in MAE against the "
         "momentum baseline, with a 95% bootstrap interval over years; negative means better "
@@ -303,9 +319,38 @@ def main() -> None:
         "",
         fmt(small_table[["MAE (pp of change)", "Right direction (%)"]]),
         "",
-    ]
-    (REPORT_DIR / "results.md").write_text("\n".join(report), encoding="utf-8")
-    print("\n".join(report))
+    ])
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--holdout", action="store_true",
+        help="also score the frozen 2022-2025 holdout (run once, after choosing the protocol)",
+    )
+    args = parser.parse_args()
+
+    set_seed()
+    ds = load_dataset()
+    REPORT_DIR.mkdir(exist_ok=True)
+
+    dev = walk_forward(ds, DEV_YEARS)
+    dev.to_csv(REPORT_DIR / "walk_forward_predictions.csv", index=False)
+    text = report(dev, "Walk-forward results (development folds)",
+                  "Each fold trains only on targets observed before the test year starts.",
+                  "predictions_vs_actual.png")
+    (REPORT_DIR / "results.md").write_text(text, encoding="utf-8")
+    print(text)
+
+    if args.holdout:
+        hold = walk_forward(ds, HOLDOUT_YEARS)
+        hold.to_csv(REPORT_DIR / "holdout_predictions.csv", index=False)
+        text = report(hold, "Frozen holdout (2022-2026)",
+                      "Scored once, after the features, models and settings were fixed on the "
+                      "development folds.",
+                      "holdout_predictions_vs_actual.png")
+        (REPORT_DIR / "holdout.md").write_text(text, encoding="utf-8")
+        print(text)
 
 
 if __name__ == "__main__":
