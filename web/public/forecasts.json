@@ -6,6 +6,7 @@
   "champion": "Baseline: momentum",
   "challenger": "Gradient boosting",
   "interval": "80% empirical interval from momentum's realised errors (last 5 years)",
+  "challenger_average_forecast": 0.0171,
   "regions": [
     {
       "region": "andalucia",
@@ -18,7 +19,14 @@
         "high": 0.2081
       },
       "challenger": {
-        "chg_12m": 0.0784
+        "chg_12m": 0.0784,
+        "explanation": {
+          "momentum": 0.0525,
+          "inflation": -0.0001,
+          "rates": 0.0005,
+          "labour": 0.0023,
+          "credit": 0.006
+        }
       }
     },
     {
@@ -32,7 +40,14 @@
         "high": 0.2167
       },
       "challenger": {
-        "chg_12m": 0.0628
+        "chg_12m": 0.0628,
+        "explanation": {
+          "momentum": 0.0485,
+          "inflation": 0.0005,
+          "rates": -0.0017,
+          "labour": -0.0063,
+          "credit": 0.0047
+        }
       }
     },
     {
@@ -46,7 +61,14 @@
         "high": 0.21
       },
       "challenger": {
-        "chg_12m": 0.0725
+        "chg_12m": 0.0725,
+        "explanation": {
+          "momentum": 0.054,
+          "inflation": 0.0006,
+          "rates": -0.001,
+          "labour": -0.0039,
+          "credit": 0.0056
+        }
       }
     },
     {
@@ -60,7 +82,14 @@
         "high": 0.2017
       },
       "challenger": {
-        "chg_12m": 0.0658
+        "chg_12m": 0.0658,
+        "explanation": {
+          "momentum": 0.0553,
+          "inflation": 0.0009,
+          "rates": -0.0038,
+          "labour": -0.0051,
+          "credit": 0.0014
+        }
       }
     },
     {
@@ -74,7 +103,14 @@
         "high": 0.2117
       },
       "challenger": {
-        "chg_12m": 0.0806
+        "chg_12m": 0.0806,
+        "explanation": {
+          "momentum": 0.0533,
+          "inflation": 0.0004,
+          "rates": -0.0006,
+          "labour": 0.0064,
+          "credit": 0.0039
+        }
       }
     },
     {
@@ -88,7 +124,14 @@
         "high": 0.2164
       },
       "challenger": {
-        "chg_12m": 0.0541
+        "chg_12m": 0.0541,
+        "explanation": {
+          "momentum": 0.0498,
+          "inflation": 0.0019,
+          "rates": -0.0028,
+          "labour": -0.0107,
+          "credit": -0.0013
+        }
       }
     },
     {
@@ -102,7 +145,14 @@
         "high": 0.217
       },
       "challenger": {
-        "chg_12m": 0.0807
+        "chg_12m": 0.0807,
+        "explanation": {
+          "momentum": 0.0511,
+          "inflation": 0.0014,
+          "rates": 0.0001,
+          "labour": 0.006,
+          "credit": 0.005
+        }
       }
     },
     {
@@ -116,7 +166,14 @@
         "high": 0.2212
       },
       "challenger": {
-        "chg_12m": 0.074
+        "chg_12m": 0.074,
+        "explanation": {
+          "momentum": 0.055,
+          "inflation": 0.0022,
+          "rates": -0.0005,
+          "labour": -0.0041,
+          "credit": 0.0043
+        }
       }
     },
     {
@@ -130,7 +187,14 @@
         "high": 0.1715
       },
       "challenger": {
-        "chg_12m": 0.0687
+        "chg_12m": 0.0687,
+        "explanation": {
+          "momentum": 0.0474,
+          "inflation": 0.0012,
+          "rates": -0.0009,
+          "labour": -0.0013,
+          "credit": 0.0052
+        }
       }
     },
     {
@@ -144,7 +208,14 @@
         "high": 0.1356
       },
       "challenger": {
-        "chg_12m": 0.0611
+        "chg_12m": 0.0611,
+        "explanation": {
+          "momentum": 0.0327,
+          "inflation": -0.0003,
+          "rates": 0.0055,
+          "labour": 0.001,
+          "credit": 0.0051
+        }
       }
     },
     {
@@ -158,7 +229,14 @@
         "high": 0.2276
       },
       "challenger": {
-        "chg_12m": 0.087
+        "chg_12m": 0.087,
+        "explanation": {
+          "momentum": 0.0593,
+          "inflation": 0.0014,
+          "rates": -0.0004,
+          "labour": 0.0038,
+          "credit": 0.0058
+        }
       }
     },
     {
@@ -172,7 +250,14 @@
         "high": 0.1536
       },
       "challenger": {
-        "chg_12m": 0.0735
+        "chg_12m": 0.0735,
+        "explanation": {
+          "momentum": 0.0468,
+          "inflation": 0.0001,
+          "rates": 0.0002,
+          "labour": 0.0057,
+          "credit": 0.0036
+        }
       }
     },
     {
@@ -186,7 +271,14 @@
         "high": 0.1822
       },
       "challenger": {
-        "chg_12m": 0.0642
+        "chg_12m": 0.0642,
+        "explanation": {
+          "momentum": 0.047,
+          "inflation": 0.0028,
+          "rates": -0.0013,
+          "labour": -0.0024,
+          "credit": 0.0009
+        }
       }
     },
     {
@@ -200,7 +292,14 @@
         "high": 0.1965
       },
       "challenger": {
-        "chg_12m": 0.0717
+        "chg_12m": 0.0717,
+        "explanation": {
+          "momentum": 0.0492,
+          "inflation": 0.0027,
+          "rates": -0.0008,
+          "labour": -0.0016,
+          "credit": 0.0052
+        }
       }
     },
     {
@@ -214,7 +313,14 @@
         "high": 0.1562
       },
       "challenger": {
-        "chg_12m": 0.0665
+        "chg_12m": 0.0665,
+        "explanation": {
+          "momentum": 0.0424,
+          "inflation": -0.0001,
+          "rates": -0.0005,
+          "labour": 0.0068,
+          "credit": 0.0008
+        }
       }
     },
     {
@@ -228,7 +334,14 @@
         "high": 0.2095
       },
       "challenger": {
-        "chg_12m": 0.0821
+        "chg_12m": 0.0821,
+        "explanation": {
+          "momentum": 0.0573,
+          "inflation": 0.0008,
+          "rates": -0.0008,
+          "labour": 0.0032,
+          "credit": 0.0045
+        }
       }
     },
     {
@@ -242,7 +355,14 @@
         "high": 0.1557
       },
       "challenger": {
-        "chg_12m": 0.0653
+        "chg_12m": 0.0653,
+        "explanation": {
+          "momentum": 0.0449,
+          "inflation": 0.0012,
+          "rates": -0.0014,
+          "labour": -0.0019,
+          "credit": 0.0053
+        }
       }
     },
     {
@@ -256,7 +376,14 @@
         "high": 0.1811
       },
       "challenger": {
-        "chg_12m": 0.0653
+        "chg_12m": 0.0653,
+        "explanation": {
+          "momentum": 0.0482,
+          "inflation": 0.0013,
+          "rates": -0.0024,
+          "labour": -0.0038,
+          "credit": 0.005
+        }
       }
     },
     {
@@ -270,7 +397,14 @@
         "high": 0.1913
       },
       "challenger": {
-        "chg_12m": 0.0704
+        "chg_12m": 0.0704,
+        "explanation": {
+          "momentum": 0.0518,
+          "inflation": 0.0007,
+          "rates": -0.0017,
+          "labour": -0.0027,
+          "credit": 0.0052
+        }
       }
     }
   ]

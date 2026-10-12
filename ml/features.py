@@ -44,6 +44,17 @@ FEATURES = [
 ]
 TARGET = "target_chg_12m"
 
+# Feature groups used to explain forecasts: correlated features (e.g. the two
+# momentum measures) share SHAP credit arbitrarily, so contributions are
+# reported per group.
+FEATURE_GROUPS = {
+    "momentum": ["price_chg_12m", "price_chg_3m"],
+    "inflation": ["cpi_chg_12m"],
+    "rates": ["euribor_12m", "euribor_chg_12m"],
+    "labour": ["unemployment_rate", "unemployment_chg_12m"],
+    "credit": ["mortgages_chg_12m"],
+}
+
 
 def load_quarterly(path: Path = DATASET_PATH) -> pd.DataFrame:
     df = pd.read_csv(path, parse_dates=["date"])

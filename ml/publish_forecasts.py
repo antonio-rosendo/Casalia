@@ -17,7 +17,7 @@ from pathlib import Path
 import pandas as pd
 
 import build_dataset
-from features import HORIZON, SMALL_MARKETS
+from features import FEATURE_GROUPS, HORIZON, SMALL_MARKETS
 from forecast import forecast_origin
 
 BASE_DIR = Path(__file__).parent
@@ -44,7 +44,12 @@ def to_payload(f: pd.DataFrame) -> dict:
                 "low": round(float(r["champion_low"]), 4),
                 "high": round(float(r["champion_high"]), 4),
             },
-            "challenger": {"chg_12m": round(float(r["challenger_chg_12m"]), 4)},
+            "challenger": {
+                "chg_12m": round(float(r["challenger_chg_12m"]), 4),
+                # SHAP: contribution of each feature group, in change units, relative to
+                # the model's average forecast; average + contributions = forecast.
+                "explanation": {g: round(float(r[f"shap_{g}"]), 4) for g in FEATURE_GROUPS},
+            },
         })
     return {
         "generated_on": date.today().isoformat(),
@@ -54,6 +59,7 @@ def to_payload(f: pd.DataFrame) -> dict:
         "champion": f.attrs["champion"],
         "challenger": f.attrs["challenger"],
         "interval": f"80% empirical interval from momentum's realised errors ({f.attrs['interval_window']})",
+        "challenger_average_forecast": round(f.attrs["challenger_average"], 4),
         "regions": regions,
     }
 

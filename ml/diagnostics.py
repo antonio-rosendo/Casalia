@@ -14,7 +14,7 @@ import numpy as np
 import pandas as pd
 import shap
 
-from features import FEATURES, SMALL_MARKETS, TARGET, load_dataset
+from features import FEATURE_GROUPS, FEATURES, SMALL_MARKETS, TARGET, load_dataset
 from models import SEED, GradientBoosting, mae, purged_split, set_seed
 
 REPORT_PATH = Path(__file__).parent / "reports" / "diagnostics.md"
@@ -23,13 +23,7 @@ HOLDOUT_YEARS = range(2022, 2026)
 BACKGROUND_ROWS = 300
 MIN_MAE_GAIN = 0.5  # pp, from the decision rule
 
-GROUPS = {
-    "momentum": ["price_chg_12m", "price_chg_3m"],
-    "inflation": ["cpi_chg_12m"],
-    "rates": ["euribor_12m", "euribor_chg_12m"],
-    "labour": ["unemployment_rate", "unemployment_chg_12m"],
-    "credit": ["mortgages_chg_12m"],
-}
+GROUPS = FEATURE_GROUPS
 HYPOTHESES = {"H1 (inflation)": "inflation", "H2 (rates)": "rates"}
 
 
