@@ -52,7 +52,7 @@ def inner_split(train: pd.DataFrame, n_quarters: int = 4, years_back: int = 1):
     return inner_train, val
 
 
-def tune(make_model, grid, train: pd.DataFrame, n_years: int = 3):
+def tune(make_model, grid, train: pd.DataFrame, n_years: int = 3, features=FEATURES):
     """Pick the setting with the lowest mean MAE over the last n_years inner
     validation blocks (one block alone is too noisy to choose from)."""
     scores = {}
@@ -62,8 +62,8 @@ def tune(make_model, grid, train: pd.DataFrame, n_years: int = 3):
             inner_train, val = inner_split(train, years_back=k)
             if inner_train.empty or val.empty:
                 continue
-            m = make_model(setting).fit(inner_train[FEATURES], inner_train[TARGET])
-            errors.append(mae(m.predict(val[FEATURES]), val[TARGET]))
+            m = make_model(setting).fit(inner_train[features], inner_train[TARGET])
+            errors.append(mae(m.predict(val[features]), val[TARGET]))
         scores[setting] = np.mean(errors)
     return min(scores, key=scores.get)
 
@@ -138,13 +138,16 @@ class GradientBoosting:
             min_samples_leaf=20, l2_regularization=1.0, random_state=SEED,
         )
 
+    def __init__(self, features=FEATURES):
+        self.features = list(features)  # a subset is used for ablations
+
     def fit(self, train):
-        self.setting_ = tune(self._make, self.grid, train)
-        self.model_ = self._make(self.setting_).fit(train[FEATURES], train[TARGET])
+        self.setting_ = tune(self._make, self.grid, train, features=self.features)
+        self.model_ = self._make(self.setting_).fit(train[self.features], train[TARGET])
         return self
 
     def predict(self, df):
-        return self.model_.predict(df[FEATURES])
+        return self.model_.predict(df[self.features])
 
 
 class MLP:
