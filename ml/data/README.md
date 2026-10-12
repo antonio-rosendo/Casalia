@@ -29,4 +29,4 @@ All three publishers allow reuse of their statistics as long as the source is ac
 This file is that acknowledgement.
 
 ## Legacy data
-`raw/datos_unidos_meses.csv` is the dataset used by the original May 2026 version (tag `v1.0-tfg`). Its source is undocumented, and its values do not match the official series above. For example, Madrid 2003-Q1 is 1,790 EUR/m² there and 1,936.9 in MIVAU. It is kept only so that version can still run.
+`raw/datos_unidos_meses.csv`, removed from the current version, was the dataset used by the original May 2026 version (tag `v1.0-tfg`). Its source was undocumented, and its values did not match the official series above. For example, Madrid 2003-Q1 was 1,790 EUR/m² there and 1,936.9 in MIVAU. It is still available at that tag.

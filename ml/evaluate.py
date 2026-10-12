@@ -15,16 +15,14 @@ Usage:  python evaluate.py            development folds -> reports/results.md
 import argparse
 from pathlib import Path
 
-import matplotlib
-
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
 from features import SMALL_MARKETS, TARGET, load_dataset
-from models import (CANDIDATE, MODELS, SEED, HistoricalMean, Momentum, NoChange,
-                    purged_split, set_seed)
+from models import CANDIDATE, MODELS, SEED, Momentum, NoChange, purged_split, set_seed
+
+plt.switch_backend("Agg")  # no window: figures are only saved to files
 
 DEV_YEARS = range(2010, 2022)       # used to choose features, models and settings
 HOLDOUT_YEARS = range(2022, 2026)   # frozen: scored once, after everything is fixed

@@ -10,7 +10,6 @@ Usage:  python diagnostics.py   -> reports/diagnostics.md
 
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
 import shap
 

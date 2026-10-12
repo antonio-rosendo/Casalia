@@ -12,7 +12,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from features import SMALL_MARKETS, load_quarterly
+from features import load_quarterly
 
 BASE_DIR = Path(__file__).parent
 LOG_DIR = BASE_DIR / "forecasts"

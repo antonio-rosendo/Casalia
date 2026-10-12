@@ -172,8 +172,10 @@ def build(refresh: bool = False) -> pd.DataFrame:
     # so "n quarters ago" is always n rows back.
     grid = []
     for slug, g in prices.groupby("region"):
-        start = pd.Period(year=g["year"].min(), quarter=g.loc[g["year"] == g["year"].min(), "quarter"].min(), freq="Q")
-        end = pd.Period(year=prices["year"].max(), quarter=prices.loc[prices["year"] == prices["year"].max(), "quarter"].max(), freq="Q")
+        first = g.sort_values(["year", "quarter"]).iloc[0]
+        last = prices.sort_values(["year", "quarter"]).iloc[-1]
+        start = pd.Period(year=first["year"], quarter=first["quarter"], freq="Q")
+        end = pd.Period(year=last["year"], quarter=last["quarter"], freq="Q")
         p = pd.period_range(start, end, freq="Q")
         grid.append(pd.DataFrame({"region": slug, "year": p.year, "quarter": p.quarter}))
     df = pd.concat(grid, ignore_index=True).merge(prices, on=keys, how="left")
