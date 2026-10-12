@@ -4,13 +4,21 @@ Each row is a (region, quarter q) forecast origin: we stand at quarter q, once
 its data has been published, and predict the % change in the appraised price
 per m2 between q and q + 4 quarters.
 
-Timing: the slowest source is the MIVAU price, published about six weeks after
-the quarter ends. By then CPI, mortgages (INE), the EPA unemployment rate and
-the Euribor for quarter q are all public, so every feature uses data up to q
-and nothing later. There are no calendar features (they take values in
-production that training never saw) and no raw levels that trend over time;
-the Euribor and unemployment rates are kept as levels because they are
-already bounded rates.
+Timing: a forecast for origin q can only be made once every source has
+published quarter q. The binding sources are the MIVAU price (the file with
+2026-Q2 was published on 15 Sep 2026, about 2.5 months after the quarter) and
+INE mortgages (each month comes out roughly two months later, so the full
+quarter is available 2-3 months after it ends). CPI, the EPA unemployment rate
+and the Euribor are out sooner. The effective origin is therefore about
+quarter end + 3 months, and every feature uses data up to q and nothing later.
+The service refuses to forecast until all sources have quarter q.
+
+The data are today's revised series, not the figures known at the time, so
+the evaluation is pseudo out-of-sample (see FINDINGS.md).
+
+There are no calendar features (they take values in production that training
+never saw) and no raw levels that trend over time; the Euribor and
+unemployment rates are kept as levels because they are already bounded rates.
 """
 
 from pathlib import Path
