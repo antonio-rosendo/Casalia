@@ -9,3 +9,4 @@ uvicorn==0.46.0
 pydantic==2.13.3
 tabulate==0.10.0
 xlrd==2.0.2
+shap==0.53.0
