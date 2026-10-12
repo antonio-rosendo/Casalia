@@ -74,8 +74,11 @@ def add_features(g: pd.DataFrame) -> pd.DataFrame:
     return g
 
 
-def build_features(df: pd.DataFrame) -> pd.DataFrame:
-    """One row per (region, quarter) with FEATURES, TARGET and metadata."""
+def build_features(df: pd.DataFrame, require_target: bool = True) -> pd.DataFrame:
+    """One row per (region, quarter) with FEATURES, TARGET and metadata.
+
+    With require_target=False, rows whose 12-month future is not known yet are
+    kept too: those are the origins we can forecast from today."""
     out = []
     for _, g in df.groupby("region", sort=False):
         g = add_features(g.sort_values("date"))
@@ -87,8 +90,9 @@ def build_features(df: pd.DataFrame) -> pd.DataFrame:
     feats = pd.concat(out, ignore_index=True)
     keep = ["region", "name", "date", "target_date", "base_price", "target_price"]
     feats = feats[keep + FEATURES + [TARGET]]
-    # Rows without full history or without an observed future are dropped.
-    return feats.dropna(subset=FEATURES + [TARGET]).reset_index(drop=True)
+    # Rows without full history (and, by default, without an observed future) are dropped.
+    required = FEATURES + ([TARGET] if require_target else [])
+    return feats.dropna(subset=required).reset_index(drop=True)
 
 
 def load_dataset() -> pd.DataFrame:
