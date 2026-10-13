@@ -40,7 +40,7 @@
       "price": "Valor de tu vivienda en {{origin}} (opcional)",
       "pricePlaceholder": "p. ej. 250000",
       "champion": "Previsión principal · inercia",
-      "championNote": "La inercia repite la variación de los últimos 12 meses. Fue la que menos falló en los dos periodos de prueba, así que es la principal.",
+      "championNote": "La inercia repite la variación de los últimos 12 meses. Fue la que menos falló en desarrollo, y el test congelado lo confirmó, así que es la principal.",
       "interval": "Rango del 80 %: de {{low}} a {{high}}",
       "intervalNote": "El rango sale de los errores pasados de la propia inercia. Contuvo el resultado real el 78 % de las veces en 2010-2021 y el 76 % en 2022-2025, aunque solo el 42-50 % en sus peores años. Se abre más hacia arriba porque, en la subida reciente, la inercia se ha quedado corta.",
       "projected": "Valor previsto en {{target}}",
@@ -48,7 +48,7 @@
       "homeNote": "Es la variación media de la comunidad aplicada a tu cifra, no una tasación de tu vivienda.",
       "smallMarket": "Mercado pequeño: pocas tasaciones por trimestre, así que los datos tienen mucho ruido.",
       "challenger": "Previsión de ML · gradient boosting",
-      "challengerNote": "Se registra y se evalúa en paralelo a la principal. Solo sustituirá a la inercia si la supera por encima del margen de error.",
+      "challengerNote": "Se registra y se evalúa en paralelo a la principal. Solo sustituirá a la inercia si la supera por encima del margen de error, primero en la evaluación y después en el registro de previsiones.",
       "shapAverage": "Previsión media del modelo",
       "shapResult": "Esta previsión",
       "shapNote": "SHAP muestra cuánto aporta cada grupo de variables a esta previsión, partiendo de la media del modelo. Explica el modelo, no el mercado.",
@@ -86,7 +86,7 @@
       "holdout": "Test congelado · 2022-2025",
       "holdoutSub": "238 previsiones por modelo; estos años se congelaron en un commit antes de evaluarlos",
       "devNote": "De media, el gradient boosting fue 0,31 p. p. peor que la inercia, aunque mejor en 4 de los 12 años. La diferencia cabe en el margen de error (intervalo del 95 %, bootstrap por bloques: de −0,29 a +0,91 p. p.).",
-      "holdoutNote": "La inercia fue la mejor los cuatro años, un periodo de sacudidas que los modelos no habían visto. En 2022 la inflación se movió entre el 5,7 % y el 12,1 %, por encima de todo lo visto en entrenamiento. En 2022-23 el Euríbor subió más rápido que nunca en los datos: hasta +3,9 p. p. en un año, frente a un máximo previo de +1,4.",
+      "holdoutNote": "La inercia fue la mejor los cuatro años, un periodo de sacudidas que los modelos no habían visto. En 2022 la inflación se movió entre el 5,7 % y el 12,1 %, por encima de todo lo visto en entrenamiento. En 2022-23 el Euríbor subió hasta +3,9 p. p. en un año, frente a un máximo de +1,4 en los datos de entrenamiento.",
       "mlpNote": "El MLP es la red en PyTorch de la primera versión del proyecto. Con unas 400 a 1.500 filas de entrenamiento por año, los modelos más simples funcionaron mejor.",
       "models": {
         "noChange": "Sin cambio",
@@ -129,7 +129,7 @@
         },
         "baselines": {
           "title": "Primero, las referencias",
-          "desc": "La regresión Ridge, el gradient boosting y un MLP en PyTorch se comparan con tres reglas sencillas: sin cambio, inercia y media histórica. La inercia tuvo el menor error en ambos periodos, así que es la principal. Otro modelo solo la sustituye si la supera por encima del margen de error (con un intervalo de confianza que excluya el cero)."
+          "desc": "La regresión Ridge, el gradient boosting y un MLP en PyTorch se comparan con tres reglas sencillas: sin cambio, inercia y media histórica. La inercia tuvo el menor error en desarrollo, y otra vez en el test congelado, así que es la principal. Otro modelo solo la sustituye si la supera por encima del margen de error (con un intervalo de confianza que excluya el cero), primero en la evaluación y después en el registro de previsiones."
         },
         "uncertainty": {
           "title": "Incertidumbre medida",
@@ -137,7 +137,7 @@
         },
         "explain": {
           "title": "Explicado y registrado",
-          "desc": "El modelo de ML se explica con TreeSHAP por grupos. Las previsiones de cada trimestre se guardan antes de conocer el resultado, para que no se puedan retocar a posteriori."
+          "desc": "El modelo de ML se explica con TreeSHAP por grupos. Las previsiones de cada trimestre se guardan antes de conocer el resultado, así que cualquier retoque posterior quedaría a la vista en el historial."
         }
       },
       "limitsTitle": "Límites",

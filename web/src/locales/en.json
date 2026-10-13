@@ -40,7 +40,7 @@
       "price": "Your home's value in {{origin}} (optional)",
       "pricePlaceholder": "e.g. 250000",
       "champion": "Main forecast · momentum",
-      "championNote": "Momentum carries the last 12 months' change forward. It had the lowest error in both backtest periods, so it leads.",
+      "championNote": "Momentum carries the last 12 months' change forward. It had the lowest error in development, and the holdout confirmed it, so it leads.",
       "interval": "80% range: {{low}} to {{high}}",
       "intervalNote": "The range comes from momentum's own past errors. It covered 78% of outcomes in 2010-2021 and 76% in 2022-2025, though only 42-50% in its worst years. Most of it lies above the forecast because momentum has underestimated the recent rise.",
       "projected": "Projected value in {{target}}",
@@ -48,7 +48,7 @@
       "homeNote": "This is the regional change applied to your figure, not a valuation of your home.",
       "smallMarket": "Small market: few appraisals per quarter, so the data are noisy.",
       "challenger": "ML forecast · gradient boosting",
-      "challengerNote": "It runs in shadow mode, logged and scored next to the main forecast. It would take over only if it beat momentum by more than the margin of error.",
+      "challengerNote": "It runs in shadow mode, logged and scored next to the main forecast. It would take over only by beating momentum by more than the margin of error, first in the backtest and then on the forecast log.",
       "shapAverage": "Model's average forecast",
       "shapResult": "This forecast",
       "shapNote": "SHAP shows how much each group of inputs moved this forecast away from the model's average. It explains the model, not the market.",
@@ -86,7 +86,7 @@
       "holdout": "Frozen holdout · 2022-2025",
       "holdoutSub": "238 forecasts per model, fixed in a commit before scoring",
       "devNote": "Gradient boosting was 0.31 pp worse than momentum on average and better in 4 of 12 years; the gap is within the margin of error (95% block-bootstrap interval: −0.29 to +0.91 pp).",
-      "holdoutNote": "Momentum was best in all four years, a period of shocks the models had never seen. In 2022 inflation ran at 5.7-12.1%, above anything in training. In 2022-23 the Euribor rose by up to 3.9 pp in a year; the largest earlier rise in the data was 1.4 pp.",
+      "holdoutNote": "Momentum was best in all four years, a period of shocks the models had never seen. In 2022 inflation ran at 5.7-12.1%, above anything in training. In 2022-23 the Euribor rose by up to 3.9 pp in a year; the largest rise in the training data was 1.4 pp.",
       "mlpNote": "The MLP is the PyTorch network from the first version of the project. With about 400 to 1,500 training rows per fold, simpler models did better.",
       "models": {
         "noChange": "No change",
@@ -129,7 +129,7 @@
         },
         "baselines": {
           "title": "Baselines first",
-          "desc": "Ridge regression, gradient boosting and a PyTorch MLP are compared with three simple rules: no change, momentum and the historical mean. Momentum had the lowest error in both periods, so it leads. Another model replaces it only if it wins by more than the margin of error (a confidence interval that excludes zero)."
+          "desc": "Ridge regression, gradient boosting and a PyTorch MLP are compared with three simple rules: no change, momentum and the historical mean. Momentum had the lowest error in development, and again in the holdout, so it leads. Another model replaces it only by winning by more than the margin of error (a confidence interval that excludes zero), first in the backtest and then on the forecast log."
         },
         "uncertainty": {
           "title": "Measured uncertainty",
@@ -137,7 +137,7 @@
         },
         "explain": {
           "title": "Explained and logged",
-          "desc": "The ML model is explained with grouped TreeSHAP. Each quarter's forecasts are committed before the outcome is known, so they can't be edited after the fact."
+          "desc": "The ML model is explained with grouped TreeSHAP. Each quarter's forecasts are committed before the outcome is known, so any later edit would show in the history."
         }
       },
       "limitsTitle": "Limits",
