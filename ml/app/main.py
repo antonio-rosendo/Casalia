@@ -3,8 +3,8 @@
 It serves the forecasts written by publish_forecasts.py (batch inference): the
 models are fitted once a quarter, when the new data come out, not on every
 request. The API, the web app and the dated log in forecasts/ therefore show
-the same numbers. If a source has not published the latest quarter yet,
-publish_forecasts.py refuses to run and the previous forecasts stay in place.
+the same numbers. publish_forecasts.py only forecasts from the latest quarter
+that every source has published.
 
 Run from ml/:  uvicorn app.main:app
 
@@ -42,7 +42,8 @@ app.add_middleware(
 
 
 def load_forecasts() -> ForecastFile:
-    # Read on every request: the file is small and a new quarter needs no restart.
+    # Read on every request: the file is small and a new quarter needs no restart
+    # (the Docker image copies the file in, so rebuild the image instead).
     path = Path(os.environ.get("CASALIA_FORECASTS", DEFAULT_FORECASTS))
     try:
         return ForecastFile.model_validate_json(path.read_text(encoding="utf-8"))

@@ -1,3 +1,5 @@
+"""The MLP's network, kept from the first version; models.MLP trains it."""
+
 import torch.nn as nn
 
 
@@ -9,7 +11,7 @@ class PricePredictor(nn.Module):
             nn.ReLU(),
             nn.Linear(hidden_dim1, hidden_dim2),
             nn.ReLU(),
-            nn.Linear(hidden_dim2, 1),  # salida: target_pct_change_12m
+            nn.Linear(hidden_dim2, 1),  # output: the 12-month change
         )
 
     def forward(self, x):

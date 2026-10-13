@@ -5,7 +5,10 @@ forecasts) and the API, so every part of the project uses the same code.
 
 Champion / challenger: the model served to users is the CHAMPION. A challenger
 replaces it only if it beats the champion in the walk-forward evaluation
-(evaluate.py) with a confidence interval that excludes zero.
+(evaluate.py) with a 95% block-bootstrap interval of the gap that excludes zero.
+The 2022-2025 holdout has already been seen, so a new challenger must also beat
+the champion on the forecast log (forecasts/, scored by score_forecasts.py)
+before it takes over.
 """
 
 import copy

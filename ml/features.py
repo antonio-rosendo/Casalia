@@ -1,4 +1,4 @@
-"""Feature construction shared by evaluation, training and (later) the API.
+"""Feature construction shared by the evaluation, the published forecasts and the tests.
 
 Each row is a (region, quarter q) forecast origin: we stand at quarter q, once
 its data has been published, and predict the % change in the appraised price
@@ -11,7 +11,8 @@ INE mortgages (each month comes out roughly two months later, so the full
 quarter is available 2-3 months after it ends). CPI, the EPA unemployment rate
 and the Euribor are out sooner. The effective origin is therefore about
 quarter end + 3 months, and every feature uses data up to q and nothing later.
-The service refuses to forecast until all sources have quarter q.
+Forecasts are only made from quarters that every source has published
+(forecast.latest_complete_origin).
 
 The data are today's revised series, not the figures known at the time, so
 the evaluation is pseudo out-of-sample (see FINDINGS.md).

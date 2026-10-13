@@ -8,8 +8,8 @@ Sources (all public, reusable with attribution; see data/README.md):
   (EPA, quarterly).
 - European Central Bank (Data Portal API): 12-month Euribor (monthly).
 
-Raw downloads are cached in data/raw/official/ so the build is repeatable
-offline; pass --refresh to download again.
+Raw downloads are cached in data/raw/official/ (not committed), so later builds
+work offline; pass --refresh to download again.
 
 Usage:  python build_dataset.py [--refresh]
 Output: data/processed/dataset.csv  (one row per region and quarter)
