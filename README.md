@@ -130,6 +130,8 @@ The sources are:
 
 Reuse terms and known gaps are in [ml/data/README.md](ml/data/README.md).
 
+The code is under the [MIT license](LICENSE); the data keep their sources' terms.
+
 ---
 
 Built by [Antonio Rosendo](https://www.linkedin.com/in/antonio-rosendo-alonso-2a9342231) · [antrosalonso@gmail.com](mailto:antrosalonso@gmail.com)
