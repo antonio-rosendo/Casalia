@@ -7,11 +7,20 @@
   --color-neo-orange: var(--theme-orange);
   --color-neo-gray: var(--theme-gray);
   --color-neo-darkgray: var(--theme-darkgray);
-  
+  /* Orange for small text: darker in light mode so it stays readable */
+  --color-neo-accent: var(--theme-accent);
+  /* Background tint for highlighted sections */
+  --color-neo-tint: var(--theme-tint);
+
   --shadow-neo: 4px 4px 0px 0px var(--theme-black);
   --shadow-neo-hover: 2px 2px 0px 0px var(--theme-black);
   --shadow-neo-heavy: 8px 8px 0px 0px var(--theme-black);
   --shadow-neo-orange: 4px 4px 0px 0px var(--theme-orange);
+
+  /* Fixed colours for blocks that stay dark in both themes */
+  --color-ink: #111111;
+  --color-paper: #f8f9fa;
+  --color-lime: #ddf247;
 
   --font-mono: "Space Mono", "Courier New", monospace;
   --font-sans: "Inter", system-ui, sans-serif;
@@ -23,8 +32,10 @@
     --theme-black: #111111;
     --theme-yellow: #ddf247;
     --theme-orange: #ff5722;
+    --theme-accent: #c2410c;
     --theme-gray: #e5e5e5;
     --theme-darkgray: #333333;
+    --theme-tint: #f4f7e4;
   }
 
   .dark {
@@ -32,17 +43,33 @@
     --theme-black: #f8f9fa;
     --theme-yellow: #e4f757; /* slightly brighter for dark mode */
     --theme-orange: #ff6a3b;
+    --theme-accent: #ff8a65;
     --theme-gray: #222222;
     --theme-darkgray: #bbbbbb;
+    --theme-tint: #1a1a1a;
   }
 
   body {
     @apply bg-neo-white text-neo-black font-sans antialiased selection:bg-neo-yellow selection:text-neo-black m-0 p-0 transition-colors duration-300;
   }
 
-  
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold tracking-tighter;
+  }
+
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--theme-orange);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 }
 
@@ -58,5 +85,9 @@
   .neo-shadow-hover:hover {
     @apply shadow-neo-hover translate-x-[2px] translate-y-[2px];
   }
-}
 
+  /* Small uppercase mono label used across sections */
+  .label {
+    @apply font-mono text-xs font-bold uppercase;
+  }
+}

@@ -1,120 +1,159 @@
 {
   "translation": {
+    "meta": {
+      "title": "Casalia · Previsiones del precio de la vivienda",
+      "description": "Previsiones a 12 meses del precio tasado por m² en cada comunidad y ciudad autónoma, validadas año a año desde 2010 y publicadas antes de conocerse el resultado."
+    },
     "nav": {
-      "prediction": "Predicción",
-      "methodology": "Metodología",
-      "dataMetrics": "Datos y Métricas"
+      "forecasts": "Previsiones",
+      "results": "Resultados",
+      "method": "Método",
+      "code": "Código",
+      "toggleTheme": "Cambiar tema",
+      "toggleMenu": "Abrir menú",
+      "switchLanguage": "View in English"
     },
     "hero": {
-      "version": "v1.0.0 Modelo en vivo",
-      "architect": "Diseña el",
-      "future": "Valor",
-      "value": "Futuro.",
-      "description": "Un modelo de predicción de vivienda impulsado por IA y con rigor académico. Estimamos y contextualizamos los valores de las propiedades en los mercados inmobiliarios utilizando métricas verificables y algoritmos transparentes.",
-      "testModel": "Probar Modelo",
-      "viewDataset": "Descargar Dataset",
-      "inferenceMode": "Modo de Inferencia",
-      "targetValue": "Valor Objetivo",
-      "proj": "PROY",
+      "badge": "Datos hasta {{origin}} · previsión para {{target}}",
+      "kicker": "Precio de la vivienda en España · a 12 meses",
+      "titleStart": "Previsiones",
+      "titleHighlight": "que puedes comprobar",
+      "answer": "Hacia dónde va el precio tasado por m² en cada comunidad y ciudad autónoma, a partir de datos oficiales. Cada año entre 2010 y 2025 se previó con modelos entrenados solo con los años anteriores.",
+      "description": "La regresión Ridge, el gradient boosting y una red en PyTorch se miden con reglas sencillas en los mismos años de prueba. De momento gana la inercia, una regla que repite la variación de los últimos 12 meses, así que de ella sale la previsión principal, con un rango del 80 %. El gradient boosting corre en paralelo y se explica con SHAP. Las previsiones de cada trimestre se guardan antes de conocerse el resultado.",
+      "ctaForecasts": "Ver las previsiones",
+      "ctaCode": "Ver el código",
       "graphic": {
-        "ineData": "Datos del INE",
-        "pytorch": "MLP PyTorch",
-        "prediction": "Proyección 12 Meses",
-        "macro": "Macroecon., Hipotecas",
-        "tensor": "Procesamiento Tensorial"
+        "data": "Datos oficiales",
+        "dataSub": "MIVAU · INE · BCE",
+        "models": "Competición de modelos",
+        "modelsSub": "Reglas sencillas vs Ridge, gradient boosting y MLP en PyTorch",
+        "output": "Previsión + rango del 80 %",
+        "outputSub": "Previsión de ML + SHAP · registrada de antemano"
       }
     },
-    "methodology": {
-      "title": "Bajo el Capó",
-      "description": "Nuestro enfoque prioriza la explicabilidad. Evitamos técnicas de caja negra en favor de métodos de conjunto estructurados donde el peso de cada variable puede ser auditado y rastreado hasta fenómenos reales verificables.",
-      "dataIngestion": {
-        "title": "Ingesta de Datos",
-        "desc": "Agregando datos históricos de precios de propiedades, factores demográficos (edad, inmigración) e indicadores macroeconómicos (IPC, hipotecas) del INE."
+    "forecasts": {
+      "title": "Previsiones",
+      "subtitle": "Variación prevista del precio tasado medio por m² entre {{origin}} y {{target}}, por comunidad. Publicada el {{generated}}.",
+      "loading": "Cargando previsiones…",
+      "error": "No se han podido cargar las previsiones.",
+      "region": "Comunidad",
+      "price": "Valor de tu vivienda en {{origin}} (opcional)",
+      "pricePlaceholder": "p. ej. 250000",
+      "champion": "Previsión principal · inercia",
+      "championNote": "La inercia repite la variación de los últimos 12 meses. Fue la que menos falló en los dos periodos de prueba, así que es la principal.",
+      "interval": "Rango del 80 %: de {{low}} a {{high}}",
+      "intervalNote": "El rango sale de los errores pasados de la propia inercia. Contuvo el resultado real el 78 % de las veces en 2010-2021 y el 76 % en 2022-2025, aunque solo el 42-50 % en sus peores años. Se abre más hacia arriba porque, en la subida reciente, la inercia se ha quedado corta.",
+      "projected": "Valor previsto en {{target}}",
+      "projectedRange": "Con el rango del 80 % de la comunidad: de {{low}} a {{high}}",
+      "homeNote": "Es la variación media de la comunidad aplicada a tu cifra, no una tasación de tu vivienda.",
+      "smallMarket": "Mercado pequeño: pocas tasaciones por trimestre, así que los datos tienen mucho ruido.",
+      "challenger": "Previsión de ML · gradient boosting",
+      "challengerNote": "Se registra y se evalúa en paralelo a la principal. Solo sustituirá a la inercia si la supera por encima del margen de error.",
+      "shapAverage": "Previsión media del modelo",
+      "shapResult": "Esta previsión",
+      "shapNote": "SHAP muestra cuánto aporta cada grupo de variables a esta previsión, partiendo de la media del modelo. Explica el modelo, no el mercado.",
+      "rounded": "Cifras redondeadas.",
+      "groups": {
+        "momentum": "Inercia del precio",
+        "inflation": "Inflación",
+        "rates": "Tipos de interés (Euríbor)",
+        "labour": "Paro",
+        "credit": "Hipotecas firmadas"
       },
-      "featureExtraction": {
-        "title": "Extracción de Características",
-        "desc": "Calculando características de rezago de 12 meses y variaciones macroeconómicas para construir un contexto temporal robusto para cada región."
+      "gapTitle": "Por qué difieren las dos previsiones",
+      "gapBelow": "En {{below}} de {{total}} comunidades la previsión de ML queda por debajo de la principal, y en {{outside}}, fuera del rango del 80 % de la principal. El modelo de ML espera que los precios suban más despacio que en los últimos 12 meses.",
+      "gapAbove": "En {{above}} de {{total}} comunidades la previsión de ML queda por encima de la principal, y en {{outside}}, fuera del rango del 80 % de la principal. El modelo de ML espera que los precios suban más deprisa que en los últimos 12 meses.",
+      "gapHistory": "Hizo el mismo tipo de apuesta en 2022-2025, y cada uno de esos años los precios subieron más de lo que esperaba. El registro dirá quién acierta esta vez.",
+      "allTitle": "Todas las comunidades",
+      "legendInterval": "Rango del 80 %",
+      "legendChampion": "Previsión principal",
+      "legendChallenger": "Previsión de ML",
+      "colMain": "Principal",
+      "colMl": "ML",
+      "rowLabel": "{{name}}: previsión principal {{main}}, rango del 80 % de {{low}} a {{high}}, previsión de ML {{ml}}",
+      "smallMarketMark": "mercado pequeño",
+      "log": "Estas previsiones se guardan en el repositorio antes de conocerse el resultado y se evaluarán cuando el MIVAU publique los datos de {{target}}.",
+      "logLink": "Registro de previsiones"
+    },
+    "results": {
+      "title": "Resultados fuera de muestra",
+      "intro": "Error absoluto medio (MAE) de la variación a 12 meses, en puntos porcentuales (p. p.); cuanto menor, mejor. Los modelos se reentrenan cada año y cada previsión solo usa datos hasta su trimestre de partida.",
+      "legendMomentum": "Inercia",
+      "legendBaselines": "Otras reglas sencillas",
+      "legendModels": "Modelos entrenados",
+      "dev": "Desarrollo · 2010-2021",
+      "devSub": "792 previsiones por modelo, con las que se eligieron modelos y ajustes",
+      "holdout": "Test congelado · 2022-2025",
+      "holdoutSub": "238 previsiones por modelo; estos años se congelaron en un commit antes de evaluarlos",
+      "devNote": "De media, el gradient boosting fue 0,31 p. p. peor que la inercia, aunque mejor en 4 de los 12 años. La diferencia cabe en el margen de error (intervalo del 95 %, bootstrap por bloques: de −0,29 a +0,91 p. p.).",
+      "holdoutNote": "La inercia fue la mejor los cuatro años, un periodo de sacudidas que los modelos no habían visto. En 2022 la inflación se movió entre el 5,7 % y el 12,1 %, por encima de todo lo visto en entrenamiento. En 2022-23 el Euríbor subió más rápido que nunca en los datos: hasta +3,9 p. p. en un año, frente a un máximo previo de +1,4.",
+      "mlpNote": "El MLP es la red en PyTorch de la primera versión del proyecto. Con unas 400 a 1.500 filas de entrenamiento por año, los modelos más simples funcionaron mejor.",
+      "models": {
+        "noChange": "Sin cambio",
+        "momentum": "Inercia",
+        "histMean": "Media histórica",
+        "ridge": "Regresión Ridge",
+        "gbm": "Gradient boosting",
+        "mlp": "Red neuronal (MLP)"
       },
-      "dnn": {
-        "title": "Red Neuronal Profunda",
-        "desc": "Un Perceptrón Multicapa (MLP) basado en PyTorch entrenado en ciclos históricos para predecir dinámicas de valor de propiedades a 12 meses con alta confianza."
+      "reports": "Informes completos en el repositorio:",
+      "reportLinks": {
+        "results": "desarrollo",
+        "holdout": "test congelado",
+        "intervals": "intervalos",
+        "diagnostics": "diagnóstico"
       },
-      "featureImportance": "Importancia de Características",
-      "shapValues": "VALORES SHAP",
-      "features": {
-        "priceDynamics": "Evolución de Precios",
-        "macro": "Indicadores Macroeconómicos",
-        "currentPrice": "Precio Actual por M2",
-        "demographics": "Demografía (Edad, Inmig.)",
-        "regional": "Contexto Regional"
+      "diagTitle": "Qué hizo fallar al gradient boosting en 2022-2025",
+      "diagIntro": "Antes de ejecutar el análisis, registré en un commit dos hipótesis y el criterio para juzgarlas. Después apliqué SHAP por grupos y reentrené el modelo quitando los grupos de variables de uno en uno. La hipótesis de la inflación surgió de un primer vistazo a los datos de 2022, como recoge el plan.",
+      "diag": {
+        "2022": "La inflación se movió entre el 5,7 % y el 12,1 %, por encima de todo lo visto en entrenamiento (el máximo era un 5,6 %, en 2008). Los árboles de decisión no extrapolan, así que el modelo trató ese año como si fuera 2008 y previó bajadas mientras los precios subían.",
+        "2023": "El salto del Euríbor tiró de las previsiones hacia abajo.",
+        "2024": "En parte, otra vez los tipos. Y algo que no estaba en las hipótesis: al reentrenar sin las variables de inercia, el error de ese año bajó 4,2 p. p.",
+        "2025": "No se cumple ninguna de las dos hipótesis, así que ese año sigue sin explicar."
       }
     },
-    "estimator": {
-      "title": "Inferencia del Modelo",
-      "subtitle": "// Calcula la valoración proyectada a 12 meses vista utilizando datos macroeconómicos del INE y una Red Neuronal PyTorch.",
-      "liveDemo": "DEMO EN VIVO",
-      "defineParams": "Definir Parámetros",
-      "comunidad": "Comunidad Autónoma",
-      "metros": "Metros Cuadrados",
-      "precio": "Precio Actual (€)",
-      "compute": "Calculando Datos del Tensor...",
-      "execute": "Ejecutar Predicción",
-      "awaiting": "Esperando Entrada",
-      "provide": "Proporcione los parámetros espaciales para calcular la valoración local estimada.",
-      "loading": {
-        "weights": "Cargando pesos: OK",
-        "normalize": "Normalizando parámetros: OK",
-        "inference": "Ejecutando inferencia..."
-      },
-      "success": "OP_EXITOSA",
-      "predictedValue": "Valor Proyectado (12 Meses)",
-      "increase": "Incremento (Interanual)",
-      "confidence": "Confianza del Modelo",
-      "excellent": "Excelente",
-      "good": "Buena",
-      "moderate": "Moderada",
-      "low": "Baja",
-      "error": "Error al conectar con el motor neuronal / API."
-    },
-    "faq": {
-      "title": "Casos de Uso",
-      "cases": {
-        "analysts": {
-          "title": "Para Analistas",
-          "desc": "Analice cambios estructurales en mercados inmobiliarios locales usando datos verificables del INE sobre inflación e hipotecas para construir informes trimestrales completos."
+    "method": {
+      "title": "Método",
+      "steps": {
+        "data": {
+          "title": "Datos oficiales",
+          "desc": "Precio tasado por m² (MIVAU); IPC, hipotecas y paro (INE); y el Euríbor a 12 meses (BCE). La serie de precios arranca en 1995, pero el modelo empieza en 2004, cuando ya están todas las fuentes, y cubre 17 comunidades más Ceuta y Melilla. Un script reconstruye el dataset desde las fuentes."
         },
-        "buyers": {
-          "title": "Para Compradores",
-          "desc": "Obtenga una proyección académica sobre el precio futuro de la vivienda a través de comunidades autónomas para informar mejores inversiones residenciales a largo plazo."
+        "leakage": {
+          "title": "Sin mirar al futuro",
+          "desc": "Las variables solo usan datos hasta el trimestre desde el que se hace la previsión. Un ejemplo entra en el entrenamiento solo cuando ya se conoce su resultado. No se prevé nada hasta que todas las fuentes hayan publicado el trimestre."
         },
-        "risk": {
-          "title": "Mitigación de Riesgos",
-          "desc": "Comprenda cómo las fuerzas macroeconómicas (como tasas de interés cambiantes y demografía por edad) probablemente afectarán la demanda local de vivienda en los próximos 12 meses."
+        "walkforward": {
+          "title": "Validación walk-forward",
+          "desc": "Cada año de prueba se prevé con modelos entrenados y ajustados solo con años anteriores. Los cuatro últimos años se congelaron en un commit antes de evaluarlos y no han cambiado desde entonces."
+        },
+        "baselines": {
+          "title": "Primero, las referencias",
+          "desc": "La regresión Ridge, el gradient boosting y un MLP en PyTorch se comparan con tres reglas sencillas: sin cambio, inercia y media histórica. La inercia tuvo el menor error en ambos periodos, así que es la principal. Otro modelo solo la sustituye si la supera por encima del margen de error (con un intervalo de confianza que excluya el cero)."
+        },
+        "uncertainty": {
+          "title": "Incertidumbre medida",
+          "desc": "El rango del 80 % sale de los errores de la propia inercia en los últimos cinco años. En el repositorio se publica, año a año, qué parte de los resultados cayó dentro del rango, incluidos los años en que no llegó al 80 %."
+        },
+        "explain": {
+          "title": "Explicado y registrado",
+          "desc": "El modelo de ML se explica con TreeSHAP por grupos. Las previsiones de cada trimestre se guardan antes de conocer el resultado, para que no se puedan retocar a posteriori."
         }
       },
-      "metric": {
-        "title": "Métrica Principal del Sistema",
-        "value": "Aprendizaje Continuo",
-        "desc": "El modelo incorpora las últimas actualizaciones macroeconómicas del INE, asegurando que la inferencia se base en la realidad actual del mercado en lugar de promedios históricos obsoletos."
-      },
-      "techTitle": "FAQ Técnico",
-      "questions": {
-        "q1": {
-          "q": "¿Qué estructuras de datos soportan la predicción?",
-          "a": "Un enfoque de tensor incorporando indicadores económicos tabulares (IPC, hipotecas), datos demográficos y dinámicas históricas de precios."
-        },
-        "q2": {
-          "q": "¿Cómo maneja la plataforma variables ausentes?",
-          "a": "Los puntos de datos faltantes del INE o problemas de API se manejan elegantemente utilizando promedios regionales establecidos para asegurar inferencia continua."
-        }
+      "limitsTitle": "Límites",
+      "limits": {
+        "appraisal": "El precio tasado se mueve de forma más suave que el de venta, y eso explica en parte que la inercia funcione tan bien.",
+        "revised": "Los datos son las series revisadas de hoy, no las que se conocían en su momento, así que la evaluación no es del todo fuera de muestra.",
+        "turns": "La inercia y su rango fallan más cuando el mercado cambia de tendencia o de ritmo, como en 2012-14, 2019-20 o 2024.",
+        "small": "Ceuta y Melilla son mercados muy pequeños y se muestran aparte."
       }
     },
     "footer": {
-      "titleReady": "Listo",
-      "titleDeploy": "Para Desplegar.",
-      "desc": "La Plataforma Inmobiliaria Impulsada por IA construida para escala, fiabilidad y precisión.",
-      "academic": "© 2026 Demo Académica",
-      "projectBadge": "Proyecto de Fin de Grado // 2026"
+      "story": "Casalia empezó en 2026 como mi proyecto final del ciclo de Desarrollo de Aplicaciones Multiplataforma (DAM): una red en PyTorch y esta web. Después lo rehíce desde cero con datos oficiales y una evaluación walk-forward en condiciones. Ahora cada previsión se publica antes de conocerse su resultado.",
+      "by": "Hecho por Antonio Rosendo",
+      "data": "Datos: MIVAU, INE y BCE.",
+      "disclaimer": "No es asesoramiento financiero.",
+      "code": "Código fuente"
     }
   }
 }
