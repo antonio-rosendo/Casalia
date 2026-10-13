@@ -1,0 +1,51 @@
+name: Quarterly forecasts
+
+# Once a month, download the latest official data. When a new quarter is
+# complete in every source, or a logged forecast can be scored, open a pull
+# request with the new forecast log, the web data and the scores.
+on:
+  schedule:
+    - cron: "0 6 20 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ml
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: ml/requirements.txt
+      - run: pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install -r requirements.txt
+      - name: Download the sources and publish forecasts
+        run: python publish_forecasts.py --refresh
+      - name: Score logged forecasts whose outcome is out
+        run: python score_forecasts.py
+      - name: Open a pull request if there is something new
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -z "$(git status --porcelain forecasts/ reports/prospective.md)" ]; then
+            echo "No new quarter and nothing to score."
+            exit 0
+          fi
+          branch="forecasts/$(date +%Y-%m-%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add forecasts/ reports/prospective.md data/processed/dataset.csv ../web/public/forecasts.json
+          git commit -m "chore(forecast): publish the latest forecasts and scores"
+          git push origin "$branch"
+          gh pr create --base master --head "$branch" \
+            --title "Forecasts and scores, $(date +%Y-%m-%d)" \
+            --body "Opened by the quarterly workflow: a new quarter of official data is complete, or a logged forecast can now be scored. The forecast log in ml/forecasts/ is never edited after it is committed."

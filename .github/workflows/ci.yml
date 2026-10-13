@@ -22,3 +22,15 @@ jobs:
       - run: pip install -r requirements-dev.txt
       - run: ruff check .
       - run: pytest -q
+
+  api-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t casalia-api .
+      - name: Smoke test the container
+        run: |
+          docker run -d -p 8000:8000 --name api casalia-api
+          for i in $(seq 1 30); do curl -fs localhost:8000/health && break; sleep 1; done
+          curl -fs -X POST localhost:8000/predict -H "Content-Type: application/json" \
+            -d '{"region": "madrid", "price": 200000}'
