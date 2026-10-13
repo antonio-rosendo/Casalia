@@ -1,6 +1,6 @@
 # Diagnostic of the challenger (pre-registered)
 
-Plan and decision rule: [diagnostics_plan.md](diagnostics_plan.md), committed before this script was run. 17 main regions; each fold's own model explains its own test rows.
+Plan and decision rule: [diagnostics_plan.md](diagnostics_plan.md), committed before this script was run. Models are trained and tested on the 17 main regions (evaluate.py also trains on Ceuta and Melilla, so yearly MAEs differ slightly from holdout.md); each fold's own model explains its own test rows.
 
 ## Verdicts on the holdout years
 
@@ -40,7 +40,7 @@ Negative = the group pushed the forecast down relative to the model's average fo
 
 ## Ablation: MAE change when refitting without each group (pp)
 
-Positive = the model was better without that group. 'MAE all features' is the challenger's MAE in that year.
+Positive = the model was better without that group. 'MAE all features' is the MAE of this diagnostic's model in that year.
 
 |   year |   MAE all features |   without momentum |   without inflation |   without rates |   without labour |   without credit |
 |-------:|-------------------:|-------------------:|--------------------:|----------------:|-----------------:|-----------------:|
