@@ -1,0 +1,411 @@
+{
+  "generated_on": "2026-10-12",
+  "origin": "2026-Q2",
+  "target": "2027-Q2",
+  "target_meaning": "% change in MIVAU appraised value per m2 between origin and target quarter",
+  "champion": "Baseline: momentum",
+  "challenger": "Gradient boosting",
+  "interval": "80% empirical interval from momentum's realised errors (last 5 years)",
+  "challenger_average_forecast": 0.0171,
+  "regions": [
+    {
+      "region": "andalucia",
+      "name": "Andalucía",
+      "small_market": false,
+      "price_m2_at_origin": 1981.6,
+      "champion": {
+        "chg_12m": 0.1379,
+        "low": 0.1226,
+        "high": 0.2081
+      },
+      "challenger": {
+        "chg_12m": 0.0784,
+        "explanation": {
+          "momentum": 0.0525,
+          "inflation": -0.0001,
+          "rates": 0.0005,
+          "labour": 0.0023,
+          "credit": 0.006
+        }
+      }
+    },
+    {
+      "region": "aragon",
+      "name": "Aragón",
+      "small_market": false,
+      "price_m2_at_origin": 1762.8,
+      "champion": {
+        "chg_12m": 0.1465,
+        "low": 0.1311,
+        "high": 0.2167
+      },
+      "challenger": {
+        "chg_12m": 0.0628,
+        "explanation": {
+          "momentum": 0.0485,
+          "inflation": 0.0005,
+          "rates": -0.0017,
+          "labour": -0.0063,
+          "credit": 0.0047
+        }
+      }
+    },
+    {
+      "region": "asturias",
+      "name": "Asturias (Principado de )",
+      "small_market": false,
+      "price_m2_at_origin": 1798.5,
+      "champion": {
+        "chg_12m": 0.1398,
+        "low": 0.1245,
+        "high": 0.21
+      },
+      "challenger": {
+        "chg_12m": 0.0725,
+        "explanation": {
+          "momentum": 0.054,
+          "inflation": 0.0006,
+          "rates": -0.001,
+          "labour": -0.0039,
+          "credit": 0.0056
+        }
+      }
+    },
+    {
+      "region": "baleares",
+      "name": "Balears (Illes)",
+      "small_market": false,
+      "price_m2_at_origin": 3980.8,
+      "champion": {
+        "chg_12m": 0.1315,
+        "low": 0.1162,
+        "high": 0.2017
+      },
+      "challenger": {
+        "chg_12m": 0.0658,
+        "explanation": {
+          "momentum": 0.0553,
+          "inflation": 0.0009,
+          "rates": -0.0038,
+          "labour": -0.0051,
+          "credit": 0.0014
+        }
+      }
+    },
+    {
+      "region": "canarias",
+      "name": "Canarias",
+      "small_market": false,
+      "price_m2_at_origin": 2279.4,
+      "champion": {
+        "chg_12m": 0.1415,
+        "low": 0.1262,
+        "high": 0.2117
+      },
+      "challenger": {
+        "chg_12m": 0.0806,
+        "explanation": {
+          "momentum": 0.0533,
+          "inflation": 0.0004,
+          "rates": -0.0006,
+          "labour": 0.0064,
+          "credit": 0.0039
+        }
+      }
+    },
+    {
+      "region": "cantabria",
+      "name": "Cantabria",
+      "small_market": false,
+      "price_m2_at_origin": 2122.0,
+      "champion": {
+        "chg_12m": 0.1462,
+        "low": 0.1309,
+        "high": 0.2164
+      },
+      "challenger": {
+        "chg_12m": 0.0541,
+        "explanation": {
+          "momentum": 0.0498,
+          "inflation": 0.0019,
+          "rates": -0.0028,
+          "labour": -0.0107,
+          "credit": -0.0013
+        }
+      }
+    },
+    {
+      "region": "castilla_la_mancha",
+      "name": "Castilla-La Mancha",
+      "small_market": false,
+      "price_m2_at_origin": 1215.4,
+      "champion": {
+        "chg_12m": 0.1468,
+        "low": 0.1315,
+        "high": 0.217
+      },
+      "challenger": {
+        "chg_12m": 0.0807,
+        "explanation": {
+          "momentum": 0.0511,
+          "inflation": 0.0014,
+          "rates": 0.0001,
+          "labour": 0.006,
+          "credit": 0.005
+        }
+      }
+    },
+    {
+      "region": "castilla_y_leon",
+      "name": "Castilla y León",
+      "small_market": false,
+      "price_m2_at_origin": 1349.6,
+      "champion": {
+        "chg_12m": 0.151,
+        "low": 0.1357,
+        "high": 0.2212
+      },
+      "challenger": {
+        "chg_12m": 0.074,
+        "explanation": {
+          "momentum": 0.055,
+          "inflation": 0.0022,
+          "rates": -0.0005,
+          "labour": -0.0041,
+          "credit": 0.0043
+        }
+      }
+    },
+    {
+      "region": "cataluna",
+      "name": "Cataluña",
+      "small_market": false,
+      "price_m2_at_origin": 2752.9,
+      "champion": {
+        "chg_12m": 0.1013,
+        "low": 0.086,
+        "high": 0.1715
+      },
+      "challenger": {
+        "chg_12m": 0.0687,
+        "explanation": {
+          "momentum": 0.0474,
+          "inflation": 0.0012,
+          "rates": -0.0009,
+          "labour": -0.0013,
+          "credit": 0.0052
+        }
+      }
+    },
+    {
+      "region": "ceuta",
+      "name": "Ceuta",
+      "small_market": true,
+      "price_m2_at_origin": 2214.9,
+      "champion": {
+        "chg_12m": 0.0654,
+        "low": 0.0501,
+        "high": 0.1356
+      },
+      "challenger": {
+        "chg_12m": 0.0611,
+        "explanation": {
+          "momentum": 0.0327,
+          "inflation": -0.0003,
+          "rates": 0.0055,
+          "labour": 0.001,
+          "credit": 0.0051
+        }
+      }
+    },
+    {
+      "region": "comunitat_valenciana",
+      "name": "Comunidad Valenciana",
+      "small_market": false,
+      "price_m2_at_origin": 1935.0,
+      "champion": {
+        "chg_12m": 0.1574,
+        "low": 0.1421,
+        "high": 0.2276
+      },
+      "challenger": {
+        "chg_12m": 0.087,
+        "explanation": {
+          "momentum": 0.0593,
+          "inflation": 0.0014,
+          "rates": -0.0004,
+          "labour": 0.0038,
+          "credit": 0.0058
+        }
+      }
+    },
+    {
+      "region": "extremadura",
+      "name": "Extremadura",
+      "small_market": false,
+      "price_m2_at_origin": 996.6,
+      "champion": {
+        "chg_12m": 0.0834,
+        "low": 0.0681,
+        "high": 0.1536
+      },
+      "challenger": {
+        "chg_12m": 0.0735,
+        "explanation": {
+          "momentum": 0.0468,
+          "inflation": 0.0001,
+          "rates": 0.0002,
+          "labour": 0.0057,
+          "credit": 0.0036
+        }
+      }
+    },
+    {
+      "region": "galicia",
+      "name": "Galicia",
+      "small_market": false,
+      "price_m2_at_origin": 1656.8,
+      "champion": {
+        "chg_12m": 0.112,
+        "low": 0.0967,
+        "high": 0.1822
+      },
+      "challenger": {
+        "chg_12m": 0.0642,
+        "explanation": {
+          "momentum": 0.047,
+          "inflation": 0.0028,
+          "rates": -0.0013,
+          "labour": -0.0024,
+          "credit": 0.0009
+        }
+      }
+    },
+    {
+      "region": "madrid",
+      "name": "Madrid (Comunidad de)",
+      "small_market": false,
+      "price_m2_at_origin": 4089.6,
+      "champion": {
+        "chg_12m": 0.1263,
+        "low": 0.111,
+        "high": 0.1965
+      },
+      "challenger": {
+        "chg_12m": 0.0717,
+        "explanation": {
+          "momentum": 0.0492,
+          "inflation": 0.0027,
+          "rates": -0.0008,
+          "labour": -0.0016,
+          "credit": 0.0052
+        }
+      }
+    },
+    {
+      "region": "melilla",
+      "name": "Melilla",
+      "small_market": true,
+      "price_m2_at_origin": 2164.5,
+      "champion": {
+        "chg_12m": 0.086,
+        "low": 0.0707,
+        "high": 0.1562
+      },
+      "challenger": {
+        "chg_12m": 0.0665,
+        "explanation": {
+          "momentum": 0.0424,
+          "inflation": -0.0001,
+          "rates": -0.0005,
+          "labour": 0.0068,
+          "credit": 0.0008
+        }
+      }
+    },
+    {
+      "region": "murcia",
+      "name": "Murcia (Región de)",
+      "small_market": false,
+      "price_m2_at_origin": 1350.1,
+      "champion": {
+        "chg_12m": 0.1393,
+        "low": 0.124,
+        "high": 0.2095
+      },
+      "challenger": {
+        "chg_12m": 0.0821,
+        "explanation": {
+          "momentum": 0.0573,
+          "inflation": 0.0008,
+          "rates": -0.0008,
+          "labour": 0.0032,
+          "credit": 0.0045
+        }
+      }
+    },
+    {
+      "region": "navarra",
+      "name": "Navarra (Comunidad Foral de)",
+      "small_market": false,
+      "price_m2_at_origin": 1936.4,
+      "champion": {
+        "chg_12m": 0.0855,
+        "low": 0.0702,
+        "high": 0.1557
+      },
+      "challenger": {
+        "chg_12m": 0.0653,
+        "explanation": {
+          "momentum": 0.0449,
+          "inflation": 0.0012,
+          "rates": -0.0014,
+          "labour": -0.0019,
+          "credit": 0.0053
+        }
+      }
+    },
+    {
+      "region": "pais_vasco",
+      "name": "País Vasco",
+      "small_market": false,
+      "price_m2_at_origin": 3102.3,
+      "champion": {
+        "chg_12m": 0.1109,
+        "low": 0.0956,
+        "high": 0.1811
+      },
+      "challenger": {
+        "chg_12m": 0.0653,
+        "explanation": {
+          "momentum": 0.0482,
+          "inflation": 0.0013,
+          "rates": -0.0024,
+          "labour": -0.0038,
+          "credit": 0.005
+        }
+      }
+    },
+    {
+      "region": "rioja",
+      "name": "Rioja (La)",
+      "small_market": false,
+      "price_m2_at_origin": 1476.8,
+      "champion": {
+        "chg_12m": 0.1211,
+        "low": 0.1058,
+        "high": 0.1913
+      },
+      "challenger": {
+        "chg_12m": 0.0704,
+        "explanation": {
+          "momentum": 0.0518,
+          "inflation": 0.0007,
+          "rates": -0.0017,
+          "labour": -0.0027,
+          "credit": 0.0052
+        }
+      }
+    }
+  ]
+}

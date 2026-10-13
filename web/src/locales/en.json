@@ -1,120 +1,159 @@
 {
   "translation": {
+    "meta": {
+      "title": "Casalia · Spanish house price forecasts",
+      "description": "12-month forecasts of the appraised price per m² in every Spanish region, backtested over 16 years and published before the outcome is known."
+    },
     "nav": {
-      "prediction": "Prediction",
-      "methodology": "Methodology",
-      "dataMetrics": "Data & Metrics"
+      "forecasts": "Forecasts",
+      "results": "Results",
+      "method": "Method",
+      "code": "Code",
+      "toggleTheme": "Toggle theme",
+      "toggleMenu": "Toggle menu",
+      "switchLanguage": "Ver en español"
     },
     "hero": {
-      "version": "v1.0.0 Model Live",
-      "architect": "Architect",
-      "future": "Future",
-      "value": "Value.",
-      "description": "An academically rigorous, AI-driven housing prediction model. We estimate and contextualize property values across real estate markets using verifiable metrics and transparent algorithms.",
-      "testModel": "Test Model",
-      "viewDataset": "Download Dataset",
-      "inferenceMode": "Inference Mode",
-      "targetValue": "Target Value",
-      "proj": "PROJ",
+      "badge": "Data up to {{origin}} · forecast for {{target}}",
+      "kicker": "Spanish house prices · 12 months ahead",
+      "titleStart": "Forecasts",
+      "titleHighlight": "you can check",
+      "answer": "Where the appraised price per m² is heading in every Spanish region, from official data. Every year from 2010 to 2025 was forecast by models trained only on earlier years.",
+      "description": "Ridge regression, gradient boosting and a PyTorch network compete against simple rules over the same test years. So far momentum, a rule that repeats the last 12 months' change, has done best, so it provides the main forecast, with an 80% range. Gradient boosting runs alongside, explained with SHAP. Each quarter's forecasts are committed before the outcome is known.",
+      "ctaForecasts": "See the forecasts",
+      "ctaCode": "View the code",
       "graphic": {
-        "ineData": "INE Data Feed",
-        "pytorch": "PyTorch MLP",
-        "prediction": "12-Month Projection",
-        "macro": "Macro-economics, Mortgages",
-        "tensor": "Tensor Processing"
+        "data": "Official data",
+        "dataSub": "MIVAU · INE · ECB",
+        "models": "Model competition",
+        "modelsSub": "Simple rules vs Ridge, gradient boosting, PyTorch MLP",
+        "output": "Forecast + 80% range",
+        "outputSub": "ML forecast + SHAP · logged in advance"
       }
     },
-    "methodology": {
-      "title": "Under the Hood",
-      "description": "Our approach prioritizes explainability. We avoid black-box techniques in favor of structured ensemble methods where each variable's weight can be audited and traced back to verifiable real-world phenomena.",
-      "dataIngestion": {
-        "title": "Data Ingestion",
-        "desc": "Aggregating historical property price data, demographic factors (age, immigration), and macro-economic indicators (IPC, mortgages) from the INE."
+    "forecasts": {
+      "title": "Forecasts",
+      "subtitle": "Forecast change in the average appraised price per m² between {{origin}} and {{target}}, by region. Published on {{generated}}.",
+      "loading": "Loading forecasts…",
+      "error": "The forecasts could not be loaded.",
+      "region": "Region",
+      "price": "Your home's value in {{origin}} (optional)",
+      "pricePlaceholder": "e.g. 250000",
+      "champion": "Main forecast · momentum",
+      "championNote": "Momentum carries the last 12 months' change forward. It had the lowest error in development, and the holdout confirmed it, so it leads.",
+      "interval": "80% range: {{low}} to {{high}}",
+      "intervalNote": "The range comes from momentum's own past errors. It covered 78% of outcomes in 2010-2021 and 76% in 2022-2025, though only 42-50% in its worst years. Most of it lies above the forecast because momentum has underestimated the recent rise.",
+      "projected": "Projected value in {{target}}",
+      "projectedRange": "Regional 80% range: {{low}} to {{high}}",
+      "homeNote": "This is the regional change applied to your figure, not a valuation of your home.",
+      "smallMarket": "Small market: few appraisals per quarter, so the data are noisy.",
+      "challenger": "ML forecast · gradient boosting",
+      "challengerNote": "It runs in shadow mode, logged and scored next to the main forecast. It would take over only by beating momentum by more than the margin of error, first in the backtest and then on the forecast log.",
+      "shapAverage": "Model's average forecast",
+      "shapResult": "This forecast",
+      "shapNote": "SHAP shows how much each group of inputs moved this forecast away from the model's average. It explains the model, not the market.",
+      "rounded": "Figures are rounded.",
+      "groups": {
+        "momentum": "Price momentum",
+        "inflation": "Inflation",
+        "rates": "Interest rates (Euribor)",
+        "labour": "Unemployment",
+        "credit": "Mortgages signed"
       },
-      "featureExtraction": {
-        "title": "Feature Extraction",
-        "desc": "Computing 12-month trailing lag features and macroeconomic variations to construct a robust temporal context for each region."
+      "gapTitle": "Why the two forecasts differ",
+      "gapBelow": "The ML forecast is below the main one in {{below}} of {{total}} regions, and outside the main forecast's 80% range in {{outside}}. The ML model expects prices to grow more slowly than over the last 12 months.",
+      "gapAbove": "The ML forecast is above the main one in {{above}} of {{total}} regions, and outside the main forecast's 80% range in {{outside}}. The ML model expects prices to grow faster than over the last 12 months.",
+      "gapHistory": "It made the same kind of call in 2022-2025, and in each of those years prices rose more than it expected. The forecast log will show who is right this time.",
+      "allTitle": "All regions",
+      "legendInterval": "80% range",
+      "legendChampion": "Main forecast",
+      "legendChallenger": "ML forecast",
+      "colMain": "Main",
+      "colMl": "ML",
+      "rowLabel": "{{name}}: main forecast {{main}}, 80% range {{low}} to {{high}}, ML forecast {{ml}}",
+      "smallMarketMark": "small market",
+      "log": "These forecasts were committed to the repository before the outcome was known and will be scored when MIVAU publishes the {{target}} data.",
+      "logLink": "Forecast log"
+    },
+    "results": {
+      "title": "Out-of-sample results",
+      "intro": "Mean absolute error (MAE) of the 12-month change, in percentage points (pp); lower is better. Models are retrained every year, and each forecast only uses data up to the quarter it starts from.",
+      "legendMomentum": "Momentum",
+      "legendBaselines": "Other simple rules",
+      "legendModels": "Trained models",
+      "dev": "Development · 2010-2021",
+      "devSub": "792 forecasts per model, used to choose models and settings",
+      "holdout": "Frozen holdout · 2022-2025",
+      "holdoutSub": "238 forecasts per model, fixed in a commit before scoring",
+      "devNote": "Gradient boosting was 0.31 pp worse than momentum on average and better in 4 of 12 years; the gap is within the margin of error (95% block-bootstrap interval: −0.29 to +0.91 pp).",
+      "holdoutNote": "Momentum was best in all four years, a period of shocks the models had never seen. In 2022 inflation ran at 5.7-12.1%, above anything in training. In 2022-23 the Euribor rose by up to 3.9 pp in a year; the largest rise in the training data was 1.4 pp.",
+      "mlpNote": "The MLP is the PyTorch network from the first version of the project. With about 400 to 1,500 training rows per fold, simpler models did better.",
+      "models": {
+        "noChange": "No change",
+        "momentum": "Momentum",
+        "histMean": "Historical mean",
+        "ridge": "Ridge regression",
+        "gbm": "Gradient boosting",
+        "mlp": "Neural network (MLP)"
       },
-      "dnn": {
-        "title": "Deep Neural Network",
-        "desc": "A PyTorch-based Multi-Layer Perceptron (MLP) trained on historical cycles to predict 12-month property value dynamics with high confidence."
+      "reports": "Full reports in the repository:",
+      "reportLinks": {
+        "results": "development",
+        "holdout": "holdout",
+        "intervals": "intervals",
+        "diagnostics": "diagnostics"
       },
-      "featureImportance": "Feature Importance",
-      "shapValues": "SHAP VALUES",
-      "features": {
-        "priceDynamics": "Historical Price Dynamics",
-        "macro": "Macroeconomic Indicators",
-        "currentPrice": "Current Price per M2",
-        "demographics": "Demographics (Age, Immig.)",
-        "regional": "Regional Context"
+      "diagTitle": "What broke gradient boosting in 2022-2025",
+      "diagIntro": "Before the analysis, I committed a plan: two hypotheses and how to test them. Then I ran grouped SHAP and refitted the model leaving out one group of inputs at a time. As the plan notes, the inflation hypothesis came from an earlier look at 2022.",
+      "diag": {
+        "2022": "Inflation ran at 5.7-12.1%, beyond anything in training (the maximum was 5.6%, in 2008). Trees can't extrapolate, so the model treated 2022 like 2008 and predicted falls while prices rose.",
+        "2023": "The jump in the Euribor pulled the forecasts down.",
+        "2024": "Partly rates again. Not covered by either hypothesis: refitting without the momentum inputs cut that year's error by 4.2 pp.",
+        "2025": "Neither hypothesis holds, so that year is still unexplained."
       }
     },
-    "estimator": {
-      "title": "Model Inference",
-      "subtitle": "// Calculates projected valuation 12 months into the future using INE macro-economic data and a PyTorch Neural Network.",
-      "liveDemo": "LIVE DEMO",
-      "defineParams": "Define Parameters",
-      "comunidad": "Autonomous Community",
-      "metros": "Square Meters",
-      "precio": "Current Price (€)",
-      "compute": "Computing Tensor Data...",
-      "execute": "Execute Prediction",
-      "awaiting": "Awaiting Input",
-      "provide": "Provide the spatial parameters to calculate the estimated local valuation.",
-      "loading": {
-        "weights": "Load weights: OK",
-        "normalize": "Normalize parameters: OK",
-        "inference": "Running inference..."
-      },
-      "success": "SUCCESS_OP",
-      "predictedValue": "Projected Value (12 Months)",
-      "increase": "Increase (YoY)",
-      "confidence": "Model Confidence",
-      "excellent": "Excellent",
-      "good": "Good",
-      "moderate": "Moderate",
-      "low": "Low",
-      "error": "Error connecting to neural engine / API."
-    },
-    "faq": {
-      "title": "Use Cases & Reliability",
-      "cases": {
-        "analysts": {
-          "title": "For Analysts",
-          "desc": "Analyze structural shifts in local real estate markets using verifiable INE data on inflation and mortgages to build comprehensive quarterly reports."
+    "method": {
+      "title": "Method",
+      "steps": {
+        "data": {
+          "title": "Official data",
+          "desc": "Appraised price per m² (MIVAU); CPI, mortgages and unemployment (INE); and the 12-month Euribor (ECB). Prices go back to 1995, but the model data start in 2004, when every source is available, and cover 17 regions plus Ceuta and Melilla. One script rebuilds the dataset from the sources."
         },
-        "buyers": {
-          "title": "For Buyers",
-          "desc": "Gain an academic projection on future house pricing across autonomous communities to inform better long-term residential investments."
+        "leakage": {
+          "title": "No look-ahead",
+          "desc": "Features use only data up to the quarter the forecast starts from. A training example is used only once its outcome has been observed, and no forecast is made until every source has published that quarter's data."
         },
-        "risk": {
-          "title": "Risk Mitigation",
-          "desc": "Understand how macroeconomic forces (like changing mortgage rates and age demographics) will likely stress local housing demand over the next 12 months."
+        "walkforward": {
+          "title": "Walk-forward evaluation",
+          "desc": "Each year is forecast by models trained and tuned only on earlier years. The last four years were frozen in a commit before being scored, and haven't changed since."
+        },
+        "baselines": {
+          "title": "Baselines first",
+          "desc": "Ridge regression, gradient boosting and a PyTorch MLP are compared with three simple rules: no change, momentum and the historical mean. Momentum had the lowest error in development, and again in the holdout, so it leads. Another model replaces it only by winning by more than the margin of error (a confidence interval that excludes zero), first in the backtest and then on the forecast log."
+        },
+        "uncertainty": {
+          "title": "Measured uncertainty",
+          "desc": "The 80% range comes from momentum's own errors over the last five years. The repository reports, year by year, how often the outcome fell inside it, including the years it fell short of 80%."
+        },
+        "explain": {
+          "title": "Explained and logged",
+          "desc": "The ML model is explained with grouped TreeSHAP. Each quarter's forecasts are committed before the outcome is known, so any later edit would show in the history."
         }
       },
-      "metric": {
-        "title": "Core System Metric",
-        "value": "Continuous Learning",
-        "desc": "The model incorporates the latest macroeconomic updates from the INE, ensuring inference relies on current market reality rather than stale historical baselines."
-      },
-      "techTitle": "Technical FAQ",
-      "questions": {
-        "q1": {
-          "q": "What data structures support the prediction?",
-          "a": "A tensor approach incorporating tabular economic indicators (IPC, mortgages), demographic data, and historical pricing dynamics."
-        },
-        "q2": {
-          "q": "How does the platform handle missing variables?",
-          "a": "Missing INE data points or API fallbacks are gracefully handled using established regional baselines to ensure continuous inference."
-        }
+      "limitsTitle": "Limits",
+      "limits": {
+        "appraisal": "Appraised prices move more smoothly than sale prices, which is part of why momentum does well.",
+        "revised": "The data are today's revised series, not what was known at the time, so the backtest is pseudo out-of-sample.",
+        "turns": "Momentum and its range do worst when the market changes direction or pace, as in 2012-14, 2019-20 and 2024.",
+        "small": "Ceuta and Melilla are tiny markets and are shown separately."
       }
     },
     "footer": {
-      "titleReady": "Ready",
-      "titleDeploy": "To Deploy.",
-      "desc": "The AI-Powered Real Estate Platform built for scale, reliability, and precision.",
-      "academic": "© 2026 Academic Demo",
-      "projectBadge": "Final Degree Project // 2026"
+      "story": "Casalia started in 2026 as my final project for a vocational diploma in software development (DAM): a PyTorch network and this web app. I later rebuilt it from scratch on official data, with a proper walk-forward backtest. Now every forecast is published before its outcome is known.",
+      "by": "Built by Antonio Rosendo",
+      "data": "Data: MIVAU, INE and ECB.",
+      "disclaimer": "Not financial advice.",
+      "code": "Source code"
     }
   }
 }

@@ -1,8 +1,8 @@
 import { Navbar } from "./components/sections/Navbar";
 import { Hero } from "./components/sections/Hero";
-import { Estimator } from "./components/sections/Estimator";
-import { Methodology } from "./components/sections/Methodology";
-import { SegmentsFAQ } from "./components/sections/SegmentsFAQ";
+import { Forecasts } from "./components/sections/Forecasts";
+import { Results } from "./components/sections/Results";
+import { Method } from "./components/sections/Method";
 import { Footer } from "./components/sections/Footer";
 
 function App() {
@@ -11,9 +11,9 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <Estimator />
-        <Methodology />
-        <SegmentsFAQ />
+        <Forecasts />
+        <Results />
+        <Method />
       </main>
       <Footer />
     </div>
@@ -21,4 +21,3 @@ function App() {
 }
 
 export default App;
-
