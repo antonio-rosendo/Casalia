@@ -1,0 +1,8 @@
+# Only ml/app, ml/requirements-api.txt and web/public/forecasts.json go into the image.
+**/node_modules
+**/.venv
+**/__pycache__
+.git
+web/dist
+ml/data
+ml/reports
